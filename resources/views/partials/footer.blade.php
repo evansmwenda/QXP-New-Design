@@ -156,22 +156,22 @@
   =============================================================================-->
 
 <!-- initialize jQuery Library -->
-<script src="js/jquery-2.0.0.min.js"></script>
+<script src="{{ asset('js/jquery-2.0.0.min.js') }}"></script>
 <!-- Popper JS -->
-<script src="js/popper.min.js"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
 <!-- Bootstrap jQuery -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- Owl Carousel -->
-<script src="js/owl-carousel.2.3.0.min.js"></script>
+<script src="{{ asset('js/owl-carousel.2.3.0.min.js') }}"></script>
 <!-- Waypoint -->
-<script src="js/waypoints.min.js"></script>
+<script src="{{ asset('js/waypoints.min.js') }}"></script>
 <!-- Counter Up -->
-<script src="js/jquery.counterup.min.js"></script>
+<script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
 <!-- Video Popup -->
-<script src="js/jquery.magnific.popup.js"></script>
+<script src="{{ asset('js/jquery.magnific.popup.js') }}"></script>
 <!-- Smooth scroll -->
-<script src="js/smoothscroll.js"></script>
+<script src="{{ asset('js/smoothscroll.js') }}"></script>
 <!-- WoW js -->
-<script src="js/wow.min.js"></script>
+<script src="{{ asset('js/wow.min.js') }}"></script>
 <!-- Template Custom -->
-<script src="js/main.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
