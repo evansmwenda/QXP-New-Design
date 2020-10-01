@@ -153,6 +153,10 @@
                <img src="images/logo/logo.svg" alt="Qxp" class="my-logo">
             </a>
             <!-- End of Navbar Brand -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
             <!-- End of Navbar toggler -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                <ul class="navbar-nav">

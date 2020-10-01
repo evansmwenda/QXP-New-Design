@@ -8,7 +8,7 @@
          <div class="col-md-4" style="margin-top: 100px">
             <div class="row">
                   <button class="btn btn-primary">SIGN UP ITS FREE</button>
-                  <button class="btn btn-warning">SEE PRICING</button>
+                  <button class="btn btn-warning" style="margin-left: 6px;">SEE PRICING</button>
             </div>
          </div>
       </div>
