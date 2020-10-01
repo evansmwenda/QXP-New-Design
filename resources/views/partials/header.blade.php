@@ -32,7 +32,8 @@
 
 <!--Responsive CSS -->
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-
+{{-- Vadodara --}}
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400&display=swap" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
