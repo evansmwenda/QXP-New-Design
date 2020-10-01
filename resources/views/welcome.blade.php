@@ -150,7 +150,7 @@
       <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand tw-nav-brand" href="#">
-               <img src="images/logo/logo.svg" alt="Qxp" height="61" width="168">
+               <img src="images/logo/logo.svg" alt="Qxp" class="my-logo">
             </a>
             <!-- End of Navbar Brand -->
             <!-- End of Navbar toggler -->
@@ -416,8 +416,8 @@
                            LEARN.
                         </h1>
                         <p>Experience Real-time sharing and Engagement through video, calls, messaging, chat, slides and screens.</p>
-                        <a href="#" class="btn btn-warning">SIGN UP, ITS FREE</a>
-                         <a href="#" class="btn btn-primary">SEE PRICING</a>
+                        <a href="#" class="btn btn-primary">SIGN UP, ITS FREE</a>
+                        <a href="#" class="btn btn-warning" style="margin-left: 5px;">SEE PRICING</a>
                      </div>
                   </div>
                   <!-- Col end -->
@@ -490,7 +490,7 @@
       {{-- end of Row 1 --}}
       <div class="row">
          <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="features-box">
+            <div class="features-box" id="academy1">
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
                      <img src="images/icons/academyIcon.svg" alt="">
@@ -499,7 +499,7 @@
                </div>
                <!-- End Features Icon -->
                <h3 style="color: #f4ba00">Academy</h3>
-               <p>For Pre-primary, Primary and Secondary Education
+               <p class="plan-detail">For Pre-primary, Primary and Secondary Education
                </p>
                <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
@@ -515,60 +515,77 @@
          </div>
          <!-- End of Academy -->
          <div class="col-lg-3 col-md-12  wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".4s">
-            <div class="features-box">
+            <div class="features-box" id="higher1">
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
-                     <img src="images/feature2.png" alt="">
+                     <img src="images/icons/higherIcon.svg" alt="">
                   </div>
-                  <!-- End Features Icon inner -->
+                  <!-- End Features icon inner -->
                </div>
                <!-- End Features Icon -->
-               <h3>SEO Optimization</h3>
-               <p>Start working with an company that provide everything you need to any create awareness drive
+               <h3 style="color: #71CA52">Higher Ed</h3>
+               <p class="plan-detail">For Institutes of Higher Learning
                </p>
-               <a href="#" class="tw-readmore">Read More
+               <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
-               
+               <div class="academy">
+                  <div class="academyIcon pull-right">
+                  <img src="{{asset('images/icons/higher.svg')}}">
+                  </div>
+               </div>
+            
             </div>
             <!-- End Single Features -->
          
          </div>
          <!-- End of higher ed -->
          <div class="col-lg-3 col-md-12  wow fadeInUp" data-wow-duration="1.9s" data-wow-delay=".6s">
-            <div class="features-box">
+            <div class="features-box" id="meeting1">
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
-                     <img src="images/feature3.png" alt="">
+                     <img src="images/icons/meetingIcon.svg" alt="">
                   </div>
-                  <!-- End Features Icon inner -->
+                  <!-- End Features icon inner -->
                </div>
                <!-- End Features Icon -->
-               <h3>SEO Management</h3>
-               <p>Start working with an company that provide everything you need to any create awareness drive
+               <h3 style="color: #11BECC">Meeting</h3>
+               <p class="plan-detail">Video Conferencing, Realtime Messaging & Content Sharing
                </p>
-               <a href="#" class="tw-readmore">Read More
+               <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
+               <div class="academy">
+                  <div class="academyIcon pull-right">
+                  <img src="{{asset('images/icons/meeting.svg')}}">
+                  </div>
+               </div>
+            
             </div>
             <!-- End Single Features -->
          </div>
          <!-- End Meering  -->
          <div class="col-lg-3 col-md-12  wow fadeInUp" data-wow-duration="1.9s" data-wow-delay=".6s">
-            <div class="features-box">
+            <div class="features-box" id="business1">
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
-                     <img src="images/feature3.png" alt="">
+                     <img src="images/icons/businessIcon.svg" alt="">
                   </div>
-                  <!-- End Features Icon inner -->
+                  <!-- End Features icon inner -->
                </div>
                <!-- End Features Icon -->
-               <h3>SEO Management</h3>
-               <p>Start working with an company that provide everything you need to any create awareness drive
+               <h3 style="color: #C92519">For Business</h3>
+               <p class="plan-detail">Suited For All Business Trainings and Webinars
                </p>
-               <a href="#" class="tw-readmore">Read More
+               <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
+               <div class="academy">
+                  <div class="academyIcon pull-right">
+                  <img src="{{asset('images/icons/business.svg')}}">
+                  </div>
+               </div>
+            
             </div>
             <!-- End Single Features -->
          </div>

@@ -215,6 +215,9 @@ button:focus,
 button:hover {
   cursor: pointer;
 }
+.plan-detail{
+  height: 85px;
+}
 
 .tw-readmore {
   color: #060646;
@@ -649,7 +652,7 @@ section {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 16px 36px;
+  padding: 11px 35px;
   border-radius: 50px;
   -webkit-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
@@ -663,14 +666,14 @@ section {
 }
 
 .btn-primary {
-  border: 1px solid #007bff;
-  background: #007bff;
+  border: 1px solid #079DFF;
+  background: #079DFF;
 }
 
 .btn-primary:hover {
   background: #fff;
   border-color: #fff;
-  color: #007bff;
+  color: #079DFF;
 }
 
 .btn-secondary {
@@ -681,6 +684,17 @@ section {
 .btn-secondary:hover {
   background: #2e2c2d;
   border-color: #2e2c2d;
+}
+
+.btn-warning {
+  background-color: #FD6C03;
+  border-color: #FD6C03;
+}
+
+.btn-warning:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #FD6C03;
 }
 
 .btn-dark {
@@ -886,10 +900,14 @@ ul.navbar-nav > li.nav-item > a.nav-link {
                Navbar Link
 
       =============================*/
+.my-logo {
+  height:48px;
+  width: 125px;
+}      
 .navbar-light .navbar-nav .nav-link {
   color: #0707A4;
-  font-weight: 600;
-  font-size: 15px;
+  /*font-weight: 600;*/
+  font-size: 1.1em;
   margin-right: 12px;
 }
 
@@ -1654,7 +1672,7 @@ li.dropdown:hover .tw-mega-menu {
  font-family: 'Hind Vadodara', sans-serif;/*'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif*/
 }
 .tw-features-area p{
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 18px;
  
 }
@@ -1728,18 +1746,42 @@ li.dropdown:hover .tw-mega-menu {
 }
 
 .features-box p {
-  margin-bottom: 5px;
-  font-size: 15px;
+  color: #484848;
   font-family: 'Hind Vadodara', sans-serif;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 17px;
+  
 }
 
 .features-box a {
   margin-top: 10px;
 }
 
-.features-box:hover {
+/*.features-box:hover {
   -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: red;
+}*/
+#academy1:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgba(244, 186, 0, 0.4); /*#f4ba00;*/
+}
+#higher1:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgba(113, 202, 82, 0.4);/*#71CA52;*/
+}
+#meeting1:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgba(17, 190, 204, 0.4);/*#11BECC;*/
+}
+#business1:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgba(201, 37, 25, 0.4);/*#C92519;*/
 }
 
 .academyIcon img{
