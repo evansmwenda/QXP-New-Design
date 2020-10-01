@@ -1,5 +1,6 @@
 /* Animated Title Border */
-@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+/*@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");*/
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap');
 .animate-border {
   position: relative;
   display: block;
@@ -144,13 +145,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Hind Vadodara', sans-serif;/*Arial, Helvetica, sans-serif;*/
   font-size: 16px;
   line-height: 28px;
 }
 
 p {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Hind Vadodara', sans-serif;/*Arial, Helvetica, sans-serif;*/
   font-size: 15px;
   line-height: 28px;
 }
@@ -1585,7 +1586,7 @@ li.dropdown:hover .tw-mega-menu {
 }
 .slider-2 .slider-content h1 {
   color: #0707A4;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Hind Vadodara', sans-serif;/*'Courier New', Courier, monospace;*/
   font-weight: 700;
   font-size: 3em;
 }
@@ -1650,7 +1651,7 @@ li.dropdown:hover .tw-mega-menu {
 .tw-features-area h3{
  color: #079DFF;
  font-size: 30px;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+ font-family: 'Hind Vadodara', sans-serif;/*'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif*/
 }
 .tw-features-area p{
   font-weight: bold;
@@ -1729,7 +1730,7 @@ li.dropdown:hover .tw-mega-menu {
 .features-box p {
   margin-bottom: 5px;
   font-size: 15px;
-  font-family:'Hind Vadodara', sans-serif;
+  font-family: 'Hind Vadodara', sans-serif;
 }
 
 .features-box a {
@@ -1992,7 +1993,7 @@ input.round-btn {
 }
 
 .intro-list li:before {
-  font-family: fontAwesome;
+  font-family:  'Hind Vadodara', sans-serif;;
   content: "\f00c";
   color: #FA704D;
   margin-right: 20px;
@@ -2016,7 +2017,7 @@ input.round-btn {
   background-size: cover;
 }
 .tw-facts h3{
-  font-family: "Muli", Sans-serif;
+  font-family:  'Hind Vadodara', sans-serif;/*"Muli", Sans-serif;*/
   font-size: 32px;
   font-weight: 800;
   color: #079DFF;;
@@ -3652,7 +3653,7 @@ input.round-btn {
   top: 30px;
   left: 40px;
   content: "\e937";
-  font-family: iconfont;
+  font-family:  'Hind Vadodara', sans-serif;;
   font-size: 60px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -3676,7 +3677,7 @@ input.round-btn {
 }
 
 .post-single .entry-content ul.list-round li:before {
-  font-family: fontAwesome;
+  font-family:  'Hind Vadodara', sans-serif;;
   content: "\f111";
   font-size: 8px;
   color: #222222;
@@ -5290,8 +5291,7 @@ ul.comments-reply .comment-body {
   padding-right: 10px;
 }
 .top-social-links{
-  border-right: #666666 solid 1px;
- 
+  border-right: #666666 solid 1px; 
 }
 .leftContainer{
   margin-left: 30px;;
@@ -5303,7 +5303,7 @@ ul.comments-reply .comment-body {
 
 .top-social-links a i {
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.1em;
   color: #fff;
 
   -webkit-transition: all 0.3s;
@@ -5321,7 +5321,7 @@ ul.comments-reply .comment-body {
 }
 
 .top-contact-info span {
-  font-size: 14px;
+  font-size: 0.82em;
   color: #ffffff;
   border-right: solid 1px #868e96;
   padding-right: 20px;
