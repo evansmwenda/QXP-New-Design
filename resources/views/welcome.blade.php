@@ -177,62 +177,92 @@
                      </a>
                      <div id="tw-megamenu" class="dropdown-menu tw-mega-menu">
                         <div class="row">
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Standard Pricing</h3>
-                                 </li>
-                                 <li><a href="pricing.html">SEO Pricing</a></li>
-                                 <li><a href="#">Ecommerce SEO</a></li>
-                                 <li><a href="#">Enterprise SEO</a></li>
-                                 <li><a href="#">Local SEO</a></li>
-                                 <li><a href="#">SEO Audits</a></li>
-                                 <li><a href="#">PPC Management</a></li>
-                                 <li><a href="#">SEO Link Buildings</a></li>
-                              </ul>
-                              <!-- End UL -->
+                        
+                           <div class="col-md-8">
+                              <h3>Products</h3>
+                              <hr style="border-top: 1px solid #ccc">
+                                    <div class="row">
+                                       <div class="col-sm-2">
+                                       <img src="{{asset('images/logo/bgAsset6.svg')}}" width="85">
+                                       </div>
+                                       <div class="col-sm-10">
+                                          For Pre-primary, Primary and Secondary Education
+                                       </div>
+                                    </div>   
+                                    <hr style="border-top: 1px solid #ccc">
+                                    <div class="row">
+                                       <div class="col-sm-2">
+                                       <img src="{{asset('images/logo/bgAsset8.svg')}}" width="85">
+                                       </div>
+                                       <div class="col-sm-10">
+                                          For Institutes of Higher Learning
+                                       </div>
+                                    </div>  
+                                    <hr style="border-top: 1px solid #ccc">
+                                    <div class="row">
+                                       <div class="col-sm-2">
+                                       <img src="{{asset('images/logo/bgAsset9.svg')}}" width="85">
+                                       </div>
+                                       <div class="col-sm-10">
+                                          Video Conferencing, Messaging & Content Sharing
+                                       </div>
+                                    </div>   
+                                    <hr style="border-top: 1px solid #ccc">
+                                    <div class="row">
+                                       <div class="col-sm-2">
+                                       <img src="{{asset('images/logo/bgAsset7.svg')}}" width="85">
+                                       </div>
+                                       <div class="col-sm-10">
+                                          Suited For All Businesses Trainings and Webinars
+                                       </div>
+
+                                    </div>  
                            </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Elements One</h3>
-                                 </li>
-                                 <li><a href="pricing.html">Addon list 1</a></li>
-                                 <li><a href="#">Addon list 2</a></li>
-                                 <li><a href="#">Addon list 3</a></li>
-                                 <li><a href="#">Addon list 4</a></li>
-                                 <li><a href="#">Addon list 5</a></li>
-                                 <li><a href="#">Addon list 6</a></li>
-                              </ul>
-                              <!-- End UL -->
+                           <div class="col-md-4" style="background: #f3f3f3;padding 10px">
+                              <h3>Solutions</h3>
+                              <hr style="border-top: 1px solid #ccc">
+                              <div class="row">
+                                 <div class="col-sm-2">
+                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    Education
+                                 </div>
+                              </div> 
+                              <div class="row">
+                                 <div class="col-sm-2">
+                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    Healthcare
+                                 </div>
+                              </div> 
+                              <div class="row">
+                                 <div class="col-sm-2">
+                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    Government
+                                 </div>
+                              </div> 
+                              <div class="row">
+                                 <div class="col-sm-2">
+                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    Financial Institutions
+                                 </div>
+                              </div> 
+                              <div class="row">
+                                 <div class="col-sm-2">
+                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    Sports & Entertainment
+                                 </div>
+                              </div> 
                            </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Elements Two</h3>
-                                 </li>
-                                 <li><a href="#">Addon list 7</a></li>
-                                 <li><a href="#">Addon list 8</a></li>
-                                 <li><a href="#">Addon list 9</a></li>
-                                 <li><a href="#">Addon list 10</a></li>
-                              </ul>
-                              <!-- End Ul -->
-                           </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Site review</h3>
-                                 </li>
-                                 <li>
-                                    <p>Start working with the best company that provide you everything you need.</p>
-                                 </li>
-                              </ul>
-                              <!-- End UL -->
-                           </div>
-                           <!-- End Col -->
+                         
                         </div>
                         <!-- End Row -->
                      </div>
@@ -412,11 +442,11 @@
       <div class="slider-wrapper d-table">
          <div class="slider-inner d-table-cell">
             <div class="container">
-               <div class="row justify-content-center">
-                  <div class="col-md-6">
+               <div class="row">
+                  <div class="col-lg-8 col-sm-12">
                      <div class="slider-content">
-                        <h1>CONNECT,<br>
-                           COLLABORATE &<br>
+                        <h1>CONNECT,
+                           COLLABORATE &
                            LEARN.
                         </h1>
                         <p>Experience Real-time sharing and Engagement through video, calls, messaging, chat, slides and screens.</p>

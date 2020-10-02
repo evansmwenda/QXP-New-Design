@@ -15,12 +15,8 @@
     </div>
      <hr style="border-top: 1px solid #fff">
   
-      <div class="row">
-         <!-- End Col -->
-         <div class="col-md-12">
-
-            <div class="row">
-               <div class="col-md-3">
+      <div class="row">         <!-- End Col -->        
+               <div class="col-md-3 col-sm-6 col-xs-6">
                   <div class="footer-widget footer-left-widget">
                   <h3>Products</h3>
                      <ul>
@@ -32,7 +28,7 @@
                   </div>
                   <!-- End Footer Widget -->
                </div>
-               <div class="col-md-3">
+               <div class="col-md-3 col-sm-6 col-xs-6">
                   <div class="footer-widget footer-left-widget">
                   <h3>Company</h3>
                      <ul>
@@ -44,7 +40,7 @@
                   </div>
                   <!-- End Footer Widget -->
                </div>
-               <div class="col-md-3">
+               <div class="col-md-3 col-sm-6 col-xs-6">
                   <div class="footer-widget footer-left-widget">
                   <h3>QXP For</h3>
                      <ul>
@@ -56,7 +52,7 @@
                   </div>
                   <!-- End Footer Widget -->
                </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-sm-6 col-xs-6">
                   <div class="footer-widget footer-left-widget">
                   <h3>Support</h3>
                      <ul>
@@ -68,12 +64,9 @@
                   </div>
                   <!-- End Footer Widget -->
                </div>
-               <!-- End Col -->
-            </div>
-            <!-- End Row -->
-         </div>
-         <!-- End Col -->
+               <!-- End Col -->         
       </div>
+   
     
      <!-- End Widget Row -->
 
@@ -90,10 +83,10 @@
            <div class="col-md-6">
               <div class="copyright-menu">
                  <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    
                  </ul>
               </div>
            </div>
