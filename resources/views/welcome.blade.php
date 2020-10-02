@@ -158,7 +158,8 @@
                   <span class="navbar-toggler-icon"></span>
                </button>
             <!-- End of Navbar toggler -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-center navbar-qxp" 
+            id="navbarSupportedContent" style="height: 80px !important;background-color: #fff !important;">
                <ul class="navbar-nav">
                   <li class="nav-item dropdown active">
                      <a class="nav-link" href="#" data-toggle="dropdown">
