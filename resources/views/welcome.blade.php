@@ -182,38 +182,38 @@
                            <div class="col-md-8">
                               <h3>Products</h3>
                               <hr style="border-top: 1px solid #ccc">
-                                    <div class="row">
-                                       <div class="col-sm-2">
+                                    <div class="row" >
+                                       <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset6.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10">
+                                       <div class="col-sm-10" style="padding-top: 15px;">
                                           For Pre-primary, Primary and Secondary Education
                                        </div>
                                     </div>   
                                     <hr style="border-top: 1px solid #ccc">
-                                    <div class="row">
-                                       <div class="col-sm-2">
+                                    <div class="row" style="margin:10px 0px;">
+                                       <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset8.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10">
+                                       <div class="col-sm-10" style="padding-top: 15px;">
                                           For Institutes of Higher Learning
                                        </div>
                                     </div>  
                                     <hr style="border-top: 1px solid #ccc">
-                                    <div class="row">
-                                       <div class="col-sm-2">
+                                    <div class="row" style="margin:10px 0px;">
+                                       <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset9.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10">
+                                       <div class="col-sm-10" style="padding-top: 15px;">
                                           Video Conferencing, Messaging & Content Sharing
                                        </div>
                                     </div>   
                                     <hr style="border-top: 1px solid #ccc">
                                     <div class="row">
-                                       <div class="col-sm-2">
+                                       <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset7.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10">
+                                       <div class="col-sm-10" style="padding-top: 15px;">
                                           Suited For All Businesses Trainings and Webinars
                                        </div>
 
