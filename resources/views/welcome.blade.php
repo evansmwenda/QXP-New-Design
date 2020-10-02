@@ -217,50 +217,32 @@
                                           Suited For All Businesses Trainings and Webinars
                                        </div>
 
-                                    </div>  
+                                    </div>  <br/>
                            </div>
                            <div class="col-md-4" style="background: #f3f3f3;padding 10px">
                               <h3>Solutions</h3>
                               <hr style="border-top: 1px solid #ccc">
                               <div class="row">
-                                 <div class="col-sm-2">
-                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
-                                 </div>
-                                 <div class="col-sm-10">
-                                    Education
-                                 </div>
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046"></span>Education
                               </div> 
                               <div class="row">
-                                 <div class="col-sm-2">
-                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
-                                 </div>
-                                 <div class="col-sm-10">
-                                    Healthcare
-                                 </div>
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span>Healthcare
                               </div> 
                               <div class="row">
-                                 <div class="col-sm-2">
-                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
-                                 </div>
-                                 <div class="col-sm-10">
-                                    Government
-                                 </div>
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span>Government
+                                 </span>
                               </div> 
                               <div class="row">
-                                 <div class="col-sm-2">
-                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
-                                 </div>
-                                 <div class="col-sm-10">
-                                    Financial Institutions
-                                 </div>
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span>Financial Institutions
+                                 </span>
                               </div> 
                               <div class="row">
-                                 <div class="col-sm-2">
-                                 <span class="fa fa-angle-right fa-2x" style="color:#06046"></span>
-                                 </div>
-                                 <div class="col-sm-10">
-                                    Sports & Entertainment
-                                 </div>
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span>Sports & Entertainment
+                                 </span>
                               </div> 
                            </div>
                          
