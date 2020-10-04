@@ -6349,3 +6349,10 @@ ul.comments-reply .comment-body {
   margin-bottom: 0;
 }
 
+/*for the features section only in mobile devices*/
+@media only screen and (max-width: 767px) {
+    .features-section {
+        text-align: center;
+    }
+}
+

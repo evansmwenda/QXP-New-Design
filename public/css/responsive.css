@@ -1093,6 +1093,11 @@
     .tw-seo-check-content .analysis-form input[type=submit] {
         border-radius: 50px;
     }
+    .tw-ellipse-pattern img {
+       width: 35px;
+      margin-bottom: 15px;
+      height: 35px;
+        }
 }
 
 /* Extra Small Devices, Phones */
@@ -1231,6 +1236,7 @@
         padding-top: 0;
         text-align: left;
     }
+
 }
 
 /* Custom, iPhone Retina */
