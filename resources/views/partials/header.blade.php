@@ -40,7 +40,7 @@
    <div class="tw-head">
       <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand tw-nav-brand" href="#">
+            <a class="navbar-brand tw-nav-brand" href="/">
                <img src="images/logo/logo.svg" alt="Qxp" class="my-logo">
             </a>
             <!-- End of Navbar Brand -->
@@ -53,7 +53,7 @@
                id="navbarSupportedContent" style="height: 80px !important;background-color: #fff !important;">
                <ul class="navbar-nav">
                   <li class="nav-item dropdown active">
-                     <a class="nav-link" href="#" data-toggle="dropdown">
+                     <a class="nav-link" href="/">
                         Home
                         <span class="tw-indicator"></span>
                      </a>
@@ -113,26 +113,30 @@
                            <div class="col-md-4" style="background: #f3f3f3;padding 10px">
                               <h3>Solutions</h3>
                               <hr style="border-top: 1px solid #ccc">
-                              <div class="row">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046"></span>Education
+                              <div class="row" style="padding:auto;">
+                                <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span><a href="/education">Education</a>
                               </div> 
+
+                              <div class="row" style="padding:auto;">
+                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span><a href="/healthcare">Healthcare</a>
+                              </div>
+
+                              <div class="row">
+                                <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
+                                 </span><a href="/legal">Legal</a>
+                              </div> 
+
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span>Healthcare
-                              </div> 
-                              <div class="row">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span>Government
+                                 </span><a href="/financial-institutions">Financial Institutions</a>
                                  </span>
                               </div> 
+
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span>Financial Institutions
-                                 </span>
-                              </div> 
-                              <div class="row">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span>Sports & Entertainment
+                                 </span><a href="/human-resources">Human Resources</a>
                                  </span>
                               </div> 
                            </div>

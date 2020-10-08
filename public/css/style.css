@@ -698,6 +698,16 @@ section {
   border-color: #fff;
   color: #FD6C03;
 }
+.btn-my-warning {
+  background-color: #FD6C03;
+  border-color: #FD6C03;
+}
+
+.btn-my-warning:hover {
+  background: #079DFF;
+  border-color: #fff;
+  color: #fff;
+}
 
 .btn-dark {
   background: #2E2C2D;
@@ -6379,6 +6389,23 @@ ul.comments-reply .comment-body {
     .copyright{
       margin-top: 10px;
     }
+    .qxp-education-bg{
+      height: 300px !important;
+    }
+    .qxp-education-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 50px !important;
+    }
+    .qxp-education-bg .spacer h1{
+      font-size:21px !important;
+    }
+    .qxp-education-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 22px !important;
+      line-height: 1.3em;
+      font-weight:600;
+    }
 }
 /* CUSTOM CSS */
 .qxp-header-row{
@@ -6516,4 +6543,24 @@ margin-left: 50px;
 .qxp-btn-dark-academy:hover{
   background: #F4BA00;
   border: 1px solid #F4BA00;
+}
+.qxp-education-bg{
+  background: url(../images/featured/education-teacher.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  height: 500px;
+}
+.qxp-education-bg .spacer{
+  margin: 30px;
+}
+.qxp-education-bg .spacer h1{
+  font-size:16px;
+}
+.qxp-education-bg .spacer h2{
+  color: #FFFFFF;
+  font-size: 34px;
+  line-height: 1.3em;
+  font-weight:600
 }
