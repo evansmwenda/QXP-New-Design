@@ -155,15 +155,11 @@
                      <!-- End of Dropdown menu -->
                   </li>
                   <!-- End Dropdown -->
-                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="#" data-toggle="dropdown">
+                  <li class="nav-item">
+                     <a class="nav-link" href="/pricing" >
                         Pricing & Plans
-                        <span class="tw-indicator"><i class="fa fa-angle-down"></i></span>
+                        
                      </a>
-                     <ul class="dropdown-menu tw-dropdown-menu">
-                        <li><a href="case-studies.html">Projects All</a></li>
-                        <li><a href="single-case.html">Project Single</a></li>
-                     </ul>
                      <!-- End of Dropdown menu -->
                   </li>
                   <!-- End Dropdown -->

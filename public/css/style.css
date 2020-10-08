@@ -6354,5 +6354,166 @@ ul.comments-reply .comment-body {
     .features-section {
         text-align: center;
     }
+    .qxp-logo{
+      height:150px;
+      width: 150px;
+    }
+    #my-carousel{
+      display: none;
+    }
+    .footer-top p{
+      font-size: 1em;
+    }
+    .footer-top h3{
+      font-size: 2em;
+    }
+    /*.tw-footer{
+      padding: 20px 0;
+    }*/
+    .my-footer{
+      margin: 15px 15px;
+    }
+    .footer-top{
+      margin-bottom: 10px;
+    }
+    .copyright{
+      margin-top: 10px;
+    }
+}
+/* CUSTOM CSS */
+.qxp-header-row{
+  padding: 110px;
+  background-color: #079DFF;
+  width: 100%;
+  color: #fff;
+}
+.qxp-header-row h2{
+  font-family: "Hind Vadodara", Sans-serif;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 50px;
+}
+.qxp-header-row p{
+  font-family: "Hind Vadodara", Sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.qxp-tab{
+  padding-top: 30px;
+  font-size: 20px;
+  font-family: "Hind Vadodara", Sans-serif !important;
 }
 
+.nav-link .active{
+  color: red;
+}
+.nav-link{
+  padding: 20px;
+}
+.qxp-price-Header{
+  padding: 30px;
+  background-color: #C92519;;
+  border-top-right-radius:5px;
+  border-top-left-radius: 5px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.qxp-price-Header-academy{
+  padding: 30px;
+  background-color: #F4BA00;
+  border-top-right-radius:5px;
+  border-top-left-radius: 5px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.qxp-price-Header-higher{
+  padding: 30px;
+  background-color: #71CA52;
+  border-top-right-radius:5px;
+  border-top-left-radius: 5px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.price-body{
+  padding-top: 20px;
+  margin-right: 20px;
+}
+.price-body ul{
+  list-style: none;
+  color: #060646;
+  font-size: 20px;
+}
+.price-body ul li{
+  padding:20px;
+  border-bottom: 1px #ccc solid;
+}
+.price-body ul i{
+  padding-right: 10px;
+}
+.qxp-price-Header h3{
+  line-height: 1.2;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+.qxp-price-Header-higher h3{
+  line-height: 1.2;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+.qxp-price-Header-academy h3{
+  line-height: 1.2;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+.qxp-price{
+margin-top: 100px;
+margin-left: 50px;
+}
+
+.qxp-price p{
+  padding: 50px;
+}
+.qxp-btn-dark{
+  background: #060646;
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  border: 1px solid #060646;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.qxp-btn-dark:hover{
+  background: #C92519;
+  border: 1px solid crimson;
+}
+.qxp-btn-dark-academy{
+  background: #060646;
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  border: 1px solid #060646;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.qxp-btn-dark-academy:hover{
+  background: #F4BA00;
+  border: 1px solid #F4BA00;
+}
