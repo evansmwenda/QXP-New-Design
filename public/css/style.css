@@ -6423,11 +6423,34 @@ ul.comments-reply .comment-body {
       line-height: 1.1em;
       font-weight:600;
     }
-     
      .qxp-resources-bg .spacer button{
       display: inline-block;
      }
 
+     .qxp-financial-bg{
+      height: 300px !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: relative;
+    }
+    .qxp-financial-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 20px !important;
+    }
+    .qxp-financial-bg .spacer h1{
+      font-size:18px !important;
+    }
+    .qxp-financial-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 20px !important;
+      line-height: 1.1em;
+      font-weight:600;
+    } 
+     .qxp-financial-bg .spacer button{
+      display: inline-block;
+     }
 
 }
 /* CUSTOM CSS */
@@ -6583,6 +6606,14 @@ margin-left: 50px;
   position: relative;
   height: 500px;
 }
+.qxp-financial-bg{
+  background: url(../images/featured/financial-institutions-meet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  position: relative;
+  height: 500px;
+}
 .qxp-education-bg .spacer{
   margin: 30px;
 }
@@ -6590,6 +6621,18 @@ margin-left: 50px;
   font-size:16px;
 }
 .qxp-education-bg .spacer h2{
+  color: #FFFFFF;
+  font-size: 34px;
+  line-height: 1.3em;
+  font-weight:600
+}
+.qxp-financial-bg .spacer{
+  margin: 30px;
+}
+.qxp-financial-bg .spacer h1{
+  font-size:16px;
+}
+.qxp-financial-bg .spacer h2{
   color: #FFFFFF;
   font-size: 34px;
   line-height: 1.3em;
@@ -6618,7 +6661,4 @@ margin-left: 50px;
   height: 100%;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
-.qxp-resources-bg .spacer button{
-  display: inline-block;
- }
   /*display: flex;justify-content: center;align-items: center;width:100%;height: 100%;*/
