@@ -3,7 +3,7 @@
 @section('main')
 	<!-- #code here -->
 	<div class="qxp-education-bg">
-		<div class="qxp-overlay" style="display: flex;justify-content: center;align-items: center;background-image: linear-gradient(90deg, #0099FE 62%, #F2295B00 59%);width:100%;height: 100%;opacity:0.75">
+		<div class="qxp-overlay">
 			<div class="container " style="height: 200px;">
 				<div class="row">
 					<div class="col-7">

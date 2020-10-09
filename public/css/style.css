@@ -6406,6 +6406,29 @@ ul.comments-reply .comment-body {
       line-height: 1.3em;
       font-weight:600;
     }
+    .qxp-resources-bg{
+      height: 400px !important;
+    }
+    .qxp-resources-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 20px !important;
+    }
+    .qxp-resources-bg .spacer h1{
+      font-size:18px !important;
+    }
+    .qxp-resources-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 20px !important;
+      line-height: 1.1em;
+      font-weight:600;
+    }
+     
+     .qxp-resources-bg .spacer button{
+      display: inline-block;
+     }
+
+
 }
 /* CUSTOM CSS */
 .qxp-header-row{
@@ -6552,6 +6575,14 @@ margin-left: 50px;
   position: relative;
   height: 500px;
 }
+.qxp-resources-bg{
+  background: url(../images/featured/resources-panel.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  height: 500px;
+}
 .qxp-education-bg .spacer{
   margin: 30px;
 }
@@ -6564,3 +6595,30 @@ margin-left: 50px;
   line-height: 1.3em;
   font-weight:600
 }
+.qxp-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #0099FE 62%, #F2295B00 59%);
+  width:100%;
+  height: 100%;
+  opacity:0.75;
+}
+.qxp-overlay-resources{
+  position:absolute;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #079DFF 42%, #079DFF00 57%);
+  opacity: 0.93;
+  mix-blend-mode: multiply;
+  width:100%;
+  height: 100%;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.qxp-resources-bg .spacer button{
+  display: inline-block;
+ }
+  /*display: flex;justify-content: center;align-items: center;width:100%;height: 100%;*/
