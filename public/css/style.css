@@ -6427,6 +6427,8 @@ ul.comments-reply .comment-body {
       display: inline-block;
      }
 
+
+     /*financial bg mobile*/
      .qxp-financial-bg{
       height: 300px !important;
       background-size: cover;
@@ -6451,6 +6453,29 @@ ul.comments-reply .comment-body {
      .qxp-financial-bg .spacer button{
       display: inline-block;
      }
+
+     /*legal mobile  bg*/
+     .qxp-legal-bg{
+      height: 300px !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: relative;
+    }
+    .qxp-legal-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 20px !important;
+    }
+    .qxp-legal-bg .spacer h1{
+      font-size:18px !important;
+    }
+    .qxp-legal-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 20px !important;
+      line-height: 1.1em;
+      font-weight:600;
+    } 
 
 }
 /* CUSTOM CSS */
@@ -6614,6 +6639,15 @@ margin-left: 50px;
   position: relative;
   height: 500px;
 }
+.qxp-legal-bg{
+  background: url(../images/featured/legal-meeting-panel.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  position: relative;
+  height: 500px;
+}
+/*education-bg*/
 .qxp-education-bg .spacer{
   margin: 30px;
 }
@@ -6626,6 +6660,8 @@ margin-left: 50px;
   line-height: 1.3em;
   font-weight:600
 }
+
+/*financial-bg*/
 .qxp-financial-bg .spacer{
   margin: 30px;
 }
@@ -6638,6 +6674,21 @@ margin-left: 50px;
   line-height: 1.3em;
   font-weight:600
 }
+/*legal-bg*/
+.qxp-legal-bg .spacer{
+  margin: 30px;
+}
+.qxp-legal-bg .spacer h1{
+  font-size:16px;
+}
+.qxp-legal-bg .spacer h2{
+  color: #FFFFFF;
+  font-size: 34px;
+  line-height: 1.3em;
+  font-weight:600
+}
+
+/*overlays*/
 .qxp-overlay{
   display: flex;
   justify-content: center;
