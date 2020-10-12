@@ -662,6 +662,19 @@ section {
   position: relative;
   z-index: 99;
 }
+.btn-square {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 11px 35px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  position: relative;
+  z-index: 99;
+}
 
 .btn-lg {
   padding: 16px 45px;
@@ -855,6 +868,16 @@ ul.navbar-nav a {
   display: block;
   position: relative;
   border-radius: 50px;
+}
+#btn-square {
+  display: block;
+  position: relative;
+  border-radius: 5px !important;
+}
+#btn-square:hover {
+  display: block;
+  position: relative;
+  border-radius: 50px !important;
 }
 
 ul.navbar-nav > li.nav-item.active > a {
@@ -6498,6 +6521,9 @@ ul.comments-reply .comment-body {
       line-height: 1.1em;
       font-weight:600;
     }
+    #btn-square {
+      padding:10px !important;
+    }
 
 }
 /* CUSTOM CSS */
@@ -6768,4 +6794,18 @@ margin-left: 50px;
   width:100%;
   height: 100%;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.qxp-overlay-legal{
+  position:absolute;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #0099FE00 23%, #079DFF 57%);
+  opacity: 0.81;
+  mix-blend-mode: multiply;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  width:100%;
+  height: 100%;
 }

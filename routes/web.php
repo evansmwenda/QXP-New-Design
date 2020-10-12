@@ -23,3 +23,4 @@ Route::get('/healthcare','HomeController@healthcare');
 Route::get('/legal','HomeController@legal');
 Route::get('/financial-institutions','HomeController@financial');
 Route::get('/human-resources','HomeController@resources');
+Route::get('/industries','HomeController@industries');

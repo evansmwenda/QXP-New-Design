@@ -131,14 +131,18 @@
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
                                  </span><a href="/financial-institutions">Financial Institutions</a>
-                                 </span>
                               </div> 
 
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
                                  </span><a href="/human-resources">Human Resources</a>
-                                 </span>
                               </div> 
+                              <div class="row" style="margin-top: 17px !important;margin-bottom: 20px;">
+                                <a id="btn-square" class="btn-square btn-primary btn-lg" href="/industries" role="button" style="letter-spacing: 1.1px;font-size: 1em;font-weight: 500;color: #ffffff;background-color:#079DFF">
+                                  SEE MORE INDUSTRIES
+                                </a>
+                                   
+                              </div>
                            </div>
                          
                         </div>

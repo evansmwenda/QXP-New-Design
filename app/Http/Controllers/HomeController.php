@@ -25,4 +25,7 @@ class HomeController extends Controller
     public function resources(){
     	return view('humanresources');
     }
+    public function industries(){
+        return view('industries');
+    }
 }

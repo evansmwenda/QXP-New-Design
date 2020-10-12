@@ -3,10 +3,11 @@
 @section('main')
 	<!-- #code here -->
 	<div class="qxp-legal-bg" style="display: flex;justify-content: center;align-items: center;width:100%;">
-		<div class="qxp-overlay-resources"></div>
+		<div class="qxp-overlay-legal"></div>
 			<div class="container " style="height: 200px;">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-sm-12 col-md-6"></div>
+					<div class="col-sm-6 col-md-6">
 						<div class="spacer" >
 							<h1 style="color:#FFFFFF;font-size:21px;font-weight: 800;text-transform: uppercase;letter-spacing: 5px;">FINANCIAL INSTITUTIONS
 							</h1>
@@ -14,7 +15,7 @@
 							<button class="btn btn-warning text-center" style="z-index:0;margin-top: 20px;">GET STARTED TODAY</button>
 						</div>
 					</div>
-					<div class="col-6"></div>
+					
 					
 				</div>
 			</div>
