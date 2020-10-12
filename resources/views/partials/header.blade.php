@@ -151,15 +151,10 @@
                      <!-- End of Mega menu -->
                   </li>
                   <!-- End Dropdown -->
-                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="#" data-toggle="dropdown">
-                        Features
-                        <span class="tw-indicator"><i class="fa fa-angle-down"></i></span>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/industries" >
+                        Industries
                      </a>
-                     <ul class="dropdown-menu tw-dropdown-menu">
-                        <li><a href="service.html">Service All</a></li>
-                        <li><a href="single-service.html">Service Single</a></li>
-                     </ul>
                      <!-- End of Dropdown menu -->
                   </li>
                   <!-- End Dropdown -->

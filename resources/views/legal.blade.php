@@ -9,7 +9,7 @@
 					<div class="col-sm-12 col-md-6"></div>
 					<div class="col-sm-6 col-md-6">
 						<div class="spacer" >
-							<h1 style="color:#FFFFFF;font-size:21px;font-weight: 800;text-transform: uppercase;letter-spacing: 5px;">FINANCIAL INSTITUTIONS
+							<h1 style="color:#FFFFFF;font-size:21px;font-weight: 800;text-transform: uppercase;letter-spacing: 5px;">LEGAL
 							</h1>
 							<h2 style="color:#FFFFFF;text-shadow: 0px 0px 10px rgba(0,0,0,0.3);">Be there for your clients every step of the way</h2>
 							<button class="btn btn-warning text-center" style="z-index:0;margin-top: 20px;">GET STARTED TODAY</button>

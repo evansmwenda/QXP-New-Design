@@ -6435,7 +6435,7 @@ ul.comments-reply .comment-body {
     .qxp-resources-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
-      margin-top: 20px !important;
+      margin-top: 50px !important;
     }
     .qxp-resources-bg .spacer h1{
       font-size:18px !important;
@@ -6462,7 +6462,7 @@ ul.comments-reply .comment-body {
     .qxp-financial-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
-      margin-top: 20px !important;
+      margin-top: 30px !important;
     }
     .qxp-financial-bg .spacer h1{
       font-size:18px !important;
@@ -6488,7 +6488,7 @@ ul.comments-reply .comment-body {
     .qxp-legal-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
-      margin-top: 20px !important;
+      margin-top: 70px !important;
     }
     .qxp-legal-bg .spacer h1{
       font-size:18px !important;
@@ -6524,6 +6524,30 @@ ul.comments-reply .comment-body {
     #btn-square {
       padding:10px !important;
     }
+
+    /*industries bg*/
+    .qxp-industries-bg{
+      height: 300px !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: relative;
+    }
+    .qxp-industries-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 50px !important;
+    }
+    .qxp-industries-bg .spacer h1{
+      font-size:18px !important;
+    }
+    .qxp-industries-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 22px !important;
+      line-height: 1.1em;
+      font-weight:600;
+    }
+
 
 }
 /* CUSTOM CSS */
@@ -6703,6 +6727,14 @@ margin-left: 50px;
   position: relative;
   height: 500px;
 }
+.qxp-industries-bg{
+  background: url(../images/featured/industries-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  position: relative;
+  height: 300px;
+}
 /*education-bg*/
 .qxp-education-bg .spacer{
   margin: 30px;
@@ -6808,4 +6840,17 @@ margin-left: 50px;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   width:100%;
   height: 100%;
+}
+.my-cards{
+  box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  height:200px;
+  margin-top: 30px;
+}
+.my-cards h5{
+  color: #079DFF;
+}
+.my-cards:hover {
+  background-color: #060646;
 }
