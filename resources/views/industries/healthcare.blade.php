@@ -2,8 +2,8 @@
 
 @section('main')
 	<!-- #code here -->
-	<div class="qxp-healthcare-bg" style="display: flex;justify-content: center;align-items: center;width:100%;">
-		<div class="qxp-overlay-healthcare"></div>
+	<div class="qxp-bg qxp-healthcare-bg" style="display: flex;justify-content: center;align-items: center;width:100%;">
+		<div class="qxp-overlay qxp-overlay-healthcare"></div>
 			<div class="container " style="height: 200px;">
 				<div class="row">
 					<div class="col-sm-12 col-md-6"></div>

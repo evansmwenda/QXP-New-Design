@@ -6412,30 +6412,28 @@ ul.comments-reply .comment-body {
     .copyright{
       margin-top: 10px;
     }
-    .qxp-education-bg{
-      height: 300px !important;
+
+
+    .qxp-bg{
+      height: 400px !important;
     }
-    .qxp-education-bg .spacer{
+    .qxp-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
-      margin-top: 50px !important;
+      margin-top: 30px !important;
     }
-    .qxp-education-bg .spacer h1{
-      font-size:21px !important;
+    .qxp-bg .spacer h1{
+      font-size:20px !important;
     }
-    .qxp-education-bg .spacer h2{
+    .qxp-bg .spacer h2{
       color: #FFFFFF;
       font-size: 22px !important;
       line-height: 1.3em;
       font-weight:600;
     }
+
     .qxp-resources-bg{
       height: 400px !important;
-    }
-    .qxp-resources-bg .spacer{
-      margin: 0px !important;
-      padding: 0px !important;
-      margin-top: 50px !important;
     }
     .qxp-resources-bg .spacer h1{
       font-size:18px !important;
@@ -6446,13 +6444,33 @@ ul.comments-reply .comment-body {
       line-height: 1.1em;
       font-weight:600;
     }
-     .qxp-resources-bg .spacer button{
+    .qxp-resources-bg .spacer button{
       display: inline-block;
      }
 
 
-     /*financial bg mobile*/
-     .qxp-financial-bg{
+
+
+
+
+
+
+/*    .qxp-education-bg{
+      height: 300px !important;
+    }
+
+    .qxp-education-bg .spacer h1{
+      font-size:21px !important;
+    }
+    .qxp-education-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 22px !important;
+      line-height: 1.3em;
+      font-weight:600;
+    }*/
+
+    /*financial bg mobile*/
+    .qxp-financial-bg{
       height: 300px !important;
       background-size: cover;
       background-repeat: no-repeat;
@@ -6466,25 +6484,12 @@ ul.comments-reply .comment-body {
     }
     .qxp-financial-bg .spacer h1{
       font-size:18px !important;
-    }
-    .qxp-financial-bg .spacer h2{
-      color: #FFFFFF;
-      font-size: 20px !important;
-      line-height: 1.1em;
-      font-weight:600;
     } 
-     .qxp-financial-bg .spacer button{
+    .qxp-financial-bg .spacer button{
       display: inline-block;
      }
 
-     /*legal mobile  bg*/
-     .qxp-legal-bg{
-      height: 300px !important;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      position: relative;
-    }
+     /*legal mobile bg*/
     .qxp-legal-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
@@ -6493,20 +6498,8 @@ ul.comments-reply .comment-body {
     .qxp-legal-bg .spacer h1{
       font-size:18px !important;
     }
-    .qxp-legal-bg .spacer h2{
-      color: #FFFFFF;
-      font-size: 20px !important;
-      line-height: 1.1em;
-      font-weight:600;
-    } 
+
     /*healthcare mobile  bg*/
-     .qxp-healthcare-bg{
-      height: 300px !important;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      position: relative;
-    }
     .qxp-healthcare-bg .spacer{
       margin: 0px !important;
       padding: 0px !important;
@@ -6515,29 +6508,11 @@ ul.comments-reply .comment-body {
     .qxp-healthcare-bg .spacer h1{
       font-size:18px !important;
     }
-    .qxp-healthcare-bg .spacer h2{
-      color: #FFFFFF;
-      font-size: 22px !important;
-      line-height: 1.1em;
-      font-weight:600;
-    }
     #btn-square {
       padding:10px !important;
     }
 
     /*industries bg*/
-    .qxp-industries-bg{
-      height: 300px !important;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      position: relative;
-    }
-    .qxp-industries-bg .spacer{
-      margin: 0px !important;
-      padding: 0px !important;
-      margin-top: 50px !important;
-    }
     .qxp-industries-bg .spacer h1{
       font-size:18px !important;
     }
@@ -6548,18 +6523,6 @@ ul.comments-reply .comment-body {
       font-weight:600;
     }
     /*manufacturing bg*/
-    .qxp-manufacturing-bg{
-      height: 300px !important;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      position: relative;
-    }
-    .qxp-manufacturing-bg .spacer{
-      margin: 0px !important;
-      padding: 0px !important;
-      margin-top: 50px !important;
-    }
     .qxp-manufacturing-bg .spacer h1{
       font-size:18px !important;
     }
@@ -6570,18 +6533,6 @@ ul.comments-reply .comment-body {
       font-weight:600;
     }
     /*organizations bg*/
-    .qxp-organizations-bg{
-      height: 300px !important;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      position: relative;
-    }
-    .qxp-organizations-bg .spacer{
-      margin: 0px !important;
-      padding: 0px !important;
-      margin-top: 50px !important;
-    }
     .qxp-organizations-bg .spacer h1{
       font-size:18px !important;
     }
@@ -6731,148 +6682,65 @@ margin-left: 50px;
   background: #F4BA00;
   border: 1px solid #F4BA00;
 }
-.qxp-education-bg{
-  background: url(../images/featured/education-teacher.jpg);
-  background-size: cover;
+
+.qxp-bg{
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   position: relative;
   height: 500px;
 }
-.qxp-resources-bg{
-  background: url(../images/featured/resources-panel.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: relative;
-  height: 500px;
-}
-.qxp-financial-bg{
-  background: url(../images/featured/financial-institutions-meet.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  position: relative;
-  height: 500px;
-}
-.qxp-legal-bg{
-  background: url(../images/featured/legal-meeting-panel.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  position: relative;
-  height: 500px;
-}
-.qxp-healthcare-bg{
-  background: url(../images/featured/healthcare-2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  position: relative;
-  height: 500px;
-}
-.qxp-industries-bg{
-  background: url(../images/featured/industries-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  position: relative;
-  height: 300px;
-}
-.qxp-manufacturing-bg{
-  background: url(../images/featured/manufacturing-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  position: relative;
-  height: 500px;
-}
-.qxp-organizations-bg{
-  background: url(../images/featured/organizations-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: relative;
-  height: 500px;
-}
-/*education-bg*/
-.qxp-education-bg .spacer{
+.qxp-bg .spacer{
   margin: 30px;
 }
-.qxp-education-bg .spacer h1{
+.qxp-bg .spacer h1{
   font-size:16px;
 }
-.qxp-education-bg .spacer h2{
+.qxp-bg .spacer h2{
   color: #FFFFFF;
   font-size: 34px;
   line-height: 1.3em;
   font-weight:600
 }
 
-/*financial-bg*/
-.qxp-financial-bg .spacer{
-  margin: 30px;
+.qxp-education-bg{
+  background: url(../images/featured/education-teacher.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
 }
-.qxp-financial-bg .spacer h1{
-  font-size:16px;
+.qxp-resources-bg{
+  background: url(../images/featured/resources-panel.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
 }
-.qxp-financial-bg .spacer h2{
-  color: #FFFFFF;
-  font-size: 34px;
-  line-height: 1.3em;
-  font-weight:600
+.qxp-financial-bg{
+  background: url(../images/featured/financial-institutions-meet.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
 }
-/*legal-bg*/
-.qxp-legal-bg .spacer{
-  margin: 30px;
+.qxp-legal-bg{
+  background: url(../images/featured/legal-meeting-panel.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
 }
-.qxp-legal-bg .spacer h1{
-  font-size:16px;
+.qxp-healthcare-bg{
+  background: url(../images/featured/healthcare-2.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
 }
-.qxp-legal-bg .spacer h2{
-  color: #FFFFFF;
-  font-size: 34px;
-  line-height: 1.3em;
-  font-weight:600
+.qxp-industries-bg{
+  background: url(../images/featured/industries-1.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
+  height: 300px;
 }
-/*healthcare-bg*/
-.qxp-healthcare-bg .spacer{
-  margin: 30px;
+.qxp-manufacturing-bg{
+  background: url(../images/featured/manufacturing-1.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
 }
-.qxp-healthcare-bg .spacer h1{
-  font-size:16px;
-}
-.qxp-healthcare-bg .spacer h2{
-  color: #FFFFFF;
-  font-size: 34px;
-  line-height: 1.3em;
-  font-weight:600
-}
-/*manufacturing-bg*/
-.qxp-manufacturing-bg .spacer{
-  margin: 30px;
-}
-.qxp-manufacturing-bg .spacer h1{
-  font-size:16px;
-}
-.qxp-manufacturing-bg .spacer h2{
-  color: #FFFFFF;
-  font-size: 34px;
-  line-height: 1.3em;
-  font-weight:600
-}
-/*organizations-bg*/
-.qxp-organizations-bg .spacer{
-  margin: 30px;
-}
-.qxp-organizations-bg .spacer h1{
-  font-size:16px;
-}
-.qxp-organizations-bg .spacer h2{
-  color: #FFFFFF;
-  font-size: 34px;
-  line-height: 1.3em;
-  font-weight:600
+.qxp-organizations-bg{
+  background: url(../images/featured/organizations-1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 /*overlays*/
@@ -6880,52 +6748,39 @@ margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(90deg, #0099FE 62%, #F2295B00 59%);
   width:100%;
   height: 100%;
+}
+.qxp-overlay-education{
+  background-image: linear-gradient(90deg, #0099FE 62%, #F2295B00 59%);
   opacity:0.75;
 }
 .qxp-overlay-resources{
   position:absolute;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   background-image: linear-gradient(90deg, #079DFF 42%, #079DFF00 57%);
   opacity: 0.93;
   mix-blend-mode: multiply;
-  width:100%;
-  height: 100%;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .qxp-overlay-healthcare{
   position:absolute;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   background-image: linear-gradient(90deg, #0099FE00 23%, #079DFF 57%);
   opacity: 0.9;
   mix-blend-mode: multiply;
-  width:100%;
-  height: 100%;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .qxp-overlay-legal{
   position:absolute;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   background-image: linear-gradient(90deg, #0099FE00 23%, #079DFF 57%);
   opacity: 0.81;
   mix-blend-mode: multiply;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-  width:100%;
-  height: 100%;
 }
 .my-cards{
   box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);

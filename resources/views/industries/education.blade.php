@@ -2,8 +2,8 @@
 
 @section('main')
 	<!-- #code here -->
-	<div class="qxp-education-bg">
-		<div class="qxp-overlay">
+	<div class="qxp-bg qxp-education-bg">
+		<div class="qxp-overlay qxp-overlay-education">
 			<div class="container " style="height: 200px;">
 				<div class="row">
 					<div class="col-7">
