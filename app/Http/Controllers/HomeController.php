@@ -11,19 +11,19 @@ class HomeController extends Controller
     	return view('plans');
     }
     public function education(){
-    	return view('education');
+    	return view('industries.education');
     }
     public function healthcare(){
-    	return view('healthcare');
+    	return view('industries.healthcare');
     }
     public function legal(){
-    	return view('legal');
+    	return view('industries.legal');
     }
     public function financial(){
-    	return view('financial');
+    	return view('industries.financial');
     }
     public function resources(){
-    	return view('humanresources');
+    	return view('industries.humanresources');
     }
     public function industries(){
         return view('industries');

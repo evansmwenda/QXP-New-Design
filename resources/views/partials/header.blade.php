@@ -41,7 +41,7 @@
       <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand tw-nav-brand" href="/">
-               <img src="images/logo/logo.svg" alt="Qxp" class="my-logo">
+               <img src="{{url('images/logo/logo.svg')}}" alt="Qxp" class="my-logo">
             </a>
             <!-- End of Navbar Brand -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -115,27 +115,27 @@
                               <hr style="border-top: 1px solid #ccc">
                               <div class="row" style="padding:auto;">
                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/education">Education</a>
+                                 </span><a href="/industries/education">Education</a>
                               </div> 
 
                               <div class="row" style="padding:auto;">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/healthcare">Healthcare</a>
+                                 </span><a href="/industries/healthcare">Healthcare</a>
                               </div>
 
                               <div class="row">
                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/legal">Legal</a>
+                                 </span><a href="/industries/legal">Legal</a>
                               </div> 
 
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/financial-institutions">Financial Institutions</a>
+                                 </span><a href="/industries/financial-institutions">Financial Institutions</a>
                               </div> 
 
                               <div class="row">
                                  <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/human-resources">Human Resources</a>
+                                 </span><a href="/industries/human-resources">Human Resources</a>
                               </div> 
                               <div class="row" style="margin-top: 17px !important;margin-bottom: 20px;">
                                 <a id="btn-square" class="btn-square btn-primary btn-lg" href="/industries" role="button" style="letter-spacing: 1.1px;font-size: 1em;font-weight: 500;color: #ffffff;background-color:#079DFF">

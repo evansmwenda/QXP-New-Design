@@ -18,9 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/pricing','HomeController@pricing');
-Route::get('/education','HomeController@education');
-Route::get('/healthcare','HomeController@healthcare');
-Route::get('/legal','HomeController@legal');
-Route::get('/financial-institutions','HomeController@financial');
-Route::get('/human-resources','HomeController@resources');
 Route::get('/industries','HomeController@industries');
+
+Route::group(['prefix'=>'industries'], function (){
+	//industries/education
+	Route::get('/education','HomeController@education');
+	Route::get('/healthcare','HomeController@healthcare');
+	Route::get('/legal','HomeController@legal');
+	Route::get('/financial-institutions','HomeController@financial');
+	Route::get('/human-resources','HomeController@resources');
+} );
+
