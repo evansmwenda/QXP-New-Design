@@ -37,15 +37,15 @@ class HomeController extends Controller
         return view('industries.organizations');
     }
     public function sports(){
-        return view('industries.legal');
+        return view('industries.sports');
     }
     public function sales(){
-        return view('industries.legal');
+        return view('industries.sales');
     }
     public function startups(){
-        return view('industries.legal');
+        return view('industries.startups');
     }
     public function technology(){
-        return view('industries.legal');
+        return view('industries.technology');
     }
 }

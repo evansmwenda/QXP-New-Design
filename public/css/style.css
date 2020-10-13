@@ -6742,6 +6742,11 @@ margin-left: 50px;
   background-size: cover;
   background-position: 50% 50%;
 }
+.qxp-sales-bg{
+  background: url(../images/featured/sales-1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
 /*overlays*/
 .qxp-overlay{

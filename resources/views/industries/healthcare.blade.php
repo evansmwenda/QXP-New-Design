@@ -15,13 +15,8 @@
 							<button class="btn btn-warning text-center" style="z-index:0;margin-top: 20px;">GET STARTED TODAY</button>
 						</div>
 					</div>
-					
-					
 				</div>
 			</div>
-			
-		
-		
 	</div>
 
 	<div class="container" >
