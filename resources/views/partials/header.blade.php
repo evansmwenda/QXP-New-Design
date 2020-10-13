@@ -4,16 +4,16 @@
      <div class="col-md-2 text-left leftContainer">
         <div class="row">
            <div class="col-md-3 top-social-links">
-              <a href="#"><i class="fa fa-facebook "></i></a>                
+              <a href="https://www.facebook.com/QXPGLOBAL"><i class="fa fa-facebook "></i></a>                
            </div>
            <div class="col-md-3 top-social-links">
-              <a href="#"><i class="fa fa-linkedin "></i></a>                
+              <a href="https://www.linkedin.com/company/qxp-global"><i class="fa fa-linkedin "></i></a>                
            </div>
            <div class="col-md-3 top-social-links">
-              <a href="#"><i class="fa fa-twitter "></i></a>                
+              <a href="https://www.twitter.com/qxpglobal"><i class="fa fa-twitter "></i></a>                
            </div>
            <div class="col-md-3 top-social-links">
-              <a href="#"><i class="fa fa-youtube "></i></a>                
+              <a href="https://www.instagram.com/qxpglobal"><i class="fa fa-instagram "></i></a>                
            </div>
         </div>
 
@@ -23,7 +23,7 @@
      <div class="col-md-8 ml-auto text-right">
         <div class="top-contact-info">
            <span><i class="fa fa-user"></i>Login</span>
-           <span><i class="fa fa-envelope"></i>info@qxpglobal.com</span>
+           <span><i class="fa fa-envelope"></i>info@qxp-global.com</span>
         </div>
      </div>
      <!-- Col End -->

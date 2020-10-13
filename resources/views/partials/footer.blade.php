@@ -83,9 +83,9 @@
              <div class="col-md-6">
                 <div class="copyright-menu">
                    <ul>
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                      <li><a href="https://www.facebook.com/QXPGLOBAL"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://www.twitter.com/qxpglobal"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="https://www.instagram.com/qxpglobal"><i class="fa fa-instagram"></i></a></li>
                       
                    </ul>
                 </div>
