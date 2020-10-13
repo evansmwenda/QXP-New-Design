@@ -6547,6 +6547,28 @@ ul.comments-reply .comment-body {
       line-height: 1.1em;
       font-weight:600;
     }
+    /*manufacturing bg*/
+    .qxp-manufacturing-bg{
+      height: 300px !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: relative;
+    }
+    .qxp-manufacturing-bg .spacer{
+      margin: 0px !important;
+      padding: 0px !important;
+      margin-top: 50px !important;
+    }
+    .qxp-manufacturing-bg .spacer h1{
+      font-size:18px !important;
+    }
+    .qxp-manufacturing-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 22px !important;
+      line-height: 1.1em;
+      font-weight:600;
+    }
 
 
 }
@@ -6735,6 +6757,14 @@ margin-left: 50px;
   position: relative;
   height: 300px;
 }
+.qxp-manufacturing-bg{
+  background: url(../images/featured/manufacturing-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  position: relative;
+  height: 500px;
+}
 /*education-bg*/
 .qxp-education-bg .spacer{
   margin: 30px;
@@ -6783,6 +6813,19 @@ margin-left: 50px;
   font-size:16px;
 }
 .qxp-healthcare-bg .spacer h2{
+  color: #FFFFFF;
+  font-size: 34px;
+  line-height: 1.3em;
+  font-weight:600
+}
+/*manufacturing-bg*/
+.qxp-manufacturing-bg .spacer{
+  margin: 30px;
+}
+.qxp-manufacturing-bg .spacer h1{
+  font-size:16px;
+}
+.qxp-manufacturing-bg .spacer h2{
   color: #FFFFFF;
   font-size: 34px;
   line-height: 1.3em;

@@ -31,7 +31,7 @@ class HomeController extends Controller
     	return view('industries.humanresources');
     }
     public function manufacturing(){
-        return view('industries.legal');
+        return view('industries.manufacturing');
     }
     public function organizations(){
         return view('industries.legal');
