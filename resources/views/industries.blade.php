@@ -19,84 +19,114 @@
 	<div class="container" style="margin-top: 30px;">
 		<div class="row">
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards" style="">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Education</h5>
-				  </div>
-				</div>
+				<a href="/industries/education">
+					<div class="card text-center my-cards" style="">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Education</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Healthcare</h5>
-				  </div>
-				</div>
+				<a href="/industries/healthcare">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Healthcare</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Financial Services</h5>
-				  </div>
-				</div>
+				<a href="/industries/financial-institutions">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Financial Services</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Manufacturing</h5>
-				  </div>
-				</div>
+				<a href="/industries/manufacturing">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Manufacturing</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Legal</h5>
-				  </div>
-				</div>
+				<a href="/industries/legal">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Legal</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Government & Non-profit organizations</h5>
-				  </div>
-				</div>
+				<a href="/industries/organizations">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Government & Non-profit organizations</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Sports and Entertainment</h5>
-				  </div>
-				</div>
+				<a href="/industries/sports-entertainment">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Sports and Entertainment</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Sales</h5>
-				  </div>
-				</div>
+				<a href="/industries/sales">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Sales</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Startup</h5>
-				  </div>
-				</div>
+				<a href="/industries/startups">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Startup</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			<div class="col-sm-12 col-md-4">
-				<div class="card text-center my-cards">
-				  <div class="card-body">
-				  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
-				    <h5 class="card-title" style="margin-top: 20px">Information technology</h5>
-				  </div>
-				</div>
+				<a href="/industries/technology">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Information technology</h5>
+					  </div>
+					</div>
+				</a>
+				
 			</div>
 			
 		</div>

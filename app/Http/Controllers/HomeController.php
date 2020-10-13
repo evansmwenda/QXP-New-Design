@@ -10,6 +10,11 @@ class HomeController extends Controller
     public function pricing(){
     	return view('plans');
     }
+    public function industries(){
+        return view('industries');
+    }
+
+
     public function education(){
     	return view('industries.education');
     }
@@ -25,7 +30,22 @@ class HomeController extends Controller
     public function resources(){
     	return view('industries.humanresources');
     }
-    public function industries(){
-        return view('industries');
+    public function manufacturing(){
+        return view('industries.legal');
+    }
+    public function organizations(){
+        return view('industries.legal');
+    }
+    public function sports(){
+        return view('industries.legal');
+    }
+    public function sales(){
+        return view('industries.legal');
+    }
+    public function startups(){
+        return view('industries.legal');
+    }
+    public function technology(){
+        return view('industries.legal');
     }
 }

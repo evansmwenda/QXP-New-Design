@@ -27,5 +27,11 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/legal','HomeController@legal');
 	Route::get('/financial-institutions','HomeController@financial');
 	Route::get('/human-resources','HomeController@resources');
+	
+	Route::get('/manufacturing','HomeController@manufacturing');
+	Route::get('/organizations','HomeController@organizations');
+	Route::get('/sports-entertainment','HomeController@sports');
+	Route::get('/sales','HomeController@sales');
+	Route::get('/startups','HomeController@startups');
+	Route::get('/technology','HomeController@technology');
 } );
-
