@@ -6747,6 +6747,11 @@ margin-left: 50px;
   background-size: cover;
   background-position: 50% 50%;
 }
+.qxp-startups-bg{
+  background: url(../images/featured/startups-1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
 /*overlays*/
 .qxp-overlay{
