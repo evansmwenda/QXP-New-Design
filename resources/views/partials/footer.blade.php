@@ -25,7 +25,7 @@
                <li> <span class="fa fa-angle-right"></span><a href="http://higher-ed.qxp-global.com"> QXP Higher Ed</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="http://business.qxp-global.com"> QXP Business</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="http://meetings.qxp-global.com"> QXP Meeting</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> Features</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="##"> Features</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
