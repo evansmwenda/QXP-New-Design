@@ -21,10 +21,10 @@
             <div class="footer-widget">
             <h3>Products</h3>
             <ul>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Academy</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Higher Ed</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Business</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Meeting</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="http://academy.qxp-global.com"> QXP Academy</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="http://higher-ed.qxp-global.com"> QXP Higher Ed</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="http://business.qxp-global.com"> QXP Business</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="http://meetings.qxp-global.com"> QXP Meeting</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Features</a></li>
             </ul>
             </div>
@@ -34,11 +34,12 @@
             <div class="footer-widget">
             <h3>Company</h3>
             <ul>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Academy</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Higher Ed</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Business</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> QXP Meeting</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> Features</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#"> Who We Are</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#">Leadership</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#"> Case Studies</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#"> News Media</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#"> Careers</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#"> Contact</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
@@ -47,12 +48,12 @@
             <div class="footer-widget">
             <h3>QXP For</h3>
             <ul>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Education</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Health Care</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Government</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Financial Institutions</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Start Ups</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Sports & Entertainment</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/education">Education</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/healthcare">Health Care</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/organizations">Government</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/financial">Financial Institutions</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/startups">Start Ups</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/sports">Sports & Entertainment</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
@@ -63,7 +64,8 @@
             <ul>
                <li> <span class="fa fa-angle-right"></span><a href="#">Getting Started</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Video Tutorials</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Support Centre / Knowledge Base</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#">Support Centre</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#">Knowledge Base</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Accessibility Resources</a></li>
             </ul>
             </div>
