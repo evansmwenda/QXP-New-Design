@@ -35,4 +35,6 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/startups','HomeController@startups');
 	Route::get('/sports-entertainment','HomeController@sports');
 	Route::get('/technology','HomeController@manufacturing');
+	Route::get('/automotive','HomeController@automotive');
+	Route::get('/franchises','HomeController@franchises');
 } );

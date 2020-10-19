@@ -83,7 +83,8 @@
              </div>
              <!-- End Col -->
              <div class="col-md-4 text-center">
-                <a href="/terms">Terms of Use</a>&nbsp;|&nbsp;
+                <a href="/terms">Terms of Use</a>
+                <p style="display: inline-block;color:#ffffff;font-size: 1em">&nbsp;|&nbsp;</p>
                 <a href="/privacy-statement">Privacy Policy</a>
               </div>
              <div class="col-md-4">

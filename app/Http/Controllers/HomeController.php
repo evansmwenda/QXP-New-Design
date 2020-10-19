@@ -55,5 +55,11 @@ class HomeController extends Controller
     public function technology(){
         return view('industries.technology');
     }
+    public function automotive(){
+        return view('industries.automotive');
+    }
+    public function franchises(){
+        return view('industries.franchises');
+    }
     // end of industries
 }

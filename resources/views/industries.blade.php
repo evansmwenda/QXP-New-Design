@@ -128,6 +128,28 @@
 				</a>
 				
 			</div>
+			<div class="col-sm-12 col-md-4">
+				<a href="/industries/automotive">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Automotive</h5>
+					  </div>
+					</div>
+				</a>
+				
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<a href="/industries/franchises">
+					<div class="card text-center my-cards">
+					  <div class="card-body">
+					  	<img src="{{asset('images/icons/007-laptop.svg')}}" width="50" height="60">
+					    <h5 class="card-title" style="margin-top: 20px">Franchise</h5>
+					  </div>
+					</div>
+				</a>
+				
+			</div>
 			
 		</div>
 	</div>
