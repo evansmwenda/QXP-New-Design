@@ -13,8 +13,15 @@ class HomeController extends Controller
     public function industries(){
         return view('industries');
     }
+    public function terms(){
+        return view('terms');
+    }
+    public function privacy(){
+        return view('privacy');
+    }
 
 
+    // for the industries
     public function education(){
     	return view('industries.education');
     }
@@ -48,4 +55,5 @@ class HomeController extends Controller
     public function technology(){
         return view('industries.technology');
     }
+    // end of industries
 }

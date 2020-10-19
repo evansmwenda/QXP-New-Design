@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/pricing','HomeController@pricing');
 Route::get('/industries','HomeController@industries');
+Route::get('/terms','HomeController@terms');
+Route::get('/privacy-statement','HomeController@privacy');
 
 Route::group(['prefix'=>'industries'], function (){
 	//industries/education

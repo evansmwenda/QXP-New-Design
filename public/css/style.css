@@ -6542,6 +6542,19 @@ ul.comments-reply .comment-body {
       line-height: 1.1em;
       font-weight:600;
     }
+    /*terms-privacy bg*/
+    .qxp-terms-privacy-bg{
+      height: 220px !important;
+    }
+    .qxp-terms-privacy-bg .spacer h1{
+      font-size:1.2em !important;
+    }
+    .qxp-terms-privacy-bg .spacer h2{
+      color: #FFFFFF;
+      font-size: 2.5em !important;
+      line-height: 1.1em;
+      font-weight:600;
+    }
 
 
 }
@@ -6757,7 +6770,12 @@ margin-left: 50px;
   background-size: cover;
   background-position: 10% 10%;
 }
-
+.qxp-terms-privacy-bg{
+  height: 270px;
+  background: url(../images/featured/industries-1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
 /*overlays*/
 .qxp-overlay{
   display: flex;
@@ -6806,6 +6824,12 @@ margin-left: 50px;
   mix-blend-mode: multiply;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
+.qxp-overlay-terms-privacy{
+    background-color: #079DFF;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+
 .my-cards{
   box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -6818,4 +6842,7 @@ margin-left: 50px;
 }
 .my-cards:hover {
   background-color: #060646;
+}
+.privacy-links a{
+  color: #c36;
 }

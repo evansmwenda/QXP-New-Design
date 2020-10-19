@@ -78,11 +78,15 @@
     <div class="copyright">
        <div class="container">
           <div class="row">
-             <div class="col-md-6">
+             <div class="col-md-4">
                 <span> &copy; 2020 QXP. All Rights Reserved</span>
              </div>
              <!-- End Col -->
-             <div class="col-md-6">
+             <div class="col-md-4 text-center">
+                <a href="/terms">Terms of Use</a>&nbsp;|&nbsp;
+                <a href="/privacy-statement">Privacy Policy</a>
+              </div>
+             <div class="col-md-4">
                 <div class="copyright-menu">
                    <ul>
                       <li><a href="https://www.facebook.com/QXPGLOBAL"><i class="fa fa-facebook"></i></a></li>
@@ -92,6 +96,7 @@
                    </ul>
                 </div>
              </div>
+             
              <!-- End col -->
           </div>
           <!-- End Row -->
