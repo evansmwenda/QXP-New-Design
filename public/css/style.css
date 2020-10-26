@@ -811,6 +811,87 @@ section {
 
 /* ************************* Header  ****************************/
 /*************************** Nav ********************************/
+/* Qxp-login modal */
+.qxp-login{
+  background: url(../images/featured/industries-1.jpg);
+  background-size: 1020px 800px;
+  padding: 20px;
+}
+.qxp-login span{
+  font-size:30px;
+  cursor: pointer;
+  color: #C92519;
+}
+.modal .modal-dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+}
+.business-login{
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+
+}
+.business-login:hover{
+  background: #D5D8DC;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.business-login h2{
+  color: #C92519;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.meeting-login{
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+
+}
+.meeting-login:hover{
+  background: #D5D8DC;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.meeting-login h2{
+  color: #11BECC;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.academy-login{
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+
+}
+.academy-login:hover{
+  background: #D5D8DC;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.academy-login h2{
+  color: #F4BA00;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.higher-login{
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+
+}
+.higher-login:hover{
+  background: #D5D8DC;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.higher-login h2{
+  color: #71CA52;
+  margin-top: 30px;
+  font-size: 20px;
+}
 .tw-header {
   background: #fff;
   -webkit-box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.06);
@@ -942,7 +1023,7 @@ ul.navbar-nav > li.nav-item > a.nav-link {
 .navbar-light .navbar-nav .nav-link {
   color: #0707A4;
   /*font-weight: 600;*/
-  font-size: 1.1em;
+  font-size: 1.0em;
   margin-right: 12px;
 }
 
@@ -5350,6 +5431,7 @@ ul.comments-reply .comment-body {
 .tw-top-bar .text-left .top-contact-info span {
   padding-left: 0;
   padding-right: 40px;
+
 }
 
 .tw-top-bar-angle {
