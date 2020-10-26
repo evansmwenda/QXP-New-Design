@@ -22,7 +22,7 @@
      <!-- Col End -->
      <div class="col-md-8 ml-auto text-right">
         <div class="top-contact-info">
-           <span><i class="fa fa-user"></i>Login</span>
+           <span data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-user"></i>Login</span>
            <span><i class="fa fa-envelope"></i>info@qxp-global.com</span>
         </div>
      </div>
@@ -268,3 +268,46 @@
    <!-- End tw head -->
 </header>
 <!-- End of Header area=-->
+
+
+{{-- Login modal preview --}}
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content qxp-login">
+       <div class="container">
+          <div class="row pull-right">
+             <span data-dismiss="modal">x</span>
+          </div>
+          <div class="row">
+             
+             <div class="col-md-6 business-login" onclick="location.href='#';">
+               <img src="{{asset('images/logo/bgAsset9.svg')}}" width="100">
+               <h2>QXP For Business</h2>
+               <p>Remodel how your business works with simple, smart and trusted architecture sure to streamline tasks and drive performance. Enabled video, audio and web conferencing solutions from any region.</p>
+             </div>
+             <div class="col-md-6 meeting-login"onclick="location.href='#';>
+               <img src="{{asset('images/logo/bgAsset7.svg')}}" width="100">
+               <h2>QXP For Meetings</h2>
+               <p>Working from home couldn’t be more convenient with the best online meeting software, bringing a whole new meaning to face-to-face and making every connection better.</p>
+           
+             </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 academy-login" onclick="location.href='#';>
+               <img src="{{asset('images/logo/bgAsset6.svg')}}" width="100">
+               <h2>QXP For Academy</h2>
+               <p>Whether a few or hundreds of students, post-secondary students can attend classes virtually from wherever they are, access learning calendars and schedules, assignments, take tests and interact with their lecturers.</p>
+           
+            </div>
+            <div class="col-md-6 higher-login" onclick="location.href='#';>
+               <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
+               <h2>QXP For Higher Ed</h2>
+               <p>Whether a few or hundreds of students, post-secondary students can attend classes virtually from wherever they are, access learning calendars and schedules, assignments, take tests and interact with their lecturers.</p>
+           
+            </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
