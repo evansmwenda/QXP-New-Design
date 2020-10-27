@@ -19,6 +19,9 @@ class HomeController extends Controller
     public function privacy(){
         return view('privacy');
     }
+    public function features(){
+        return view('features');
+    }
 
 
     // for the industries
