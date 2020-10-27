@@ -816,6 +816,7 @@ section {
   background: url(../images/featured/industries-1.jpg);
   background-size: 1020px 800px;
   padding: 20px;
+  height: 800px;
 }
 .qxp-login span{
   font-size:30px;
@@ -829,14 +830,19 @@ section {
   margin: 0;
 }
 .business-login{
-  padding: 20px;
+  padding: 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
+  margin-right: 20px;
+  margin-left: 60px;
+  box-shadow: 3px 3px  #888888;
+  border-radius: 5px;
+  border: 2px solid #ccc;
 
 }
 .business-login:hover{
   background: #D5D8DC;
-  border-radius: 10px;
+
   cursor: pointer;
 }
 .business-login h2{
@@ -844,12 +850,7 @@ section {
   margin-top: 30px;
   font-size: 20px;
 }
-.meeting-login{
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
 
-}
 .meeting-login:hover{
   background: #D5D8DC;
   border-radius: 10px;
@@ -860,12 +861,7 @@ section {
   margin-top: 30px;
   font-size: 20px;
 }
-.academy-login{
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
 
-}
 .academy-login:hover{
   background: #D5D8DC;
   border-radius: 10px;
@@ -876,12 +872,7 @@ section {
   margin-top: 30px;
   font-size: 20px;
 }
-.higher-login{
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
 
-}
 .higher-login:hover{
   background: #D5D8DC;
   border-radius: 10px;
@@ -4999,6 +4990,43 @@ ul.comments-reply .comment-body {
   left: auto;
   right: -235px;
   top: -65px;
+}
+/* Features page */
+.features-top{
+  background: url(../images/featured/industries-1.jpg);
+  background-size: 1020px 800px;
+  padding: 20px;
+  height: 400px;
+  padding: 50px;
+  text-align: center;
+}
+.features-top h2{
+  color: #079DFF;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.features-top p{
+  color: #060646;
+  font-weight: 600;
+}
+.features {
+  margin-top: 10px;
+  background: #fff;
+}
+.features img{
+  width: 100%;
+  padding-top: 10px;
+}
+.features h2{
+  color: #079DFF;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.features span{
+  color: #060646;
+  font-weight: 900;
+  font-size: 15px;
 }
 
 /* Service

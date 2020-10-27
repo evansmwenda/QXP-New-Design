@@ -166,87 +166,18 @@
                      <!-- End of Dropdown menu -->
                   </li>
                   <!-- End Dropdown -->
-                  <li class="nav-item dropdown tw-megamenu-wrapper">
-                     <a class="nav-link" href="#" data-toggle="dropdown">
-                        Why QXP
-                        <span class="tw-indicator">
-                           <i class="fa fa-angle-down"></i>
-                        </span>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/features">
+                        Features & Benefits
+
                      </a>
-                     <div id="tw-megamenu" class="dropdown-menu tw-mega-menu">
-                        <div class="row">
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Standard Pricing</h3>
-                                 </li>
-                                 <li><a href="pricing.html">SEO Pricing</a></li>
-                                 <li><a href="#">Ecommerce SEO</a></li>
-                                 <li><a href="#">Enterprise SEO</a></li>
-                                 <li><a href="#">Local SEO</a></li>
-                                 <li><a href="#">SEO Audits</a></li>
-                                 <li><a href="#">PPC Management</a></li>
-                                 <li><a href="#">SEO Link Buildings</a></li>
-                              </ul>
-                              <!-- End UL -->
-                           </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Elements One</h3>
-                                 </li>
-                                 <li><a href="pricing.html">Addon list 1</a></li>
-                                 <li><a href="#">Addon list 2</a></li>
-                                 <li><a href="#">Addon list 3</a></li>
-                                 <li><a href="#">Addon list 4</a></li>
-                                 <li><a href="#">Addon list 5</a></li>
-                                 <li><a href="#">Addon list 6</a></li>
-                              </ul>
-                              <!-- End UL -->
-                           </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Elements Two</h3>
-                                 </li>
-                                 <li><a href="#">Addon list 7</a></li>
-                                 <li><a href="#">Addon list 8</a></li>
-                                 <li><a href="#">Addon list 9</a></li>
-                                 <li><a href="#">Addon list 10</a></li>
-                              </ul>
-                              <!-- End Ul -->
-                           </div>
-                           <!-- End Col -->
-                           <div class="col-md-12 col-lg-3 no-padding">
-                              <ul>
-                                 <li class="tw-megamenu-title">
-                                    <h3>Site review</h3>
-                                 </li>
-                                 <li>
-                                    <p>Start working with the best company that provide you everything you need.</p>
-                                 </li>
-                              </ul>
-                              <!-- End UL -->
-                           </div>
-                           <!-- End Col -->
-                        </div>
-                        <!-- End Row -->
-                     </div>
                      <!-- End of Mega menu -->
                   </li>
                   <!-- End MegaMenu -->
-                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="#" data-toggle="dropdown">
-                        Resources
-                        <span class="tw-indicator"><i class="fa fa-angle-down"></i></span>
+                  <li class="nav-item ">
+                     <a class="nav-link" href="#">
+                        Support Center
                      </a>
-                     <ul class="dropdown-menu tw-dropdown-menu">
-                        <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                        <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                        <li><a href="news-single.html">News Single</a></li>
-                     </ul>
                      <!-- End of Dropdown menu -->
                   </li>
                   <!-- End Dropdown -->
@@ -275,39 +206,37 @@
    <div class="modal-dialog modal-lg">
      <div class="modal-content qxp-login">
        <div class="container">
+          
           <div class="row pull-right">
              <span data-dismiss="modal">x</span>
           </div>
           <div class="row">
-             
-             <div class="col-md-6 business-login" onclick="location.href='#';">
+             <div class="col-md-5 business-login" onclick="location.href='#';">
                <img src="{{asset('images/logo/bgAsset9.svg')}}" width="100">
                <h2>QXP For Business</h2>
-               <p>Remodel how your business works with simple, smart and trusted architecture sure to streamline tasks and drive performance. Enabled video, audio and web conferencing solutions from any region.</p>
-             </div>
-             <div class="col-md-6 meeting-login"onclick="location.href='#';>
-               <img src="{{asset('images/logo/bgAsset7.svg')}}" width="100">
+               <p>Remain Connected, Stay Organized</p>
+               </div>
+             <div class="col-md-5 meeting-login business-login"onclick="location.href='#';">
+                <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
                <h2>QXP For Meetings</h2>
-               <p>Working from home couldn’t be more convenient with the best online meeting software, bringing a whole new meaning to face-to-face and making every connection better.</p>
-           
+              <p>Reaching Anyone, Anytime, Anywhere.</p>
              </div>
           </div>
-          <hr>
+    
           <div class="row">
-            <div class="col-md-6 academy-login" onclick="location.href='#';>
+            <div class="col-md-5 academy-login business-login" onclick="location.href='#';">
                <img src="{{asset('images/logo/bgAsset6.svg')}}" width="100">
                <h2>QXP For Academy</h2>
-               <p>Whether a few or hundreds of students, post-secondary students can attend classes virtually from wherever they are, access learning calendars and schedules, assignments, take tests and interact with their lecturers.</p>
-           
+              <p>QXP for Pre Primary, Primary and Secondary Education (K-12)</p>
             </div>
-            <div class="col-md-6 higher-login" onclick="location.href='#';>
+            <div class="col-md-5 higher-login business-login" onclick="location.href='#';">
                <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
                <h2>QXP For Higher Ed</h2>
-               <p>Whether a few or hundreds of students, post-secondary students can attend classes virtually from wherever they are, access learning calendars and schedules, assignments, take tests and interact with their lecturers.</p>
-           
+              <p>Immersively Engaging Tertiary Education</p>
             </div>
          </div>
        </div>
+      </div>
      </div>
    </div>
  </div>
