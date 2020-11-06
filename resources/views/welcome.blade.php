@@ -2,9 +2,9 @@
 
 @section('main')
 <!-- Start hero slider/ Owl Carousel Slider -->
-<div class="tw-hero-slider owl-carousel">
+{{-- <div class="tw-hero-slider owl-carousel">
 
-   {{-- <div class="slider-1 slider-map-pattern">
+   <div class="slider-1 slider-map-pattern">
       <!-- Slider arrow end -->
       <div class="slider-wrapper d-table">
          <div class="slider-inner d-table-cell">
@@ -33,16 +33,16 @@
          <!-- Slider Inner End -->
       </div>
       <!-- Slider Wrapper End -->
-   </div> --}}
+   </div>
    <!-- Slider 1 end -->
 
 
   <div class="slider-2">
-      {{-- <div class="slider-arrow">
+      <div class="slider-arrow">
          <img src="images/pattern_arrow2.png" alt="sliderArrow1">
          <img src="images/pattern_arrow1.png" alt="sliderArrow2">
          <img src="images/pattern_arrow3.png" alt="sliderArrow3">
-      </div> --}}
+      </div>
       <div class="slider-wrapper d-table">
          <div class="slider-inner d-table-cell">
             <div class="container">
@@ -75,7 +75,7 @@
    <!-- Slider 2 end -->
 
 
-   {{-- <div class="slider-3">
+   <div class="slider-3">
       <div class="slider-arrow">
          <img src="images/pattern_arrow2.png" alt="sliderArrow1">
          <img src="images/pattern_arrow1.png" alt="sliderArrow2">
@@ -109,11 +109,21 @@
          <!-- Slider Inner End -->
       </div>
       <!-- Slider Wrapper End -->
-   </div>  --}}
+   </div> 
    <!-- Slider 3 end -->
-</div>
+</div> --}}
 <!-- End Carousel -->
 
+{{-- LANDING PAGE DESIGN 2 --}}
+<div class="landing2">
+   <h2>Connect, Collaborate & Learn</h2>
+   <p>Qxp maximizes productivity through reliable tools -tailor-made for meeting and learning,anytime, anywhere, Across any device.</p>
+   <button style="background: #11BECC">SIGN UP, ITS FREE</button>
+   <button style="background: #FD6C03"> SEE PRICING</button>
+   <div class="row">
+      <img src="{{asset('images/featured/UX-Ui-01-01smaller-1.png')}}" alt="">
+   </div>
+</div>
 
 <section id="tw-features" class="tw-features-area">
    <div class="container">

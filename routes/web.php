@@ -22,6 +22,10 @@ Route::get('/industries','HomeController@industries');
 Route::get('/terms','HomeController@terms');
 Route::get('/privacy-statement','HomeController@privacy');
 Route::get('/features','HomeController@features');
+Route::get('/meeting','HomeController@meeting');
+Route::get('/login-for-meeting','HomeController@meetingLogin');
+
+Route::post('/schedule','HomeController@createMeeting');
 
 Route::group(['prefix'=>'industries'], function (){
 	//industries/education
@@ -39,3 +43,7 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/automotive','HomeController@automotive');
 	Route::get('/franchises','HomeController@franchises');
 } );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@meeting')->name('home');

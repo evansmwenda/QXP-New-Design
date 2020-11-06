@@ -22,7 +22,9 @@
      <!-- Col End -->
      <div class="col-md-8 ml-auto text-right">
         <div class="top-contact-info">
-           <span data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-user"></i>Login</span>
+         
+           <span><i class="fa fa-user"></i>Sign up</span>
+           <span><i class="fa fa-comment"></i><a href="/login-for-meeting"> Join Meeting</a></span>
            <span><i class="fa fa-envelope"></i>info@qxp-global.com</span>
         </div>
      </div>
@@ -184,7 +186,7 @@
                   
                </ul>
                <!-- End Navbar Nav -->
-               <button class="btn btn-warning">Contact Us</button>
+               <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-warning">Login</button>
             </div>
             <!-- End of navbar collapse -->
             
@@ -216,8 +218,8 @@
                <h2>QXP For Business</h2>
                <p>Remain Connected, Stay Organized</p>
                </div>
-             <div class="col-md-5 meeting-login business-login"onclick="location.href='#';">
-                <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
+             <div class="col-md-5 meeting-login business-login"onclick="location.href='/login-for-meeting';">
+                <img src="{{asset('images/logo/bgAsset7.svg')}}" width="100">
                <h2>QXP For Meetings</h2>
               <p>Reaching Anyone, Anytime, Anywhere.</p>
              </div>
