@@ -40,7 +40,7 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/organizations','HomeController@organizations');
 	Route::get('/sales','HomeController@sales');
 	Route::get('/startups','HomeController@startups');
-	Route::get('/sports-entertainment','HomeController@sports');
+	Route::get('/sports','HomeController@sports');
 	Route::get('/technology','HomeController@manufacturing');
 	Route::get('/automotive','HomeController@automotive');
 	Route::get('/franchises','HomeController@franchises');
