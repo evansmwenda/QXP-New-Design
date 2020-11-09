@@ -6,7 +6,7 @@
 <div class="row meeting-bg">
 
     <div class="meeting-form">
-  
+       
         <div class="meeting-user">
           <h2>Welcome To QXP-Meeting</h2>
           <hr>
@@ -19,21 +19,6 @@
           </form>
       </div>
        <div class="meeting-content">
-        <div class="row">
-          @if(Session::has("flash_message_error")) 
-          <div class="alert alert-success alert-block">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              <strong style="color:white;">{!! session('flash_message_error') !!}</strong>
-          </div> 
-        @endif 
-  
-        @if(Session::has("flash_message_success")) 
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong style="color:white;">{!! session('flash_message_success') !!}</strong>
-            </div> 
-        @endif
-        </div>
            <div class="row">
               <button><i class="fa fa-group"></i> Join Meeting</button> 
               <button data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-clock-o"></i> Create Meeting</button> 
@@ -41,13 +26,25 @@
            <hr>
            <br>
             <p> Please enter ID to join meeting or create a new meeting</p> 
-            <form action="">
-                <input type="text" class="form-control" required placeholder="Enter Meeting Id">
-                <button type="submit">Enter Meeting</button> 
+            <form method="post" action="/joinmeeting">{{ csrf_field() }}
+                <input type="text" class="form-control" name="meetingID" required placeholder="Enter Meeting Id">
+                <button type="submit">Join Meeting</button> 
             </form>
-         
+
        </div>
+       @if(Session::has("flash_message_error"))
+       <div class="Join-link">
+       {!! session('flash_message_error') !!}
+     </div>
+     @endif
+   
+     @if(Session::has("flash_message_success")) 
+     <div class="Join-link">
+      {!! session('flash_message_success') !!}
+     </div>
+     @endif
     </div>
+
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

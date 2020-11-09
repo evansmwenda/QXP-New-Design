@@ -814,8 +814,8 @@ section {
   background-repeat: repeat-x;
   background-size: 100% auto;
   height: 600px;
-
 }
+
 .login-pref{
   display: flex;
   justify-content: center;
@@ -831,11 +831,29 @@ section {
   height: 180px;
   background: #F4F6F6;
 }
+.Join-link{
+  margin-top: -120px;
+
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background:  #0099FE;;
+}
+.Join-link h2{
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
 .meeting-user h2{
   color: #0099FE;
   font-weight: 800;
   font-size: 20px;
 }
+.Join-link h3{
+  color: #060646;
+  font-weight: 500;
+  font-size: 15px;
+  }
 .meeting-user h3{
   color: #060646;
   font-weight: 500;
@@ -849,24 +867,68 @@ section {
 }
 .login-meeting-overlay{
   background-color: transparent;
-  background-image: linear-gradient(90deg, #11BECC 0%, #11BECCBA 50%);
+  background-image: linear-gradient(90deg, #0734FF 0%, #0734FFBA 50%);
   opacity: 1;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .meeting-custom-login{
   background: #fff;
-  margin-top: -90px;
+  /* margin-top: -0px; */
   border-radius: 5px;
+  width: 60%;
   padding: 30px;
 }
+.register-custom-login{
+  background: #fff;
+  /* margin-top: -0px; */
+  border-radius: 5px;
+  width: 60%;
+  padding: 30px;
+}
+.register-spacer img{
+  width: 100px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+    border-radius: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.register-custom-login h1{
+color:#060646;
+font-weight: 600;
+font-size: 20px;
+}
 .meeting-spacer{
-  margin-left: 50px;
+  margin-right: 50px;
+  float:right;
+  padding: 20px;
+  text-align: center;
+  width: 60%;
+  
+  border-radius: 10px;
+}
+.register-spacer{
+  margin-right: 50px;
+  float:right;
+  padding: 20px;
+  text-align: center;
+  width: 60%;
+  background: #079DFF;
+  border-radius: 10px;
 }
 .meeting-spacer h1{
 color: #fff;
 font-weight: 400;
 font-size:40px;
 }
+.register-spacer h1{
+  color: #fff;
+  font-weight: 400;
+  font-size:40px;
+  }
+  .register-spacer p{
+    color: #fff;
+  }
 .meeting-spacer p{
   color: #fff;
 }
@@ -1847,7 +1909,7 @@ li.dropdown:hover .tw-mega-menu {
 }
 .landing2 button{
   color:#fff;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 1px solid #fff;
   font-size: 13px;
   font-weight: bold;
@@ -1873,7 +1935,7 @@ li.dropdown:hover .tw-mega-menu {
 }
 .meeting-form{
 border: 1px solid #E5E8E8;
-height: 350px;
+
 border-radius: 5px;
 padding: 50px;
 margin-top: -120px;
@@ -6700,28 +6762,15 @@ ul.comments-reply .comment-body {
     .qxp-resources-bg .spacer button{
       display: inline-block;
      }
-
-
-
-
-
-
-
-
-/*    .qxp-education-bg{
-      height: 300px !important;
+    .register-spacer{
+      display: none;
     }
-
-    .qxp-education-bg .spacer h1{
-      font-size:21px !important;
+    .register-custom-login, .meeting-custom-login{
+    width: 100%;
     }
-    .qxp-education-bg .spacer h2{
-      color: #FFFFFF;
-      font-size: 22px !important;
-      line-height: 1.3em;
-      font-weight:600;
-    }*/
-
+    .meeting-spacer{
+      display: none;
+    }
     /*financial bg mobile*/
     .qxp-financial-bg{
       height: 300px !important;
@@ -6840,8 +6889,31 @@ ul.comments-reply .comment-body {
     .qxp-franchises-bg .spacer button{
       display: inline-block;
      }
-
-
+  /* LANDING PAGE RESPONSIVENESS */
+    .landing2{
+      padding: 20px;
+      }
+    .landing2 h2{
+      color: #0707A4;
+      font-family: "Hind Vadodara", Sans-serif;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+    }
+    .landing2 img{
+      width: 100%;
+      margin-left: 0px;
+      
+    }
+    .features-box{
+      background: #F4F6F6;
+    }
+    .tw-intro-area {
+      background-size: 336px auto;
+      background-repeat: no-repeat;
+      background-position: top right;
+      color: #757575;
+    }
 }
 /* CUSTOM CSS */
 .qxp-header-row{
