@@ -22,10 +22,10 @@
             <h3>Products</h3>
             <ul>
                <li> <span class="fa fa-angle-right"></span><a href="http://academy.qxp-global.com"> QXP Academy</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="http://higher-ed.qxp-global.com"> QXP Higher Ed</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="http://higher-ed.qxp-global.com" target="new"> QXP Higher Ed</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="http://business.qxp-global.com"> QXP Business</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="http://meetings.qxp-global.com"> QXP Meeting</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> Features</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/features"> Features</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
@@ -34,7 +34,7 @@
             <div class="footer-widget">
             <h3>Company</h3>
             <ul>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> Who We Are</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/about"> Who We Are</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Leadership</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Case Studies</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> News Media</a></li>

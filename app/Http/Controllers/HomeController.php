@@ -57,6 +57,9 @@ class HomeController extends Controller
             return view('meeting_login');
         }
     }
+    public function about(){
+        return view('about_us');
+    }
 
 
 

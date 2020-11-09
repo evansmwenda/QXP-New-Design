@@ -6914,6 +6914,13 @@ ul.comments-reply .comment-body {
       background-position: top right;
       color: #757575;
     }
+    .about-top{
+      margin-left: -150px;
+    }
+    .about-body{
+      margin-left: -150px;
+      margin-top: -20px;
+    }
 }
 /* CUSTOM CSS */
 .qxp-header-row{
@@ -7220,4 +7227,88 @@ ul.franchises {
 }
 ul.franchises li:before {
  content: '✓'; 
+}
+
+/* ABout us styling */
+.about-top{
+  
+  padding-left: 150px;
+  padding-top:50px ;
+  background: url(../images/featured/industries-1.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
+}
+.about-top h2{
+  color: #007bff;
+  font-weight: 800;
+}
+.about-top p{
+  color:#000
+}
+.about-body{
+  height: 500px;
+  padding-left: 150px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: rgba(50, 50, 50, 0.75);
+}
+.about-body h2{
+  color: #007bff;
+  font-size: 15px;
+  font-weight: 800;
+  padding-top: 70px;
+}
+.about-body p{
+  color: #000;
+
+}
+.about-body img {
+  padding-top: 70px;
+  width: 80%;
+  float: left;
+
+}
+.about-main{
+  background: #007bff;
+  
+  color: #fff;
+  padding-top:50px;
+  padding-bottom:50px;
+  padding-left: 100px;
+}
+.about-main h3{
+  color: #fff;
+}
+.about-main h4{
+  color: #fff;
+}
+.about-main p{
+  color: #fff;
+}
+.second-side{
+  float: right;
+}
+.about-main h2{
+  color: #578DFF;
+  font-family: "Muli", Sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 80px;
+  line-height: 50px;
+}
+.about-bottom{
+  padding: 100px;
+  text-align: center;
+}
+.about-bottom button{
+  border-radius: 30px;
+  background: #FD6C03;
+  padding: 10px;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.about-bottom h2{
+  color: #079DFF;
 }
