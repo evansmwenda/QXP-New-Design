@@ -6921,7 +6921,18 @@ ul.comments-reply .comment-body {
       margin-left: -150px;
       margin-top: -20px;
     }
+
 }
+
+
+
+
+
+
+
+
+
+
 /* CUSTOM CSS */
 .qxp-header-row{
   padding: 110px;
@@ -7311,4 +7322,48 @@ ul.franchises li:before {
 }
 .about-bottom h2{
   color: #079DFF;
+}
+.leader-top{
+  text-align: center;
+  /* background: url(../images/featured/industries-1.jpg); */
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  padding:130px;
+  background: #079DFF;
+
+}
+
+.leader-top h2{
+  color: #fff;
+}
+.leader-top p{
+  color: #060646;
+  font-style: bold;
+}
+.profiles{
+  border-radius: 3px;
+ margin-left: 60px;
+ margin-bottom: 20px;
+  width: 27%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 5px 5px 20px;
+}
+.profiles h3{
+  font-size: 20px;
+  font-weight: 200;
+}
+.profiles h4{
+  color: #0099FE;
+  font-size: 15px;
+}
+.profiles img{
+  border-radius: 500px;
+  -o-object-fit: cover;
+  width: 180px;
+  align-items: center;
+  object-fit: cover;
 }

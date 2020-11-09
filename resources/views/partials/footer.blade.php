@@ -35,7 +35,7 @@
             <h3>Company</h3>
             <ul>
                <li> <span class="fa fa-angle-right"></span><a href="/about"> Who We Are</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Leadership</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/leadership">Leadership</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Case Studies</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> News Media</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Careers</a></li>

@@ -25,6 +25,7 @@ Route::get('/features','HomeController@features');
 Route::get('/meeting','HomeController@meeting');
 Route::get('/login-for-meeting','HomeController@meetingLogin');
 Route::get('/about','HomeController@about');
+Route::get('/leadership','HomeController@leadership');
 
 Route::post('/schedule','HomeController@createMeeting');
 Route::post('/joinmeeting','HomeController@joinmeeting');

@@ -60,7 +60,9 @@ class HomeController extends Controller
     public function about(){
         return view('about_us');
     }
-
+    public function leadership(){
+        return view('leadership');
+    }
 
 
     // for the industries
