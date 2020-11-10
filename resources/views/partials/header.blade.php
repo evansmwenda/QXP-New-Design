@@ -75,38 +75,42 @@
                            <div class="col-md-8">
                               <h3>Products</h3>
                               <hr style="border-top: 1px solid #ccc">
-                                    <div class="row" >
+                                    <div class="row products-menu" onclick="location.href='http://academy.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset6.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10" style="padding-top: 15px;">
+                                       <div class="col-md-1"></div>
+                                       <div class="col-sm-9" style="padding-top: 15px;">
                                           For Pre-primary, Primary and Secondary Education
                                        </div>
                                     </div>   
-                                    <hr style="border-top: 1px solid #ccc">
-                                    <div class="row" style="margin:10px 0px;">
+                                    {{-- <hr style="border-top: 1px solid #ccc"> --}}
+                                    <div class="row products-menu" onclick="location.href='http://higher-ed.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset8.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10" style="padding-top: 15px;">
+                                       <div class="col-md-1"></div>
+                                       <div class="col-sm-9" style="padding-top: 15px;">
                                           For Institutes of Higher Learning
                                        </div>
                                     </div>  
-                                    <hr style="border-top: 1px solid #ccc">
-                                    <div class="row" style="margin:10px 0px;">
+                                    
+                                    <div class="row products-menu" onclick="location.href='http://business.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset9.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10" style="padding-top: 15px;">
+                                       <div class="col-md-1"></div>
+                                       <div class="col-sm-9" style="padding-top: 15px;">
                                           Video Conferencing, Messaging & Content Sharing
                                        </div>
                                     </div>   
-                                    <hr style="border-top: 1px solid #ccc">
-                                    <div class="row">
+                                    {{-- <hr style="border-top: 1px solid #ccc"> --}}
+                                    <div class="row products-menu" onclick="location.href='{{url('/login-for-meeting')}}';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset7.svg')}}" width="85">
                                        </div>
-                                       <div class="col-sm-10" style="padding-top: 15px;">
+                                       <div class="col-md-1"></div>
+                                       <div class="col-sm-9" style="padding-top: 15px;">
                                           Suited For All Businesses Trainings and Webinars
                                        </div>
 
@@ -186,7 +190,14 @@
                   
                </ul>
                <!-- End Navbar Nav -->
-               <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-warning">Login</button>
+               @if (\Auth::check())
+                  <form action="{{ route('logout') }}" method="POST">
+                     @csrf
+                     <button type="submit" class="btn btn-warning">Logout</button>
+                   </form>
+               @else
+                  <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-warning">Login</button>
+               @endif
             </div>
             <!-- End of navbar collapse -->
             

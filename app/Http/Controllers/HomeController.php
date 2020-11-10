@@ -8,7 +8,18 @@ use App\LiveClasses;
 use App\LiveClassRecordings;
 use GuzzleHttp\Client;
 use GuzzleHttp\Ring\Exception\ConnectException;
+use App\Package;
+use App\library\OAuth;
 use DB;
+use App\Subscription;
+use App\Transaction as MyTransactions;
+use App\User;
+use DateTime;
+use DateInterval;
+use DatePeriod;
+use Session;
+use App\Http\Requests;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class HomeController extends Controller
 {
@@ -17,6 +28,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+        // use Illuminate\Support\Facades\Request;
 
     /**
      * Show the application dashboard.
@@ -27,7 +39,7 @@ class HomeController extends Controller
 
     public function meetingLogin(){
         if (\Auth::check()) {
-            return view('meeting');
+            return view('meeting')->with('flash_message_success','logged in');
         }else{
             return view('meeting_login');
         }
@@ -52,7 +64,7 @@ class HomeController extends Controller
     public function meeting(){
     
         if (\Auth::check()) {
-            return view('meeting');
+        return view('meeting');
         }else{
             return view('meeting_login');
         }
@@ -272,7 +284,7 @@ class HomeController extends Controller
         $live_class = LiveClasses::where('meetingID',$meetingID)->first();
         // dd($live_class->title); = "First Class"
         if($live_class == null){
-            return redirect()->back()->with('flash_message_error','An error occurred when trying to join the class');
+            return redirect()->back()->with('flash_message_error','An error occurred when trying to join the meeting');
         }
 
         //check if user is presenter by default or not 
@@ -313,6 +325,11 @@ class HomeController extends Controller
 
         // dd($getJoinURL);
         return redirect()->away($getJoinURL);
+    }
+
+    // Meetings subscriptions
+    public function subscription(){
+
     }
 }
 

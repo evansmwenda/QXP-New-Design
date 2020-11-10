@@ -44,6 +44,7 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/technology','HomeController@manufacturing');
 	Route::get('/automotive','HomeController@automotive');
 	Route::get('/franchises','HomeController@franchises');
+	Route::get('/manufacturing','HomeController@manufacturing');
 } );
 
 Auth::routes();

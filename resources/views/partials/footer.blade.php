@@ -54,6 +54,7 @@
                <li> <span class="fa fa-angle-right"></span><a href="/industries/financial">Financial Institutions</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="/industries/startups">Start Ups</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="/industries/sports">Sports & Entertainment</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/industries/manufacturing">Manufacturing</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->

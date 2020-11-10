@@ -10,7 +10,8 @@
                       <p>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</p> 
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-2"></div>
+                <div class="col-sm-5">
                     <div class="meeting-custom-login">
                         <div class="text-center">
                             <img class="text-center" src="{{asset('images/logo/bgAsset7.svg')}}" width="100" height="100">
@@ -48,7 +49,9 @@
                             </div>
                             
                             <div class="form-group">
-                                <a href="{{ route('password.request') }}">Lost your password? | Register</a>
+                                <a href="{{ route('password.request') }}">Lost your password?</a>
+                                <br>
+                            <a href="{{url('/register')}}">Sign Up</a>
                             </div>
 
                           </form>

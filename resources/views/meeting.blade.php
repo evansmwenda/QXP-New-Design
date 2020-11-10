@@ -6,43 +6,61 @@
 <div class="row meeting-bg">
 
     <div class="meeting-form">
-       
-        <div class="meeting-user">
-          <h2>Welcome To QXP-Meeting</h2>
-          <hr>
-          <h3>User: {{\Auth::user()->name}}</h3>
-          <hr>
-          
-          <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button type="submit">Logout</button>
-          </form>
+      <div class="row meeting-user">
+        <div class="col-sm-4"><h1>Welcome to QXP-Meeting</h1>
+        </div>
+        <div class="col-sm-6">Logged in as: {{\Auth::user()->name}}</div>
+        
       </div>
-       <div class="meeting-content">
-           <div class="row">
-              <button><i class="fa fa-group"></i> Join Meeting</button> 
-              <button data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-clock-o"></i> Create Meeting</button> 
+      <div class="row">
+        <div class="meeting-menu">
+          <ul>
+            
+            <li onclick="createMeeting()">Create Meeting</li>
+            <li onclick="subscription()">Renew Subsription</li>
+          </ul>
+        </div>
+        <div class="meeting-body">
+           {{-- create meeting --}}
+           <div class="meeting-content" id="create">
+              <h2>Creeate or Join Meeting</h2>
+              <div class="row">
+                {{-- <button><i class="fa fa-group"></i> Join Meeting</button>  --}}
+                <button style="background: #0099FE" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-clock-o"></i> Create Meeting</button> 
+              </div>
+              <hr>
+              <p> Please enter ID to join meeting or create a new meeting</p> 
+              <form method="post" action="/joinmeeting">{{ csrf_field() }}
+                  <input type="text" class="form-control col-md-8" name="meetingID" required placeholder="Enter Meeting Id">
+                  <button type="submit" style="background:#FD6C03" >Join Meeting</button> 
+              </form>
+           </div>
+           {{-- Subscribe Here --}}
+           <div class="meeting-subscription" id="subscribe">
+            <h2>Renew Subscription</h2>
+            @if(isset($iframe_src))
+            <div class="col-xs-12 col-sm-12">
+                <iframe src="{{ $iframe_src }}" width="100%" height="700px" scrolling="no" frameBorder="0">
+                  <p>Browser unable to load iFrame</p>
+                </iframe>
+            </div>
+          @endif
+  
           </div>
-           <hr>
-           <br>
-            <p> Please enter ID to join meeting or create a new meeting</p> 
-            <form method="post" action="/joinmeeting">{{ csrf_field() }}
-                <input type="text" class="form-control" name="meetingID" required placeholder="Enter Meeting Id">
-                <button type="submit">Join Meeting</button> 
-            </form>
+         {{-- Error Display  --}}
+         @if(Session::has("flash_message_error"))
+         <div class="errors">
+            {!! session('flash_message_error') !!}
+         </div>
+         @endif
+         @if(Session::has("flash_message_success")) 
+         <div class="errors">
+          {!! session('flash_message_success') !!}
+         </div>
+         @endif
 
-       </div>
-       @if(Session::has("flash_message_error"))
-       <div class="Join-link">
-       {!! session('flash_message_error') !!}
-     </div>
-     @endif
-   
-     @if(Session::has("flash_message_success")) 
-     <div class="Join-link">
-      {!! session('flash_message_success') !!}
-     </div>
-     @endif
+        </div>
+      </div>
     </div>
 
 </div>
@@ -74,4 +92,14 @@
       </div>
     </div>
   </div>
+  <script>
+    function createMeeting(){
+      document.getElementById('subscribe').style.display="none";
+      document.getElementById('create').style.display="block";
+    }
+    function subscription(){
+      document.getElementById('create').style.display="none";
+      document.getElementById('subscribe').style.display="block";
+    }
+  </script>
 @endsection
