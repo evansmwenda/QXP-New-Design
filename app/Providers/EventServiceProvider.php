@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\PaymentSuccessfulEvent' => [
             'App\Listeners\SendPaymentNotificationListener',
         ],
+        'App\Events\NewUserRegisteredEvent' => [
+            'App\Listeners\SendRegistrationEmailListener',
+        ],
     ];
 
     /**
