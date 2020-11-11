@@ -24,6 +24,8 @@ use AfricasTalking\SDK\AfricasTalking;
 
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MeetingEmail;
 
 
 class HomeController extends Controller
@@ -251,12 +253,25 @@ class HomeController extends Controller
                     //UNCOMMENT THIS
                     // $update = User::where('email',$user['email'])->update(['token'=>$meetingID]);
     
-    
-                    // sendMail(['template'=>get_option('user_create_meeting_email'),'recipent'=>[$user['email']]]);
+                    $data=array(
+                        'message'=>'Meeting has been created successfully,Meeting ID is',
+                        'ID'=>$meetingID,
+                        'link'=>$url
+                    );
+                    Mail::to($user['email'])->send(new MeetingEmail($data));
+                    // if( count(Mail::failures()) > 0 ) {
+ 
+                    //     return "Failed";
+             
+                    //  } else{
+                    //      return "Mail send";
+                    //  }
+                     //sendMail(['template'=>get_option('user_create_meeting_email'),'recipent'=>[$user['email']]]);
     
                     // return redirect()->back()->with('msg',trans('main.thanks_class'));
                     // $class_string = 'Meeting created successfully!. Share -> '.$meetingID.' for others to join. Meeting details sent to your E-mail Address';
                     $class_string = "Meeting created successfully!.<br> ID: -> ".$meetingID."<br>Link. <a href='$url'>$url</a>";
+                   
                     return redirect()->back()->with('flash_message_success',$class_string);
     
                 }else{
@@ -269,6 +284,7 @@ class HomeController extends Controller
             }  
 
     }
+
     public function joinmeeting(Request $request){
         return $this->join_meeting($request->meetingID);
     }
