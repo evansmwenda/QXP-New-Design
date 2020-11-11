@@ -1208,6 +1208,17 @@ span.tw-indicator:after {
   display: none;
   
 }
+.solutions{
+  background: #f3f3f3;
+}
+.solutions ul li a{
+  color: #060646;
+  margin-top: 10px;
+}
+.solutions ul li a span{
+  padding-right: 10px;
+ height: 20px;
+}
 .products-menu{
  margin: 20px;
  border-bottom: 1px solid #EAECEE;
@@ -7539,12 +7550,12 @@ background: #079DFF;
 background: #fff;
 padding-top: 30px;
 padding-left: 150px;
-
 margin-top: -70px;
 margin-left: 5%;
 border-radius: 5px;
 box-shadow: 5px 5px 20px;
 width: 90%;
+
 }
 .get-started-content h4{
   color: #000;
@@ -7563,6 +7574,7 @@ width: 90%;
 .get-started-content ul li{
 padding: 9px;
 cursor: pointer;
+color: #060646;
 margin-right: 130px;
 border-bottom: 1px solid rgb(223, 220, 220);
 }
