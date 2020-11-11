@@ -118,8 +118,8 @@
 <div class="landing2">
    <h2>Connect, Collaborate & Learn</h2>
    <p>Qxp maximizes productivity through reliable tools -tailor-made for meeting and learning,anytime, anywhere, Across any device.</p>
-   <button style="background: #11BECC">SIGN UP, ITS FREE</button>
-   <button style="background: #FD6C03"> SEE PRICING</button>
+   <a href="/register"><button style="background: #11BECC">SIGN UP, ITS FREE</button></a>
+   <a href="/pricing"><button style="background: #FD6C03"> SEE PRICING</button></a>
    <div class="row">
       <img src="{{asset('images/featured/UX-Ui-01-01smaller-1.png')}}" alt="">
    </div>

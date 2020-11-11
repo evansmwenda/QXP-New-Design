@@ -7,8 +7,8 @@
          </div>
          <div class="col-md-4 my-footer">
             <div class="row">
-                  <button class="btn btn-primary">SIGN UP ITS FREE</button>
-                  <button class="btn btn-warning" style="margin-left: 6px;">SEE PRICING</button>
+                  <a href="/register"><button class="btn btn-primary">SIGN UP ITS FREE</button></a>
+                  <a href="pricing"><button class="btn btn-warning" style="margin-left: 6px;">SEE PRICING</button></a>
             </div>
          </div>
       </div>
