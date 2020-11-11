@@ -18,7 +18,7 @@
           <ul>
             <li onclick="meetingPlans()">Meeting Plans</li>
             <li onclick="createMeeting()">Create Meeting</li>
-            <li onclick="location.href='home/subscribe'">Renew Subsription</li>
+            <li onclick="location.href='/home/subscribe'">Renew Subsription</li>
           </ul>
         </div>
         <div class="meeting-body">

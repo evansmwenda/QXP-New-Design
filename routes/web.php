@@ -30,6 +30,7 @@ Route::get('/get-started','HomeController@getstarted');
 
 Route::post('/schedule','HomeController@createMeeting');
 Route::post('/joinmeeting','HomeController@joinmeeting');
+Route::get('/user/live/{id}','HomeController@join_meeting');
 Route::group(['prefix'=>'industries'], function (){
 	//industries/education
 	Route::get('/education','HomeController@education');

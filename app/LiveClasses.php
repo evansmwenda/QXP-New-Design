@@ -9,5 +9,5 @@ class LiveClasses extends Model
     //
     public $timestamps = false;
     protected $table = 'live_classes';
-    public $fillable = ['id','title','classTime','meetingID','attendeePW','moderatorPW','owner'];
+    public $fillable = ['id','title','classTime','meetingID','course_id','attendeePW','moderatorPW','owner'];
 }
