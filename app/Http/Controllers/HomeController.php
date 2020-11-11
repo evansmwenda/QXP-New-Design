@@ -19,6 +19,7 @@ use DateInterval;
 use DatePeriod;
 use Session;
 use App\Events\PaymentSuccessfulEvent;
+use App\Events\NewUserRegisteredEvent;
 use AfricasTalking\SDK\AfricasTalking;
 
 
@@ -44,6 +45,16 @@ class HomeController extends Controller
             return view('meeting_login');
         }
         
+    }
+    public function test(){
+        $data=array(
+            'message'=>'Meeting has been created successfully,Meeting ID is',
+            'ID'=>"meetingID",
+            'link'=>"url",
+            'email'=>"evansmwenda.em@gmail.com"
+        );
+        // dd($data);
+        event(new NewUserRegisteredEvent($data));
     }
     
 
@@ -256,9 +267,13 @@ class HomeController extends Controller
                     $data=array(
                         'message'=>'Meeting has been created successfully,Meeting ID is',
                         'ID'=>$meetingID,
-                        'link'=>$url
+                        'link'=>$url,
+                        'email'=>$user['email']
                     );
-                    Mail::to($user['email'])->send(new MeetingEmail($data));
+
+                    //send email notification for welcome and account activation
+                    event(new NewUserRegisteredEvent($data));
+                    // Mail::to($user['email'])->send(new MeetingEmail($data));
                     // if( count(Mail::failures()) > 0 ) {
  
                     //     return "Failed";
@@ -656,6 +671,8 @@ class HomeController extends Controller
         
         //transaction status
         $elements = preg_split("/=/",substr($response, $header_size));
+
+        // dd($elements);
         $pesapal_response_data = $elements[1];
         
         return $pesapal_response_data;
