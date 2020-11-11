@@ -26,7 +26,8 @@
     },
     "autoload": {
         "classmap": [
-            "database",
+            "database/seeds",
+            "database/factories",
             "app/library/"
         ],
         "files": [

@@ -59,4 +59,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@meeting')->name('home');
 Route::get('/home/subscribe', 'HomeController@subscribe');
 Route::get('/home/subscribe/{id}', 'HomeController@startSubscription');
+// Route::get('/home/subscribe/redirect', 'HomeController@getCallback');
 Route::get('/payments/redirect', 'HomeController@getCallback');

@@ -40,13 +40,7 @@ class HomeController extends Controller
         }
         
     }
-    public function subscribe(){
-        if (\Auth::check()) {
-        return view('subscribe');
-        }else{
-            return view('meeting_login');
-        }
-    }
+    
 
     public function pricing(){
     	return view('plans');
@@ -333,10 +327,15 @@ class HomeController extends Controller
     }
 
     // Meetings subscriptions
+    public function subscribe(){
+        if (\Auth::check()) {
+        return view('payments.subscribe');
+        }else{
+            return view('meeting_login');
+        }
+    }
     public function startSubscription($id=null){
         $user = \Auth::user();
-        
-
         $packages = Package::where('id',$id)->get();
         // dd($packages);
         
@@ -440,7 +439,7 @@ class HomeController extends Controller
 
         // return view('user.payments.iframe')->with(compact('iframe_src','amount','package_name'));
 
-         return view('students.subscribe')->with(compact('iframe_src','amount','package_name'));
+         return view('payments.subscribe')->with(compact('iframe_src','amount','package_name'));
     }
     public function getCallback(Request $request){
         $user= \Auth::user();
@@ -482,7 +481,7 @@ class HomeController extends Controller
         //the status has changed for UNKNOWN to PENDING/COMPLETED/FAILED
 
         //make query to check status here
-        return view('students.redirect')->with(compact('status','reference','tracking_id'));
+        return view('payments.redirect')->with(compact('status','reference','tracking_id'));
     }
     public function checkStatusUsingTrackingIdandMerchantRef($pesapalMerchantReference,$pesapalTrackingId){
         //checkStatusUsingTrackingIdandMerchantRef($pesapalMerchantReference,$pesapalTrackingId)
