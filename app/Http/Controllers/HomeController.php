@@ -18,28 +18,22 @@ use DateTime;
 use DateInterval;
 use DatePeriod;
 use Session;
+
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class HomeController extends Controller
 {
-                /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-        // use Illuminate\Support\Facades\Request;
 
+    use AuthenticatesUsers;
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
-    //
-
     public function meetingLogin(){
         if (\Auth::check()) {
-            return view('meeting')->with('flash_message_success','logged in');
+            return view('meeting');
         }else{
             return view('meeting_login');
         }
@@ -58,12 +52,16 @@ class HomeController extends Controller
     public function privacy(){
         return view('privacy');
     }
+    public function getstarted(){
+        return view('get_started');
+    }
     public function features(){
         return view('features');
     }
     public function meeting(){
     
         if (\Auth::check()) {
+  
         return view('meeting');
         }else{
             return view('meeting_login');
@@ -330,6 +328,13 @@ class HomeController extends Controller
     // Meetings subscriptions
     public function subscription(){
 
+    }
+    //for support pages
+    public function start(){
+        return view('support.get_started');
+    }
+    public function qxpmeetings(){
+        return view('support.qxp_meetings');
     }
 }
 

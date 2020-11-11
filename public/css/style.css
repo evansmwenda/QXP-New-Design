@@ -5731,6 +5731,7 @@ ul.comments-reply .comment-body {
 }
 .top-contact-info a{
   color:#fff;
+  font-size: 14px;
 }
 
 .tw-top-bar-angle {
@@ -5762,7 +5763,7 @@ ul.comments-reply .comment-body {
 
 .top-bar-angle-info i {
   color: #fff;
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 5px;
 }
 
@@ -7432,4 +7433,88 @@ ul.franchises li:before {
   width: 180px;
   align-items: center;
   object-fit: cover;
+}
+
+/* GET STARTED STYLING */
+.get-top{
+padding: 130px;
+background: #079DFF;
+}
+.get-top-details{
+  padding: 100px;
+  background: #079DFF;
+  text-align: center;
+
+  }
+  .get-top-details h2{
+    font-weight: 900px;
+    color: #fff;
+    font-size: 30px;
+    
+  }
+.get-top h2{
+  font-weight: 900px;
+  color: #fff;
+  font-size: 30px;
+  
+}
+.get-top input{
+ padding:8px;
+ border-radius: 2px;
+ border: 1px solid transparent;
+}
+.get-top button{
+  margin-left: -10px;
+  padding: 8px;
+  border: 1px solid transparent;
+  background: #060646;
+  border-radius: 2px;
+  color: rgb(126, 115, 115);
+  width: 50px;
+}
+.get-started-bg{
+
+  background: url(../images/featured/industries-1.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
+}
+.get-started-content{
+background: #fff;
+padding-top: 30px;
+padding-left: 150px;
+
+margin-top: -70px;
+margin-left: 5%;
+border-radius: 5px;
+box-shadow: 5px 5px 20px;
+width: 90%;
+}
+.get-started-content h4{
+  color: #000;
+  font-size: 15px;
+  font-weight: 600px;
+}
+.get-started-content ul{
+  list-style:none;
+  color: #3f3e3e;
+
+}
+.get-started-content ul li span{
+  padding-right: 10px;
+  color: #0099FE;
+}
+.get-started-content ul li{
+padding: 9px;
+cursor: pointer;
+margin-right: 130px;
+border-bottom: 1px solid rgb(223, 220, 220);
+}
+.get-started-content ul li a{
+  color: #3f3e3e;
+}
+.get-started-content ul li a:hover{
+  color: #0099FE;
+}
+.collapse{
+  padding: 20px;
 }
