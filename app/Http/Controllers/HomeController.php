@@ -442,7 +442,7 @@ class HomeController extends Controller
 
         // return view('user.payments.iframe')->with(compact('iframe_src','amount','package_name'));
 
-         return view('students.subscribe')->with(compact('iframe_src','amount','package_name'));
+         return view('subscribe')->with(compact('iframe_src','amount','package_name'));
     }
     public function getCallback(Request $request){
         $user= \Auth::user();

@@ -1936,9 +1936,10 @@ li.dropdown:hover .tw-mega-menu {
 .meeting-bg{
   justify-content: center;
   /* background-image: url('../images/featured/industries-1.jpg'); */
-  height:300px;
+  height:auto;/*300px;*/
   color: #060646;
   background: #D5DBDB;
+  margin-bottom: 50px;
 }
 .meeting-form{
 border: 1px solid #E5E8E8;
