@@ -815,6 +815,31 @@ section {
   background-size: 100% auto;
   height: 600px;
 }
+.meeting-sm-header {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  color: #fff;
+
+  background: #11BECC;
+}
+.meeting-sm-header h3{
+  color: #fff;
+}
+
+.meeting-sm-body button{
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 70px;
+  width: 150px;
+  background: #0099FE;
+  border: 1px solid transparent;
+}
 
 .login-pref{
   display: flex;
@@ -1935,8 +1960,8 @@ li.dropdown:hover .tw-mega-menu {
 }
 .meeting-bg{
   justify-content: center;
+  height: 600px;
   /* background-image: url('../images/featured/industries-1.jpg'); */
-  height:300px;
   color: #060646;
   background: #D5DBDB;
 }
@@ -1962,7 +1987,7 @@ position: relative;
 .meeting-menu{
  margin-top: 20px;
   border-radius: 5px;
-  background: #F4F6F6;
+
   width: 30%;
 }
 .meeting-menu ul{
@@ -1974,6 +1999,7 @@ position: relative;
   border-bottom: 1px solid #EAECEE;
   margin-right: 30px;
   margin-top: 30px;
+  background: #E5E8E8;
   padding:8px;
   border-radius: 3px;
   
@@ -1984,6 +2010,34 @@ position: relative;
 .meeting-body{
   margin-top: 20px;
   width: 60%;
+
+}
+.meeting-sm-body ul{
+  list-style: none;
+}
+.meeting-sm-body ul li span{
+  color: #0099FE;
+  padding-right: 5px;
+}
+.meeting-sm-body ul li{
+  font-size: 15px;
+  color: #000;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #E5E8E8;
+}
+.meeting-sm-body h2{
+  color: #060646;
+  font-size: 25px;
+  text-align: center;
+}
+.meeting-basic{
+  border: 1px solid #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 48%;
+float: left;
+margin-right: 10px;
+  margin-bottom: 20px;
 }
 .meeting-content h2{
   color: #0099FE;
@@ -1992,6 +2046,7 @@ position: relative;
 }
 .meeting-content{
 padding-left: 30px;
+display: none;
 }
 .meeting-content button{
   border-radius: 30px;
