@@ -30,6 +30,7 @@ Route::get('/get-started','HomeController@getstarted');
 
 Route::post('/schedule','HomeController@createMeeting');
 Route::post('/joinmeeting','HomeController@joinmeeting');
+Route::get('/user/live/{id}','HomeController@join_meeting');
 Route::group(['prefix'=>'industries'], function (){
 	//industries/education
 	Route::get('/education','HomeController@education');
@@ -57,3 +58,8 @@ Route::get('qxp_meetings','HomeController@qxpmeetings');
 Auth::routes();
 
 Route::get('/home', 'HomeController@meeting')->name('home');
+Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
+Route::get('/home/subscribe', 'HomeController@subscribe');
+Route::get('/home/subscribe/{id}', 'HomeController@startSubscription');
+// Route::get('/home/subscribe/redirect', 'HomeController@getCallback');
+Route::get('/payments/redirect', 'HomeController@getCallback');

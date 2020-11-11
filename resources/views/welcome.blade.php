@@ -118,8 +118,8 @@
 <div class="landing2">
    <h2>Connect, Collaborate & Learn</h2>
    <p>Qxp maximizes productivity through reliable tools -tailor-made for meeting and learning,anytime, anywhere, Across any device.</p>
-   <a href="/register"><button style="background: #11BECC">SIGN UP, ITS FREE</button></a>
-   <a href="/pricing"><button style="background: #FD6C03"> SEE PRICING</button></a>
+   <button style="background: #11BECC" onclick="location.href='/register'">SIGN UP, ITS FREE</button>
+   <button style="background: #FD6C03" onclick="location.href='/pricing'"> SEE PRICING</button>
    <div class="row">
       <img src="{{asset('images/featured/UX-Ui-01-01smaller-1.png')}}" alt="">
    </div>
@@ -149,7 +149,7 @@
                <h3 style="color: #f4ba00">Academy</h3>
                <p class="plan-detail">For Pre-primary, Primary and Secondary Education
                </p>
-               <a href="#" class="tw-readmore">Learn More
+               <a href="http://academy.qxp-global.com" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
@@ -163,7 +163,7 @@
          </div>
          <!-- End of Academy -->
          <div class="col-lg-3 col-md-12  wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".4s">
-            <div class="features-box" id="higher1">
+            <div class="features-box" id="higher1" >
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
                      <img src="images/icons/higherIcon.svg" alt="">
@@ -174,7 +174,7 @@
                <h3 style="color: #71CA52">Higher Ed</h3>
                <p class="plan-detail">For Institutes of Higher Learning
                </p>
-               <a href="#" class="tw-readmore">Learn More
+               <a href="http://higher-ed.qxp-global.com" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
@@ -200,7 +200,7 @@
                <h3 style="color: #11BECC">Meeting</h3>
                <p class="plan-detail">Video Conferencing, Realtime Messaging & Content Sharing
                </p>
-               <a href="#" class="tw-readmore">Learn More
+               <a href="/" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
@@ -214,7 +214,7 @@
          </div>
          <!-- End Meering  -->
          <div class="col-lg-3 col-md-12  wow fadeInUp" data-wow-duration="1.9s" data-wow-delay=".6s">
-            <div class="features-box" id="business1">
+            <div class="features-box" id="business1" >
                <div class="features-icon d-table">
                   <div class="features-icon-inner d-table-cell">
                      <img src="images/icons/businessIcon.svg" alt="">
@@ -225,7 +225,7 @@
                <h3 style="color: #C92519">For Business</h3>
                <p class="plan-detail">Suited For All Business Trainings and Webinars
                </p>
-               <a href="#" class="tw-readmore">Learn More
+               <a href="http://business.qxp-global.com" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
