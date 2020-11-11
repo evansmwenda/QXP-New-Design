@@ -26,6 +26,7 @@ Route::get('/meeting','HomeController@meeting');
 Route::get('/login-for-meeting','HomeController@meetingLogin');
 Route::get('/about','HomeController@about');
 Route::get('/leadership','HomeController@leadership');
+Route::get('/get-started','HomeController@getstarted');
 
 Route::post('/schedule','HomeController@createMeeting');
 Route::post('/joinmeeting','HomeController@joinmeeting');
@@ -46,6 +47,12 @@ Route::group(['prefix'=>'industries'], function (){
 	Route::get('/franchises','HomeController@franchises');
 	Route::get('/manufacturing','HomeController@manufacturing');
 } );
+
+Route::group(['prefix'=>'support'],function(){
+// inbuid support pages
+Route::get('get_started','HomeController@start');
+Route::get('qxp_meetings','HomeController@qxpmeetings');
+});
 
 Auth::routes();
 

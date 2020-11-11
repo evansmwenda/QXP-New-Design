@@ -12,10 +12,11 @@
         <div class="col-sm-6">Logged in as: {{\Auth::user()->name}}</div>
         
       </div>
+      <hr>
       <div class="row">
         <div class="meeting-menu">
           <ul>
-            
+            <li onclick="createMeeting()">QXP-Meetings</li>
             <li onclick="createMeeting()">Create Meeting</li>
             <li onclick="location.href='home/subscribe'">Renew Subsription</li>
           </ul>

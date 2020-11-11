@@ -1,7 +1,7 @@
 <div class="tw-top-bar">
 
   <div class="row">
-     <div class="col-md-2 text-left leftContainer">
+     <div class="col-md-3 text-left leftContainer">
         <div class="row">
            <div class="col-md-3 top-social-links">
               <a href="https://www.facebook.com/QXPGLOBAL"><i class="fa fa-facebook "></i></a>                
@@ -13,7 +13,7 @@
               <a href="https://www.twitter.com/qxpglobal"><i class="fa fa-twitter "></i></a>                
            </div>
            <div class="col-md-3 top-social-links">
-              <a href="https://www.instagram.com/qxpglobal"><i class="fa fa-instagram "></i></a>                
+              <a href="https://www.instagram.com/qxpglobal"><i class="fa fa-instagram fa-2x"></i></a>                
            </div>
         </div>
 
@@ -22,10 +22,9 @@
      <!-- Col End -->
      <div class="col-md-8 ml-auto text-right">
         <div class="top-contact-info">
-         
            <span><i class="fa fa-user"></i><a href="/register">Sign up</a></span>
            <span><i class="fa fa-comment"></i><a href="/login-for-meeting"> Join Meeting</a></span>
-           <span><i class="fa fa-envelope"></i>info@qxp-global.com</span>
+           <span><i class="fa fa-envelope"></i><a href="#">info@qxp-global.com</a></span>
         </div>
      </div>
      <!-- Col End -->
@@ -181,7 +180,7 @@
                   </li>
                   <!-- End MegaMenu -->
                   <li class="nav-item ">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link" href="/get-started">
                         Support Center
                      </a>
                      <!-- End of Dropdown menu -->
