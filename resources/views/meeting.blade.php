@@ -18,7 +18,7 @@
           <ul>
             <li onclick="meetingPlans()">Meeting Plans</li>
             <li onclick="createMeeting()">Create Meeting</li>
-            <li onclick="subscription()">Renew Subsription</li>
+            <li onclick="location.href='home/subscribe'">Renew Subsription</li>
           </ul>
         </div>
         <div class="meeting-body">
@@ -68,7 +68,7 @@
           </div>
            {{-- create meeting --}}
            <div class="meeting-content" id="create">
-              <h2>Creeate or Join Meeting</h2>
+              <h2>Create or Join Meeting</h2>
               <div class="row">
                 {{-- <button><i class="fa fa-group"></i> Join Meeting</button>  --}}
                 <button style="background: #0099FE" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-clock-o"></i> Create Meeting</button> 
@@ -83,6 +83,11 @@
            {{-- Subscribe Here --}}
            <div class="meeting-subscription" id="subscribe">
             <h2>Renew Subscription</h2>
+              <p>
+                Package: Student - QXP Academy <span style="color:green">(Active)</span>
+              </p>
+              <p class="card-text">Expiry Date : <span style="color:green;">09-12-2020 10:00AM</span></p>
+              <a href="/home/subscribe/1" class="btn btn-primary">Renew Subscription</a>
             @if(isset($iframe_src))
             <div class="col-xs-12 col-sm-12">
                 <iframe src="{{ $iframe_src }}" width="100%" height="700px" scrolling="no" frameBorder="0">
