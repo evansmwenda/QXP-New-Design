@@ -18,6 +18,9 @@ use DateTime;
 use DateInterval;
 use DatePeriod;
 use Session;
+use App\Events\PaymentSuccessfulEvent;
+use AfricasTalking\SDK\AfricasTalking;
+
 
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -62,7 +65,8 @@ class HomeController extends Controller
     }
     public function meeting(){
         if (\Auth::check()) {
-  
+            // check if any unused payments
+            $this->checkPaymentStatusDashboard();
         return view('meeting');
         }else{
             return view('meeting_login');
@@ -671,7 +675,6 @@ class HomeController extends Controller
     public function checkPaymentStatusDashboard(){
         //check on dashboard if user's payment was successful
         $user = \Auth::user();
-        // dd($user);
 
         $my_transaction = MyTransactions::where([
             ['user_id','=',$user['id']],
@@ -698,6 +701,49 @@ class HomeController extends Controller
         // https://skytoptechnologies.com
         // /?pesapal_transaction_tracking_id=058e9adb-d351-4092-9df7-0bd776900859
         // &pesapal_merchant_reference=5f2ad92d9dc87
+    }
+    public function sendPaymentNotification(){
+        //test function to send sms
+        if(!is_null(\Auth::id())){
+            $data = \Auth::user();
+            // dd($data);
+            $sms_recipients="";//empty string
+
+            $username = getenv("AFRICASTALKING_USERNAME");
+            $apiKey   = getenv("AFRICASTALKING_API_KEY");
+
+            $AT       = new AfricasTalking($username, $apiKey);
+            // Get one of the services
+            $sms      = $AT->sms();
+
+            // Set the numbers you want to send to in international format
+            $recipients='+254718145956';//$data['phone'];//'+254712345678'
+
+            // Set your message
+            $message    = "Dear Customer,your payment was successful.";
+
+            // Set your shortCode or senderId
+            $from       = "QXP";
+            // Get one of the services
+            try {
+                // Thats it, hit send and we'll take care of the rest
+                $result = $sms->send([
+                    'to'      => $recipients,
+                    'message' => $message,
+                    'from'    => $from
+                    
+                ]);
+
+                // print_r($result);
+                    
+            } catch (Exception $e) {
+                //echo "Error: ".$e->getMessage();
+                $result=$e->getMessage();
+                // print_r($result);
+            }
+        }
+        // dd("logged out");
+        
     }
     //for support pages
     public function start(){
