@@ -115,35 +115,19 @@
 
                                     </div>  <br/>
                            </div>
-                           <div class="col-md-4" style="background: #f3f3f3;padding 10px">
+                           <div class="col-md-4 solutions">
                               <h3>Solutions</h3>
                               <hr style="border-top: 1px solid #ccc">
-                              <div class="row" style="padding:auto;">
-                                <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/industries/education">Education</a>
-                              </div> 
-
-                              <div class="row" style="padding:auto;">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/industries/healthcare">Healthcare</a>
-                              </div>
-
-                              <div class="row">
-                                <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/industries/legal">Legal</a>
-                              </div> 
-
-                              <div class="row">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/industries/financial-institutions">Financial Institutions</a>
-                              </div> 
-
-                              <div class="row">
-                                 <span class="fa fa-angle-right fa-2x" style="padding:0px 15px;color:#06046">
-                                 </span><a href="/industries/human-resources">Human Resources</a>
-                              </div> 
+                              <ul>
+                                 <li><a href="/industries/education"><span class=" fa fa-angle-right"></span>Education</a></li>
+                                 <li><span><a href="/industries/education"><span class=" fa fa-angle-right"></span>Education</a></li>
+                                 <li><span><a href="/industries/legal"><span class=" fa fa-angle-right"></span>Legal</a></li>
+                                 <li><span><a href="/industries/financial-institutions"><span class=" fa fa-angle-right"></span>Financial Institutions</a>
+                                 </li>
+                                 <li><span><a href="/industries/human-resources"><span class=" fa fa-angle-right"></span>Human Resources</a></li>
+                              </ul>
                               <div class="row" style="margin-top: 17px !important;margin-bottom: 20px;">
-                                <a id="btn-square" class="btn-square btn-primary btn-lg" href="/industries" role="button" style="letter-spacing: 1.1px;font-size: 1em;font-weight: 500;color: #ffffff;background-color:#079DFF">
+                                <a id="btn-square" class="btn-square btn-primary btn-lg" href="/industries" role="button" style="letter-spacing: 1.1px;font-size: 15px;font-weight: 500;color: #ffffff;background-color:#079DFF">
                                   SEE MORE INDUSTRIES
                                 </a>
                                    
