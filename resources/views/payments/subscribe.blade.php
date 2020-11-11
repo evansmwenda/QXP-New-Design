@@ -15,9 +15,9 @@
       <div class="row">
         <div class="meeting-menu">
           <ul>
-            
             <li onclick="location.href='/home'">Create Meeting</li>
-            <li onclick="location.href='/home/subscribe'">Renew Subsription</li>
+            <li onclick="location.href='/home/plans'">Meeting Plans</li>
+            <li onclick="location.href='/home/subscribe'">Subscribe</li>
           </ul>
         </div>
         <div class="meeting-body">
@@ -38,17 +38,6 @@
           @endif
   
           </div>
-         {{-- Error Display  --}}
-         @if(Session::has("flash_message_error"))
-         <div class="errors">
-            {!! session('flash_message_error') !!}
-         </div>
-         @endif
-         @if(Session::has("flash_message_success")) 
-         <div class="errors">
-          {!! session('flash_message_success') !!}
-         </div>
-         @endif
 
         </div>
       </div>

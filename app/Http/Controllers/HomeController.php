@@ -72,6 +72,15 @@ class HomeController extends Controller
             return view('meeting_login');
         }
     }
+    public function getPlans(){
+        if (\Auth::check()) {
+            // check if any unused payments
+            // $this->checkPaymentStatusDashboard();
+        return view('meeting_plans');
+        }else{
+            return view('meeting_login');
+        }
+    }
     public function about(){
         return view('about_us');
     }
