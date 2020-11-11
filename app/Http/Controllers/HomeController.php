@@ -218,6 +218,7 @@ class HomeController extends Controller
                 //successful on bbb server
                 $newLiveClass= [
                 'title'=>$title,//class title
+                'course_id'=>'0',
                 'meetingID'=>$meetingID,//meeting ID
                 'classTime'=>$classTime,//classTime
                 'attendeePW'=>$attendeePW,//attendee password 
