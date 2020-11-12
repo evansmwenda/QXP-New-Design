@@ -7,10 +7,7 @@
 
     <div class="meeting-form">
       <div class="row meeting-user">
-        <div class="col-sm-4"><h1>Welcome to QXP-Meeting</h1>
-        </div>
-        <div class="col-sm-6">Logged in as: {{\Auth::user()->name}}</div>
-        
+        @include('partials.meeting_topbar')
       </div>
       <div class="row">
         <div class="col-sm-12 col-md-4">

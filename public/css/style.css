@@ -2026,6 +2026,7 @@ position: relative;
 }
 .meeting-sm-body ul{
   list-style: none;
+  padding-inline-start: 20px !important;
 }
 .meeting-sm-body ul li span{
   color: #0099FE;
@@ -2046,7 +2047,7 @@ position: relative;
   border: 1px solid #ccc;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 48%;
+  /* width: 48%; */
 float: left;
 margin-right: 10px;
   margin-bottom: 20px;
