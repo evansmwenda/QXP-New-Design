@@ -2,5 +2,13 @@
 </div>
 <div class="col-sm-4">Logged in as: {{\Auth::user()->name}}</div>
 <div class="col-sm-4">
-  <p class="card-text">Expiry Date : <span style="color:green;">09-12-2020 10:00AM (Active)</span></p>
+  
+    @if($active ?? '')
+    <p class="card-text">Expiry Date : 
+      <span style="color:green;">{{$expiry_on ?? ''}} (Active)</span></p>
+    @else
+    <p class="card-text">Expiry Date : 
+      <span style="color:red;">{{$expiry_on ?? ''}} (Expired)</span></p>
+    @endif
+    
 </div>

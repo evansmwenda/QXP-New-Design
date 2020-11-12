@@ -27,6 +27,7 @@ use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MeetingEmail;
+use View;
 
 
 class HomeController extends Controller
@@ -80,7 +81,19 @@ class HomeController extends Controller
         if (\Auth::check()) {
             // check if any unused payments
             $this->checkPaymentStatusDashboard();
-        return view('meeting');
+            //get package status
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('meeting')->with(compact('subscription', 'active','expiry_on'));
         }else{
             return view('meeting_login');
         }
@@ -89,7 +102,19 @@ class HomeController extends Controller
         if (\Auth::check()) {
             // check if any unused payments
             // $this->checkPaymentStatusDashboard();
-        return view('meeting_plans');
+            //get package status
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('meeting_plans')->with(compact('subscription', 'active','expiry_on'));
         }else{
             return view('meeting_login');
         }
@@ -374,15 +399,40 @@ class HomeController extends Controller
     // Meetings subscriptions
     public function subscribe(){
         if (\Auth::check()) {
-        return view('payments.subscribe');
+            //get package status
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+            // dd($subscription);
+
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('payments.subscribe')->with(compact('subscription', 'active','expiry_on'));
         }else{
             return view('meeting_login');
         }
     }
     public function startSubscription($id=null){
+        //get package status
+        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+        $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+        $expiry_on =$subscription[0]->expiry_on;
+        if($expiry_on > $date_now){
+            $active = true;//subscription is active
+        }else{
+            $active = false;//expired or is on free trial
+        }
+
         $user = \Auth::user();
         $packages = Package::where('id',$id)->get();
         // dd($packages);
+
         
         if($packages->isEmpty()){
             return back()->with('flash_message_error','An error occurred, please try again');
@@ -483,10 +533,25 @@ class HomeController extends Controller
         $iframe_src->sign_request($signature_method, $consumer, $token);
 
         // return view('user.payments.iframe')->with(compact('iframe_src','amount','package_name'));
-
-         return view('payments.subscribe')->with(compact('iframe_src','amount','package_name'));
+         return view('payments.subscribe')->with(compact('iframe_src',
+         'amount',
+         'package_name',
+         'subscription', 
+         'active',
+         'expiry_on'));
     }
     public function getCallback(Request $request){
+        //get package status
+        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+        $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+        $expiry_on =$subscription[0]->expiry_on;
+        if($expiry_on > $date_now){
+            $active = true;//subscription is active
+        }else{
+            $active = false;//expired or is on free trial
+        }
+
         $user= \Auth::user();
         // $status='UNKNOWN';
         // dd($request->all());
@@ -526,7 +591,12 @@ class HomeController extends Controller
         //the status has changed for UNKNOWN to PENDING/COMPLETED/FAILED
 
         //make query to check status here
-        return view('payments.redirect')->with(compact('status','reference','tracking_id'));
+        return view('payments.redirect')->with(compact('status',
+        'reference',
+        'tracking_id',
+        'subscription',
+         'active',
+         'expiry_on'));
     }
     public function checkStatusUsingTrackingIdandMerchantRef($pesapalMerchantReference,$pesapalTrackingId){
         //checkStatusUsingTrackingIdandMerchantRef($pesapalMerchantReference,$pesapalTrackingId)
