@@ -30,7 +30,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Username" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" placeholder="Email Address" name="email" value="{{ old('email') }}">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Password" name="password">
