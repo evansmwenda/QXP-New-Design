@@ -40,6 +40,176 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function fetchRecordings(){
+        //fetch live class recordings you have created or have been among
+        // $classes = DB::table('live_classes')
+        //     ->select('live_classes.id as class_id','live_classes.title as title','live_classes.meetingID as meetingID','users.name as name','users.id as user_id')
+        //     ->join('users', 'users.id', '=', 'live_classes.owner')
+        //     // ->where('live_classes.owner',$user['id'])
+        //     ->orderBy('live_classes.id','DESC')->limit(8)->get();
+        $meetings = LiveClasses::where('course_id','0')->get()->pluck('meetingID');
+        $meetingIDsArray = $meetings->all();
+
+        dump($meetingIDsArray);
+
+
+            
+        // $classes = LiveClasses::with(['user'])->get();
+         // dd($classes);
+        
+        // $new_content = Content::with('metas','user')->where('mode','publish')->limit(4)->orderBy('id','DESC')->get();
+        // // $popular_content = Content::with('metas','user')->where('mode','publish')->limit(4)->orderBy('view','DESC')->get();
+        // $sell_content = Content::with('metas','user')->withCount('sells')->where('mode','publish')->limit(4)->orderBy('sells_count','DESC')->get();
+        $classRecordings=(array) null;
+
+
+        //get the list of recordings
+        //get the secure salt
+        $salt = env("BBB_SALT", "0");
+        //UNCOMMENT //get BBB server
+        $bbb_server = env("BBB_SERVER", "0");
+
+        $newListString="getRecordings";
+
+
+        //get sha1sum of keyword+salt
+        $checksumList=sha1($newListString.$salt);
+        // echo $newCreateString;
+        // echo "<br/>".$checksumCreate;
+
+
+        $getListURL= $bbb_server.'getRecordings?&checksum='.$checksumList;
+
+
+
+
+
+        //NEW CODE INSERTED HERE
+        //make get request to create live class
+        // $url = $getCreateURL;
+
+        // //dd($url);
+        // //  Initiate curl
+        // $ch = curl_init();
+        // // Disable SSL verification
+        // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // // Will return the response, if false it print the response
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // // Set the url
+        // curl_setopt($ch, CURLOPT_URL,$url);
+        // // Execute
+        // $result=curl_exec($ch);
+        // // Closing
+        // curl_close($ch);
+            
+        // // Print the return data
+        // // print_r(json_decode($result, true));
+        // // dd($url);
+        // // die();
+
+
+        // // $client = new Client();
+        // // $response = $client->request('GET', $getCreateURL);
+        // // $response = $client->request('GET', 'http://bbb.teledogs.com/bigbluebutton/api/create?name=Flirting&meetingID=quest&attendeePW=ap&checksum=bcfb49cc9dac7b0834c90f1604c7005b9079da7b');
+
+        // // $body = $response->getBody(); 
+        // $xml = simplexml_load_string($result);
+        //END OF NEW CODE INSERTED HERE
+
+
+
+
+        ///getlist of  live class recordings
+
+         $client = new Client();
+        $response = $client->request('GET', $getListURL);
+        //incase site offline->try & catch
+        // try {
+        //     $response = $client->request('GET', $getListURL);
+        // }
+        // //catch exception
+        // catch(ConnectException $e) {
+        //   echo 'Message: ' .$e->getMessage();
+        //   // $response = $client->request('GET', $getListURL);
+        // }
+        
+
+        $body = $response->getBody(); 
+        $xml = simplexml_load_string($body);
+        // dd($xml);
+        
+
+        if($xml->returncode=="SUCCESS"){
+            if($xml->messageKey == "noRecordings"){
+                //no recordings available on the server
+                //$classRecordings=(array) null;
+
+            }else{
+
+                //recording available->CHECK TO SEE WHETHER TO DISPLAY THE LIST
+                //loop through recordings array to get recordings
+                foreach($xml->recordings->recording as $records){
+                    //get the record id & cross match with tbl_scheduled classes
+                    $myRecordID=$records->recordID;
+                    $meetingID=$records->meetingID;
+                    //check if meeting id is in among meetigns createdon QXP Meetings
+                    if(in_array($meetingID,$meetingIDsArray)){
+                        //recorded playback belongs to meetings->fetch and display
+                        //for every recording->cross check with tbl_scheduled_classes_recordings
+                        //to ensure current user has enough permissions to view the recordings
+
+
+                        $names=array();
+                        //save details into the liveclassrecordings table
+                        $names = LiveClassRecordings::where('meetingID', $meetingID)->value('users');
+                        $namesArray = explode(",", $names);
+                        dd($namesArray);
+                        if (in_array($user['id'], $namesArray)) {
+                            //user allowed to view this live class recording
+                            $owner_id = LiveClasses::where('meetingID',$meetingID)->value('owner');
+
+                            $owner_name = $owner_id == null ? "General User" : DB::table('tbl_users')->where('id', $owner_id)->value('name');
+
+                            $classRecordings [] = (object) [
+                                'owner'=>$owner_name,
+                                'recordID'=>$myRecordID,
+                                'name'=>$records->name,
+                                'size'=>$records->size,
+                                'length'=>$records->playback->format->length,
+                                'url'=>$records->playback->format->url
+                            ];
+                        }else{
+                            //user not allowed to view this live class recording
+                        }
+                    }
+
+                    }
+                    
+                    
+            }
+        }
+    }
+    public function getRecordings(){
+        //fetch the recordings stored for previous meetings
+        if (\Auth::check()) {
+            //get package status
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+            // dd($subscription);
+
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('meetings.recordings')->with(compact('subscription', 'active','expiry_on'));
+        }else{
+            return view('meeting_login');
+        }
+    }
     public function meetingLogin(){
         if (\Auth::check()) {
             return view('meeting');
@@ -60,7 +230,6 @@ class HomeController extends Controller
         return view('mails.meeting')->with(compact('data'));
     }
     
-
     public function pricing(){
     	return view('plans');
     }
