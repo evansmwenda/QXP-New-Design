@@ -7,8 +7,8 @@
 </head>
 <body>
 <h2>Qxp Meeting Link</h2>
-<h4>Your Meeting has been Created successfully</h4>
-<h5>Meeting ID is : {{$data['ID']}}</h5>
-<h6>Meeting Link is : <a href="{{$data['link']}}">{{$data['link']}}</a></h6>
+<h4>{{$data['name']}} is inviting you to live QXP Meeting</h4>
+<p>Meeting ID is : {{$data['ID']}}</p>
+<p>Meeting Link is : <a href="{{$data['link']}}">{{$data['link']}}</a></p>
 </body>
 </html>

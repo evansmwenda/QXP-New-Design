@@ -53,10 +53,11 @@ class HomeController extends Controller
             'message'=>'Meeting has been created successfully,Meeting ID is',
             'ID'=>"meetingID",
             'link'=>"url",
+            'name' => 'Evans Mwenda',
             'email'=>"evansmwenda.em@gmail.com"
         );
         // dd($data);
-        event(new NewUserRegisteredEvent($data));
+        return view('mails.meeting')->with(compact('data'));
     }
     
 
@@ -245,7 +246,7 @@ class HomeController extends Controller
 
             $newCreateString="create".$create_string;
         }else{
-            $timer = 2;
+            $timer = 45;
             //user can only create meeting that is 40 mins long
             //2.get the checksum(to be computer) and store it in column
         
@@ -337,6 +338,7 @@ class HomeController extends Controller
                     'message'=>'Meeting has been created successfully,Meeting ID is',
                     'ID'=>$meetingID,
                     'link'=>$url,
+                    'name'=>$user['name'],
                     'email'=>$user['email']
                 );
 
