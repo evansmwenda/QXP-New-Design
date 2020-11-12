@@ -22,9 +22,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\SendPaymentNotificationListener',
         ],
         'App\Events\NewUserRegisteredEvent' => [
-            'App\Listeners\AssignUserRoleListener',
             'App\Listeners\SendRegistrationEmailListener',
             'App\Listeners\AwardFreeTrialListener',
+            // 'App\Listeners\AssignUserRoleListener',
         ],
     ];
 
