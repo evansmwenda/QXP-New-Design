@@ -26,6 +26,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\AwardFreeTrialListener',
             // 'App\Listeners\AssignUserRoleListener',
         ],
+        'App\Events\MeetingCreatedEvent' => [
+            'App\Listeners\SendMeetingNotificationListener',
+        ],
     ];
 
     /**

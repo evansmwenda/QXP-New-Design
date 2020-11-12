@@ -20,6 +20,19 @@
           <div class="meeting-body">
             {{-- create meeting --}}
             <div class="meeting-content" id="create">
+              @if(Session::has("flash_message_error")) 
+              <div class="alert alert-error alert-block">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+                  <strong>{!! session( 'flash_message_error') !!}</strong>
+              </div> 
+            @endif 
+
+              @if(Session::has("flash_message_success")) 
+              <div class="alert progress-bar-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+                  <strong>{!! session('flash_message_success') !!}</strong>
+              </div> 
+              @endif
                <h2>Create or Join Meeting</h2>
                <div class="row">
                  {{-- <button><i class="fa fa-group"></i> Join Meeting</button>  --}}
