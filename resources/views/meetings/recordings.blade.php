@@ -35,9 +35,50 @@
               @endif
                <h2>Previous Meeting Recordings</h2>
                <div class="row">
+                <table class="table">
+                    @if(count($recordings) > 0)
+                        <thead>
+                            <tr>
+                            <th>Title</th>
+                            <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($recordings as $key=>$recording)
+                        <tr>
+                            <td>{{$recording->name ?? ''}}</td>
+                            <td>{{$recording->length}} min(s) </td>
+                        </tr>
+                            {{-- <a href="{{$recording->url}}" target="_blank">{{$recording->name ?? ''}}</a>
+                            <p>{{$recording->length}} min(s) </p> --}}
+                        @endforeach
+                        </tbody>
+                   @else
+                        <p class="text-center">
+                            You have no recorded meetings
+                        </p>
+                   @endif
+
+                    
+                    
+                      
+                    
+                  </table>
+
+
+
+
+
+                   
                  {{-- <button><i class="fa fa-group"></i> Join Meeting</button>  --}}
-                 <button style="background: #0099FE" data-toggle="modal" data-target="#exampleModalCenter">
-                    <i class="fa fa-clock-o"></i> Create Meeting</button> 
+                {{-- <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary Panel title</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk of the
+                        panel's content.</p>
+                    </div>
+                </div> --}}
                </div>
                <hr>
                <p> Please enter ID to join meeting or create a new meeting</p> 
