@@ -76,7 +76,7 @@
                               <hr style="border-top: 1px solid #ccc">
                                     <div class="row products-menu" onclick="location.href='http://academy.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
-                                       <img src="{{asset('images/logo/bgAsset6.svg')}}" width="85">
+                                       <img src="{{asset('images/logo/bgAsset-3-2.svg')}}" width="85">
                                        </div>
                                        <div class="col-md-1"></div>
                                        <div class="col-sm-9" style="padding-top: 15px;">
@@ -86,7 +86,7 @@
                                     {{-- <hr style="border-top: 1px solid #ccc"> --}}
                                     <div class="row products-menu" onclick="location.href='http://higher-ed.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
-                                       <img src="{{asset('images/logo/bgAsset8.svg')}}" width="85">
+                                       <img src="{{asset('images/logo/bgAsset-2-2.svg')}}" width="85">
                                        </div>
                                        <div class="col-md-1"></div>
                                        <div class="col-sm-9" style="padding-top: 15px;">
@@ -96,7 +96,7 @@
                                     
                                     <div class="row products-menu" onclick="location.href='http://business.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
-                                       <img src="{{asset('images/logo/bgAsset9.svg')}}" width="85">
+                                       <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="85">
                                        </div>
                                        <div class="col-md-1"></div>
                                        <div class="col-sm-9" style="padding-top: 15px;">
@@ -106,7 +106,7 @@
                                     {{-- <hr style="border-top: 1px solid #ccc"> --}}
                                     <div class="row products-menu" onclick="location.href='{{url('/login-for-meeting')}}';">
                                        <div class="col-sm-2" style="padding-top: 15px">
-                                       <img src="{{asset('images/logo/bgAsset7.svg')}}" width="85">
+                                       <img src="{{asset('images/logo/bgAsset-1-1.svg')}}" width="85">
                                        </div>
                                        <div class="col-md-1"></div>
                                        <div class="col-sm-9" style="padding-top: 15px;">

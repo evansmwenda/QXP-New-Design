@@ -35,7 +35,7 @@
               @endif
                <h2>Previous Meeting Recordings</h2>
                <div class="row">
-                <ul class="list-group list-group-flush" style="width: 80%;background-color:red;margin-left:20px;">
+                <ul class="list-group list-group-flush" style="width: 80%;margin-left:20px;">
                     @if(count($recordings) > 0)
 
                         @foreach($recordings as $key=>$recording)
@@ -46,9 +46,7 @@
                         </li>
                         @endforeach
                    @else
-                        <p class="text-center">
-                            You have no recorded meetings
-                        </p>
+            <h3 class="text-muted" style="margin-top: 50px">You have no recorded meetings</h3>
                    @endif
                 </ul>
                </div>
