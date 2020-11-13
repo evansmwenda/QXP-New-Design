@@ -28,6 +28,6 @@ class MeetingEmail extends Mailable
      */
     public function build()
     {
-        return $this->from('support@qxp-global.com','support@qxp-global.com')->subject('QXP-Meeting')->view('mails.meeting')->with('data',$this->my_data);
+        return $this->from('notifications@qxp-global.com','notifications@qxp-global.com')->subject('QXP-Meeting')->view('mails.meeting')->with('data',$this->my_data);
     }
 }
