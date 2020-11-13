@@ -58,6 +58,7 @@ Route::get('qxp_meetings','HomeController@qxpmeetings');
 Auth::routes();
 
 Route::get('/home', 'HomeController@meeting')->name('home');
+
 Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
 Route::get('/home/subscribe', 'HomeController@subscribe');
 Route::get('/home/subscribe/{id}', 'HomeController@startSubscription');

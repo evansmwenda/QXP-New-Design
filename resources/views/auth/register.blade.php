@@ -5,7 +5,7 @@
         <div class="login-pref login-meeting-overlay">
         
                 
-                <div class="">
+                <div class="col-md-6">
                     <div class="register-spacer">
                         <img src="http://0.gravatar.com/avatar/fcf3541949a1700be9f391b9430484b6?s=300&d=mm&r=g" alt="">
                       <h1>Lets Get you Started</h1>
@@ -36,9 +36,7 @@
                             </div>
     
                             <div class="form-group row">
-                                <label for="email" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-    
-                                
+                                <label for="email" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>S
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     
                                     @error('email')
@@ -46,6 +44,13 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                               
+                            </div>
+                                <div class="form-group row">
+                                <label for="Number" class="col-form-label text-md-right">{{ __('Mobile Number') }}</label>
+    
+                                
+                                    <input id="number" type="number" class="form-control" name="phone" required >
                                
                             </div>
     
