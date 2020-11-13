@@ -28,7 +28,10 @@ use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MeetingEmail;
+use App\Mail\RegisterMail;
 use View;
+use Redirect;
+use Illuminate\Support\Facades\Hash;
 
 
 class HomeController extends Controller
@@ -40,38 +43,100 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function accountActivate($token=null){
+        //this function checks if token exists and updates the activation status and redirects to home page
+        $user = User::where('token',$token)->first();
+        dd($user);
+        $user->verified = 1;
+        $user->save();
+        return redirect()->route('home');
+    }
+    public function sendActivate(Request $request){
+        //this function sends activation email to those  who havent activated their accounts
+        $user = User::where('email',$request->email)->get()->first();
+        dump($user);
+        //generate new token
+        $token = str_random(15);
+        dump($token);
+        $update = User::where('email',$request->email)->update(['token'=>$token]);
+        dump($update);
+        if($update) {
+            //write code to send activation email
+            //http://localhost.com/register/activate/9TT0e3YmDUV20f8
+            $url = url('register/activate/'.$token);
+            dump($url);
+            $data=array(
+                'link'=>$url,
+                'name' => $user->name,
+                'email'=>$request->email
+            );
+            Mail::to($request->email)->send(new RegisterMail($data));
+            return back()->with('flash_message_success', 'Account Activation Email Sent');
+        }
+    }
+    public function verify(){
+        $email= \Auth::user()->email;
+        return view('auth.verify_email')->with(compact('email'));
+    }
     public function register2(Request $request){
         if($request->isMethod('post')){
             //user submitting register request
-            dd($request->all());
+            // dd($request->all());
+            
             //check if any of the required fields is empty
             if(empty($request->name) || 
-                empty($request->number) || 
+                empty($request->phone) || 
                 empty($request->email) ||
+                empty($request->role_id) || 
                 empty($request->password) ||
                 empty($request->password_confirmation)){
                 //missing details on form submit by 'enter key'
-                return redirect()->back()->with('msg','Please fill all details');
+                return redirect()->back()->with('flash_message_error','Please fill all details');
             }
 
-            $duplicateNumber = User::where('phone',$request->number)->first();
+            $duplicateUser= User::where('phone',$request->number)->first();
             $duplicateEmail = User::where('email',$request->email)->first();
 
             if($duplicateUser)
             {
-                $request->session()->flash('Error','duplicate_user');
-                return redirect()->back()->with('msg',trans('main.user_exists'));
+                // $request->session()->flash('Error','duplicate_user');
+                return redirect()->back()->with('flash_message_error','Phone already exists');
             }
             if($duplicateEmail)
             {
-                $request->session()->flash('Error','duplicate_email');
-                return redirect()->back()->with('msg',trans('main.user_exists'));
+                // $request->session()->flash('Error','duplicate_email');
+                return redirect()->back()->with('flash_message_error','Email already exists');
             }
-            if($request->password != $request->repassword)
+            if($request->password != $request->password_confirmation)
             {
                 $request->session()->flash('Error','password_not_same');
                 return redirect()->back()->with('msg',trans('main.pass_confirmation_same'));
             }
+            //id,name,email,phone,verified,password,remember_token,created_at,updated)at
+            $newUser = [
+                'name'=>$request->name,
+                'email'=>$request->email,
+                'phone'=>$request->phone,
+                'verified'=>0,
+                'password'=>Hash::make($request->password),//encrypt($request->password),
+                'token'=>str_random(15)
+            ];
+
+
+            // print_r($newUser);die();
+            $newUser = User::create($newUser);
+            // dd($newUser);
+            event(new NewUserRegisteredEvent($newUser));
+
+            //assign user to selected role
+            DB::table('role_user')->insert(
+                [
+                    "user_id" => $newUser['id'],
+                    "role_id" => $request->role_id
+                ]
+            );
+
+            return redirect('/login');
         }
         return view('auth.register');
     }
@@ -209,12 +274,12 @@ class HomeController extends Controller
         $data=array(
             'message'=>'Meeting has been created successfully,Meeting ID is',
             'ID'=>"meetingID",
-            'link'=>"url",
+            'link'=>"https://sandbox.register/activate",
             'name' => 'Evans Mwenda',
             'email'=>"evansmwenda.em@gmail.com"
         );
         // dd($data);
-        return view('mails.meeting')->with(compact('data'));
+        return view('mails.register')->with(compact('data'));
     }
     
     public function pricing(){
@@ -235,8 +300,27 @@ class HomeController extends Controller
     public function features(){
         return view('features');
     }
+    public function checkEmailActivationStatus(String $email_address){
+        $status = User::where('email',$email_address)->value('verified');
+        if($status == '0'){
+            //user not verified->redirect to verification page
+            // dd("not verif");
+            return Redirect::route('verify2');
+        }else{
+            //user account ok
+        }
+        // dd($status);
+    }
     public function meeting(){
         if (\Auth::check()) {
+            $status = User::where('email',\Auth::user()->email)->value('verified');
+            if($status == '0'){
+                //user not verified->redirect to verification page
+                // dd("not verif");
+                // return Redirect::route('verify2');
+                return redirect()->route('verify2');
+            }
+            // $this->checkEmailActivationStatus(\Auth::user()->email);
             // check if any unused payments
             $this->checkPaymentStatusDashboard();
             //get package status
