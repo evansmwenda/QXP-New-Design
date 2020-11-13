@@ -23,6 +23,11 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\NewUserRegisteredEvent' => [
             'App\Listeners\SendRegistrationEmailListener',
+            'App\Listeners\AwardFreeTrialListener',
+            // 'App\Listeners\AssignUserRoleListener',
+        ],
+        'App\Events\MeetingCreatedEvent' => [
+            'App\Listeners\SendMeetingNotificationListener',
         ],
     ];
 

@@ -60,6 +60,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@meeting')->name('home');
 
 Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
+Route::get('/home/recordings', 'HomeController@getRecordings')->name('recordings');
 Route::get('/home/subscribe', 'HomeController@subscribe');
 Route::get('/home/subscribe/{id}', 'HomeController@startSubscription');
 // Route::get('/home/subscribe/redirect', 'HomeController@getCallback');

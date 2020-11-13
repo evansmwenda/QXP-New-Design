@@ -1972,7 +1972,7 @@ li.dropdown:hover .tw-mega-menu {
 .meeting-bg{
   justify-content: center;
   /* background-image: url('../images/featured/industries-1.jpg'); */
-  height:auto;/*300px;*/
+  height:auto;
   color: #060646;
   background: #D5DBDB;
   margin-bottom: 50px;
@@ -2000,7 +2000,7 @@ position: relative;
  margin-top: 20px;
   border-radius: 5px;
 
-  width: 30%;
+  /* width: 30%; */
 }
 .meeting-menu ul{
   list-style: none;
@@ -2021,11 +2021,12 @@ position: relative;
 }
 .meeting-body{
   margin-top: 20px;
-  width: 60%;
+  /* width: 60%; */
 
 }
 .meeting-sm-body ul{
   list-style: none;
+  padding-inline-start: 20px !important;
 }
 .meeting-sm-body ul li span{
   color: #0099FE;
@@ -2046,7 +2047,7 @@ position: relative;
   border: 1px solid #ccc;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 48%;
+  /* width: 48%; */
 float: left;
 margin-right: 10px;
   margin-bottom: 20px;
