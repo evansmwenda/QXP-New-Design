@@ -29,6 +29,6 @@ class RegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->from('support@qxp-global.com','Registration Email')->subject('Account Creation Successful')->view('mail.register')->with('data',$this->my_data);
+        return $this->from('support@qxp-global.com','Registration Email')->subject('Account Creation Successful')->view('mails.register')->with('data',$this->my_data);
     }
 }
