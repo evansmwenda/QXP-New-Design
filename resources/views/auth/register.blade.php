@@ -19,7 +19,7 @@
                            <h1>Sign Up for Free</h1>
                       
                           {{-- login form --}}
-                          <form method="POST" action="{{ route('register') }}">
+                          <form method="POST" action="{{ route('register2') }}">
                             @csrf
                            
                             <div class="form-group row">
@@ -42,6 +42,19 @@
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     
                                     @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                               
+                            </div>
+                            <div class="form-group row">
+                                <label for="phone" class="col-form-label text-md-right">Phone Number</label>
+    
+                                
+                                    <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+    
+                                    @error('phone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

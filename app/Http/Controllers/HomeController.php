@@ -40,6 +40,41 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function register2(Request $request){
+        if($request->isMethod('post')){
+            //user submitting register request
+            dd($request->all());
+            //check if any of the required fields is empty
+            if(empty($request->name) || 
+                empty($request->number) || 
+                empty($request->email) ||
+                empty($request->password) ||
+                empty($request->password_confirmation)){
+                //missing details on form submit by 'enter key'
+                return redirect()->back()->with('msg','Please fill all details');
+            }
+
+            $duplicateNumber = User::where('phone',$request->number)->first();
+            $duplicateEmail = User::where('email',$request->email)->first();
+
+            if($duplicateUser)
+            {
+                $request->session()->flash('Error','duplicate_user');
+                return redirect()->back()->with('msg',trans('main.user_exists'));
+            }
+            if($duplicateEmail)
+            {
+                $request->session()->flash('Error','duplicate_email');
+                return redirect()->back()->with('msg',trans('main.user_exists'));
+            }
+            if($request->password != $request->repassword)
+            {
+                $request->session()->flash('Error','password_not_same');
+                return redirect()->back()->with('msg',trans('main.pass_confirmation_same'));
+            }
+        }
+        return view('auth.register');
+    }
     public function fetchRecordings(){
         //fetch live class recordings you have created or have been among
         $meetings = LiveClasses::where('course_id','0')->get()->pluck('meetingID');
