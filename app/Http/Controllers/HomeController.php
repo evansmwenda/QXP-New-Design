@@ -50,6 +50,7 @@ class HomeController extends Controller
         if(!is_null($user)){
             //token valid
             $user->verified = 1;
+            $user->token = NULL;
             $user->save();
             return redirect()->route('home');
         }
@@ -116,6 +117,11 @@ class HomeController extends Controller
                 $request->session()->flash('Error','password_not_same');
                 return redirect()->back()->with('msg',trans('main.pass_confirmation_same'));
             }
+            $token = str_random(15);
+            //http://localhost.com/register/activate/9TT0e3YmDUV20f8
+            $url = url('register/activate/'.$token);
+
+
             //id,name,email,phone,verified,password,remember_token,created_at,updated)at
             $newUser = [
                 'name'=>$request->name,
@@ -123,14 +129,20 @@ class HomeController extends Controller
                 'phone'=>$request->phone,
                 'verified'=>0,
                 'password'=>Hash::make($request->password),//encrypt($request->password),
-                'token'=>str_random(15)
+                'token'=>$token
             ];
-
 
             // print_r($newUser);die();
             $newUser = User::create($newUser);
             // dd($newUser);
-            event(new NewUserRegisteredEvent($newUser));
+
+            $data=array(
+                'id' =>$newUser['id'],
+                'link'=>$url,
+                'name' => $request->name,
+                'email'=>$request->email
+            );
+            event(new NewUserRegisteredEvent($data));
 
             //assign user to selected role
             DB::table('role_user')->insert(
