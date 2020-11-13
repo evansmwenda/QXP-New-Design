@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test','HomeController@test');
+Route::get('/tester','HomeController@tester');
 Route::get('/pricing','HomeController@pricing');
 Route::get('/industries','HomeController@industries');
 Route::get('/terms','HomeController@terms');

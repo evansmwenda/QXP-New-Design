@@ -28,6 +28,6 @@ class SendPaymentNotificationListener
     public function handle(PaymentSuccessfulEvent $event)
     {
         //send sms upon successful payment
-        app('App\Http\Controllers\HomeController')->sendPaymentNotification();
+        app('App\Http\Controllers\HomeController')->sendPaymentNotification($event->user);
     }
 }
