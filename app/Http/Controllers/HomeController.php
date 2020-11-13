@@ -46,25 +46,29 @@ class HomeController extends Controller
     public function accountActivate($token=null){
         //this function checks if token exists and updates the activation status and redirects to home page
         $user = User::where('token',$token)->first();
-        dd($user);
-        $user->verified = 1;
-        $user->save();
-        return redirect()->route('home');
+        // dd($user);
+        if(!is_null($user)){
+            //token valid
+            $user->verified = 1;
+            $user->save();
+            return redirect()->route('home');
+        }
+        
     }
     public function sendActivate(Request $request){
         //this function sends activation email to those  who havent activated their accounts
         $user = User::where('email',$request->email)->get()->first();
-        dump($user);
+        // dump($user);
         //generate new token
         $token = str_random(15);
-        dump($token);
+        // dump($token);
         $update = User::where('email',$request->email)->update(['token'=>$token]);
-        dump($update);
+        // dump($update);
         if($update) {
             //write code to send activation email
             //http://localhost.com/register/activate/9TT0e3YmDUV20f8
             $url = url('register/activate/'.$token);
-            dump($url);
+            // dump($url);
             $data=array(
                 'link'=>$url,
                 'name' => $user->name,

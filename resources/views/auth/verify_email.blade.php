@@ -4,6 +4,19 @@
 <div class="container" style="margin: 20px auto;">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @if(Session::has("flash_message_error")) 
+    <div class="alert alert-error alert-block">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>{!! session('flash_message_error') !!}</strong>
+    </div> 
+  @endif 
+
+    @if(Session::has("flash_message_success")) 
+    <div class="alert progress-bar-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong style="color:#11BECC;">{!! session('flash_message_success') !!}</strong>
+    </div> 
+    @endif
             <div class="card">
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
@@ -13,7 +26,7 @@
                             {{ __('A fresh verification link has been sent to your email address.') }}
                         </div>
                     @endif
-                    
+
                     Before proceeding, please check your email for a verification link.
                    If you did not receive the email, submit the form below to request for another
                     <form class="d-inline" method="POST" action="/register/activate">@csrf
