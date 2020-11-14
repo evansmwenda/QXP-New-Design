@@ -6,7 +6,7 @@ use App\Events\NewUserRegisteredEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\MeetingEmail;
+use App\Mail\RegisterMail;
 
 class SendRegistrationEmailListener
 {
@@ -29,6 +29,6 @@ class SendRegistrationEmailListener
     public function handle(NewUserRegisteredEvent $event)
     {
         //
-        Mail::to($event->data['email'])->send(new MeetingEmail($event->data));
+        Mail::to($event->data['email'])->send(new RegisterMail($event->data));
     }
 }
