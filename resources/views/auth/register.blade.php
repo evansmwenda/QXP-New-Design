@@ -35,19 +35,17 @@
                           <form method="POST" action="{{ route('register2') }}">
                             @csrf
                             <div class="form-group row">
-                                <label for="role_id" class="col-form-label text-md-right">Select Role</label>
-                                <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
+                                   <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
                                 name="role_id" value="{{ old('role_id') }}"  required autocomplete="role_id" autofocus>
-                                  <option value="">Who are you?</option>
+                                  <option value="">Select Role</option>
                                   <option value="3">Student</option>
                                   <option value="2">Teacher</option>
                                 </select>
                               </div>
                            
                             <div class="form-group row">
-                                <label for="name" class="col-form-label text-md-right">{{ __('Name') }}</label>
-                                    
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"  required autocomplete="name">
+                                   
+                                    <input id="name" placeholder="FullName" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"  required autocomplete="name">
     
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -58,8 +56,7 @@
                             </div>
     
                             <div class="form-group row">
-                                <label for="email" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" placeholder="Email Address" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -70,10 +67,8 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="phone" class="col-form-label text-md-right">Phone Number</label>
-    
-                                
-                                    <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+
+                                    <input id="phone" placeholder="Phone No" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
     
                                     @error('phone')
                                         <span class="invalid-feedback" role="alert">
