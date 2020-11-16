@@ -3,30 +3,29 @@
 @section('main')
     <div class="meeting-login-design">
         <div class="login-pref login-meeting-overlay">
-            
-                <div class="">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
                     <div class="meeting-spacer">
                         <h1>Connecting People Together</h1>
                       <p>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</p> 
                     </div>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-sm-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="meeting-custom-login">
                         <div class="text-center">
                             <img class="text-center" src="{{asset('images/logo/bgAsset7.svg')}}" width="100" height="100">
                         </div>
                         @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <ul style="list-style: none">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                            <div class="alert alert-danger">
+                                <ul style="list-style: none">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                           {{-- login form --}}
-                          <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
                             <div class="form-group">
@@ -51,13 +50,15 @@
                             <div class="form-group">
                                 <a href="{{ route('password.request') }}">Lost your password?</a>
                                 <br>
-                            <a href="{{url('/register')}}">Sign Up</a>
+                            <a href="{{url('/register-user')}}">Sign Up</a>
                             </div>
 
-                          </form>
+                        </form>
                 
                     </div>
                 </div>
             </div>
+                
         </div>
+    </div>
     @endsection

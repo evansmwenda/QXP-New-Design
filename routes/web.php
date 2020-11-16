@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test','HomeController@test');
+Route::get('/tester','HomeController@tester');
 Route::get('/pricing','HomeController@pricing');
 Route::get('/industries','HomeController@industries');
 Route::get('/terms','HomeController@terms');
@@ -58,8 +59,8 @@ Route::get('qxp_meetings','HomeController@qxpmeetings');
 
 //auth routes
 Auth::routes();
-Route::match(['get','post'],'/verify2', 'HomeController@verify')->name('verify2');
-Route::match(['get','post'],'/register2', 'HomeController@register2')->name('register2');
+Route::match(['get','post'],'/verify-user', 'HomeController@verify')->name('verify2');
+Route::match(['get','post'],'/register-user', 'HomeController@register2')->name('register2');
 Route::post('/register/activate', 'HomeController@sendActivate')->name('send_activate');
 Route::get('/register/activate/{id}', 'HomeController@accountActivate')->name('account_activate');
 // Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
