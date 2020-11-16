@@ -92,7 +92,6 @@ class HomeController extends Controller
             if(empty($request->name) || 
                 empty($request->phone) || 
                 empty($request->email) ||
-                empty($request->role_id) || 
                 empty($request->password) ||
                 empty($request->password_confirmation)){
                 //missing details on form submit by 'enter key'
@@ -145,10 +144,11 @@ class HomeController extends Controller
             event(new NewUserRegisteredEvent($data));
 
             //assign user to selected role
+            //$request->role_id 0=student by default
             DB::table('role_user')->insert(
                 [
                     "user_id" => $newUser['id'],
-                    "role_id" => $request->role_id
+                    "role_id" => 3 
                 ]
             );
 
