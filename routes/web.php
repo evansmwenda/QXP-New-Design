@@ -28,6 +28,7 @@ Route::get('/login-for-meeting','HomeController@meetingLogin');
 Route::get('/about','HomeController@about');
 Route::get('/leadership','HomeController@leadership');
 Route::get('/get-started','HomeController@getstarted');
+Route::get('/mail','HomeController@mail');
 
 Route::post('/schedule','HomeController@createMeeting');
 Route::post('/joinmeeting','HomeController@joinmeeting');
@@ -68,6 +69,7 @@ Route::get('/register/activate/{id}', 'HomeController@accountActivate')->name('a
 
 
 Route::get('/home', 'HomeController@meeting')->name('home');
+
 Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
 Route::get('/home/recordings', 'HomeController@getRecordings')->name('recordings');
 Route::get('/home/subscribe', 'HomeController@subscribe');
