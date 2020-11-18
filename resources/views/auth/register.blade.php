@@ -38,7 +38,7 @@
                                    <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
                                 name="role_id" value="{{ old('role_id') }}"  required autocomplete="role_id" autofocus>
                                   <option value="">Select Role</option>
-                                  <option value="3">Student</option>
+                                  <option v alue="3">Student</option>
                                   <option value="2">Teacher</option>
                                 </select>
                               </div>
@@ -96,8 +96,6 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
-
-
                           </form>
                 
                 </div>
