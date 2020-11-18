@@ -4,13 +4,13 @@
     <div class="row meeting-login-design">
         <div class="login-pref login-meeting-overlay">
             <div class="row">
-                <div class="col-7">
+                <div class="col-md-7">
                     <div class="meeting-spacer">
                         <h1>Connecting People Together</h1>
                       <p>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</p> 
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-5">
                     <div class="meeting-custom-login">
                         <div class="text-center">
                             <img class="text-center" src="{{asset('images/logo/bgAsset7.svg')}}" width="100" height="100">

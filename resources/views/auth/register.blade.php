@@ -3,45 +3,46 @@
 @section('main')
     <div class="meeting-login-design">
         @if(Session::has("flash_message_error")) 
-    <div class="alert alert-error alert-block">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        <strong>{!! session('flash_message_error') !!}</strong>
-    </div> 
-  @endif 
+            <div class="alert alert-error alert-block">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>{!! session('flash_message_error') !!}</strong>
+            </div> 
+        @endif 
 
-    @if(Session::has("flash_message_success")) 
-    <div class="alert progress-bar-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        <strong style="color:white;">{!! session('flash_message_success') !!}</strong>
-    </div> 
-    @endif
+        @if(Session::has("flash_message_success")) 
+            <div class="alert progress-bar-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong style="color:white;">{!! session('flash_message_success') !!}</strong>
+            </div> 
+        @endif
         <div class="login-pref login-meeting-overlay">
-        
-                
-                <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
                     <div class="register-spacer">
                         <img src="http://0.gravatar.com/avatar/fcf3541949a1700be9f391b9430484b6?s=300&d=mm&r=g" alt="">
-                      <h1>Lets Get you Started</h1>
-                      <p>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</p>
-                    </div>
+                        <h1>Lets Get you Started</h1>
+                        <p>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</p>
+                    </div>    
                 </div>
-                
-                <div class="col-sm-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="register-custom-login">
                        
-                           <h1>Sign Up for Free</h1>
+                        <h1>Sign Up for Free</h1>
                       
-                          {{-- login form --}}
-                          <form method="POST" action="{{ route('register2') }}">
+                        {{-- login form --}}
+                        <form method="POST" action="{{ route('register2') }}">
                             @csrf
+
                             <div class="form-group row">
-                                   <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
+                                <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
                                 name="role_id" value="{{ old('role_id') }}"  required autocomplete="role_id" autofocus>
                                   <option value="">Select Role</option>
                                   <option v alue="3">Student</option>
                                   <option value="2">Teacher</option>
                                 </select>
-                              </div>
+                            </div>
+	                              
+
                            
                             <div class="form-group row">
                                    
@@ -91,16 +92,18 @@
     
                             <div class="form-group row">
                                <input id="password-confirm" placeholder="Confirm-Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                                <button type="submit" class="btn btn-primary">
+                                
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
                                     {{ __('Register') }}
                                 </button>
                             </div>
-                          </form>
-                
+
+
+                        </form>
+                    </div>    
                 </div>
-        </div>
-           
+            </div>
+        </div>  
     </div>
 
 @endsection

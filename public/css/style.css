@@ -386,7 +386,7 @@ button:hover {
 
 /* Section Padding */
 section {
-  padding: 100px 0;
+  padding: 70px 0;
   position: relative;
 }
 
@@ -920,6 +920,7 @@ font-size: 20px;
   margin-right: 50px;
   float:right;
   padding: 20px;
+  padding-top:100px !important;
   text-align: center;
   width: 60%;
   
@@ -1934,7 +1935,7 @@ li.dropdown:hover .tw-mega-menu {
 }
 .landing2{
   background: #EBF5FB;
-  padding: 130px;
+  padding: 50px 130px !important;
   text-align: center !important;
 }
 .landing2 h2{

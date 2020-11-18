@@ -92,7 +92,7 @@ class HomeController extends Controller
             if(empty($request->name) || 
                 empty($request->phone) || 
                 empty($request->email) ||
-                empty($request->role_id) || 
+                empty($request->role_id) ||
                 empty($request->password) ||
                 empty($request->password_confirmation)){
                 //missing details on form submit by 'enter key'
@@ -145,6 +145,7 @@ class HomeController extends Controller
             event(new NewUserRegisteredEvent($data));
 
             //assign user to selected role
+            //$request->role_id 0=student by default
             DB::table('role_user')->insert(
                 [
                     "user_id" => $newUser['id'],
@@ -1126,7 +1127,10 @@ class HomeController extends Controller
         // /?pesapal_transaction_tracking_id=058e9adb-d351-4092-9df7-0bd776900859
         // &pesapal_merchant_reference=5f2ad92d9dc87
     }
-    public function sendPaymentNotification(){
+    public function tester(){
+        $this->sendPaymentNotification(\Auth::user());
+    }
+    public function sendPaymentNotification($user){
         //test function to send sms
         if(!is_null(\Auth::id())){
             $data = \Auth::user();
@@ -1139,9 +1143,17 @@ class HomeController extends Controller
             $AT       = new AfricasTalking($username, $apiKey);
             // Get one of the services
             $sms      = $AT->sms();
+            if(empty($data['phone'])){
+                //user has no mobile number
+                $recipients='+254718145956';//$data['phone'];//'+254712345678'
+            }else{
+                //user has a valid mobile number
+                $phone = substr($data['phone'],1);
+                $recipients='+254'.$phone;//$data['phone'];//'+254712345678'
+            }
 
             // Set the numbers you want to send to in international format
-            $recipients='+254718145956';//$data['phone'];//'+254712345678'
+            
 
             // Set your message
             $message    = "Dear Customer,your payment was successful.";

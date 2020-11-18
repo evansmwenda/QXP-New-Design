@@ -20,7 +20,7 @@
         <img src="http://0.gravatar.com/avatar/fcf3541949a1700be9f391b9430484b6?s=300&d=mm&r=g" alt="">
             <h3>Mary Kinyua</h3>
             <h4>Co-Founder</h4>  
-            <p>A Seasoned business expert acknowledged throughout his career for capacity to cultivate strategic relationships and build trust, while simultaneously steering positive bottom line results. Kevin has worked in many different roles as a Financial Modelling Expert, Strategy Analyst and now sits as a Managing Director</p>
+            <p>With a PHD in Strategy & HRM and over a decade of experience in senior leadership roles as Human Resource (HR) Manager, Mary has amassed expertise working across multiple sectors in Manufacturing, Financial Services, Service Industry, Horticulture, Consultancy and I.T.</p>
          </div>
     <div class="profiles">
         <img src="http://0.gravatar.com/avatar/fcf3541949a1700be9f391b9430484b6?s=300&d=mm&r=g" alt="">
