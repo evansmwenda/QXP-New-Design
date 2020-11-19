@@ -74,7 +74,7 @@
                            <div class="col-md-8">
                               <h3>Products</h3>
                               <hr style="border-top: 1px solid #ccc">
-                                    <div class="row products-menu" onclick="location.href='http://academy.qxp-global.com/';">
+                                    <div class="row products-menu" onclick="location.href='https://academy.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset-3-2.svg')}}" width="85">
                                        </div>
@@ -84,7 +84,7 @@
                                        </div>
                                     </div>   
                                     {{-- <hr style="border-top: 1px solid #ccc"> --}}
-                                    <div class="row products-menu" onclick="location.href='http://higher-ed.qxp-global.com/';">
+                                    <div class="row products-menu" onclick="location.href='https://higher-ed.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset-2-2.svg')}}" width="85">
                                        </div>
@@ -93,18 +93,9 @@
                                           For Institutes of Higher Learning
                                        </div>
                                     </div>  
-                                    
-                                    <div class="row products-menu" onclick="location.href='http://business.qxp-global.com/';">
-                                       <div class="col-sm-2" style="padding-top: 15px">
-                                       <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="85">
-                                       </div>
-                                       <div class="col-md-1"></div>
-                                       <div class="col-sm-9" style="padding-top: 15px;">
-                                          Video Conferencing, Messaging & Content Sharing
-                                       </div>
-                                    </div>   
+                                     
                                     {{-- <hr style="border-top: 1px solid #ccc"> --}}
-                                    <div class="row products-menu" onclick="location.href='{{url('/login-for-meeting')}}';">
+                                    <div class="row products-menu" onclick="location.href='https://business.qxp-global.com/';">
                                        <div class="col-sm-2" style="padding-top: 15px">
                                        <img src="{{asset('images/logo/bgAsset-1-1.svg')}}" width="85">
                                        </div>
@@ -113,7 +104,17 @@
                                           Suited For All Businesses Trainings and Webinars
                                        </div>
 
-                                    </div>  <br/>
+                                    </div> 
+
+                                    <div class="row products-menu" onclick="location.href='/login-for-meeting';">
+                                       <div class="col-sm-2" style="padding-top: 15px">
+                                       <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="85">
+                                       </div>
+                                       <div class="col-md-1"></div>
+                                       <div class="col-sm-9" style="padding-top: 15px;">
+                                          Video Conferencing, Messaging & Content Sharing
+                                       </div>
+                                    </div>  
                            </div>
                            <div class="col-md-4 solutions">
                               <h3>Solutions</h3>
@@ -207,7 +208,19 @@
              <span data-dismiss="modal">x</span>
           </div>
           <div class="row">
-             <div class="col-md-5 business-login" onclick="location.href='#';">
+            <div class="col-md-5 academy-login business-login" onclick="location.href='https://academy.qxp-global.com/';">
+               <img src="{{asset('images/logo/bgAsset6.svg')}}" width="100">
+               <h2>QXP For Academy</h2>
+              <p>QXP for Pre Primary, Primary and Secondary Education (K-12)</p>
+            </div>
+            <div class="col-md-5 higher-login business-login" onclick="location.href='https://higher-ed.qxp-global.com/';">
+               <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
+               <h2>QXP For Higher Ed</h2>
+              <p>Immersively Engaging Tertiary Education</p>
+            </div>
+         </div>
+          <div class="row">
+             <div class="col-md-5 business-login" onclick="location.href='https://business.qxp-global.com/';">
                <img src="{{asset('images/logo/bgAsset9.svg')}}" width="100">
                <h2>QXP For Business</h2>
                <p>Remain Connected, Stay Organized</p>
@@ -219,18 +232,7 @@
              </div>
           </div>
     
-          <div class="row">
-            <div class="col-md-5 academy-login business-login" onclick="location.href='#';">
-               <img src="{{asset('images/logo/bgAsset6.svg')}}" width="100">
-               <h2>QXP For Academy</h2>
-              <p>QXP for Pre Primary, Primary and Secondary Education (K-12)</p>
-            </div>
-            <div class="col-md-5 higher-login business-login" onclick="location.href='#';">
-               <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
-               <h2>QXP For Higher Ed</h2>
-              <p>Immersively Engaging Tertiary Education</p>
-            </div>
-         </div>
+
        </div>
       </div>
      </div>

@@ -979,10 +979,10 @@ font-size:40px;
   padding: 20px;
 }
 .business-login{
-  padding: 30px;
+  padding: 10px;
   text-align: center;
-  margin: 20px;
-  box-shadow: 3px 3px  #888888;
+  margin: 30px;
+  box-shadow: 3px 3px 20px;
   border-radius: 5px;
   border: 2px solid #ccc;
 }
@@ -1279,8 +1279,8 @@ ul.tw-dropdown-menu li.active a {
   position: absolute;
   border: none;
   width: 80%;
-  margin-top: 0px;
-  /*margin-left: 240px;*/
+  margin: 0px;
+  margin-left: 120px;
   overflow: hidden;
   z-index: -1;
   padding: 37px 18px 27px 40px;
@@ -7057,7 +7057,16 @@ ul.comments-reply .comment-body {
       margin-left: -150px;
       margin-top: -20px;
     }
-
+.leader-top{
+  padding: 20px !important;
+  text-align: left !important;
+}
+.profiles{
+  
+  border-radius: 10px !important;
+   width: 100% !important;
+   margin: 30px !important;
+}
 }
 
 
@@ -7090,9 +7099,12 @@ ul.comments-reply .comment-body {
   color: #fff;
 }
 .qxp-tab{
-  padding-top: 30px;
+
   font-size: 20px;
   font-family: "Hind Vadodara", Sans-serif !important;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  border-bottom: 1px solid transparent !important;
 }
 
 .nav-link .active{
@@ -7100,6 +7112,18 @@ ul.comments-reply .comment-body {
 }
 .nav-link{
   padding: 20px;
+}
+.plans{
+text-align: center;
+}
+.plans .nav-item {
+width: 250px;
+margin-right: 30px;
+border-radius: 10px;
+  border: 1px solid #079DFF;
+}
+.plans .nav-item .nav-link{
+  padding: 8px !important;
 }
 .qxp-price-Header{
   padding: 30px;
@@ -7128,10 +7152,35 @@ ul.comments-reply .comment-body {
   margin-right: 30px;
   margin-left: 30px;
 }
+.qxp-price-Header-meeting{
+  padding: 30px;
+  box-shadow: 3px 3px 20px;
+  background-color: #11BECC;
+  border-top-right-radius:10px;
+  border-top-left-radius: 10px;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.qxp-price-Header-meeting h3{
+  line-height: 1.2;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+.qxp-price-Header-meeting p{
+  line-height: 1.2;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
 
 .price-body{
-  padding-top: 20px;
-  margin-right: 20px;
+  margin-right: 30px;
+ margin-left: 30px;
+  box-shadow: 3px 3px 20px;
 }
 .price-body ul{
   list-style: none;
@@ -7497,11 +7546,11 @@ ul.franchises li:before {
   font-size: 15px;
 }
 .profiles img{
-  border-radius: 500px;
+  border-radius: 50% 50% 50% 50%;
   -o-object-fit: cover;
   width: 180px;
   align-items: center;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 /* GET STARTED STYLING */
