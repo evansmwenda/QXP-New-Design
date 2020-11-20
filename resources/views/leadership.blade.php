@@ -10,7 +10,7 @@
     
 </div>
 <div class="row">
-    <div class="profiles">
+    <div class="profiles" data-toggle="modal" data-target=".kevin">
         <img src="{{asset('images/profiles/kevin.jpg')}}" alt="">
             <h3>Kevin Baraza</h3>
             <h4>Founder</h4>   
@@ -54,7 +54,6 @@
 
      </div>
 </div>
-
 <div class="row">
     <div class="profiles">
         <img src="{{asset('images/profiles/doreen.jpeg')}}" alt="">
@@ -69,11 +68,38 @@
             <h4>Co-Founder</h4>  
             <span class="fa fa-linkedin"></span>
     </div>
-
-
-
-
 </div>
 
+
+{{-- DETAILS MODALS --}}
+
+{{-- Login modal preview --}}
+<div class="modal fade kevin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content qxp-login">
+            <div class="container">
+           
+                <div class="row">
+                    {{-- <span data-dismiss="modal" class="pull-right">x</span> --}}
+                 </div>
+                 <div class="row profile-modals">
+                     <div class="col-md-5">
+                        <img src="{{asset('images/profiles/kevin.jpg')}}" alt="">
+                     </div>
+                     <div class="col-md-7">
+                        <h3>Kevin Baraza</h3>
+                        <h4>Founder</h4> 
+                        <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                        <p><strong>Phone:</strong> +1 (859) 254-6589</p>
+                        <p><strong>Email:</strong> info@example.com</p>
+                        <span class="fa fa-linkedin"></span> 
+                     </div>
+                 </div>
+            
+    
+            </div>
+       </div>
+    </div>
+</div>
 
 @endsection
