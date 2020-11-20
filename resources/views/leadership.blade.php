@@ -23,14 +23,13 @@
             <span class="fa fa-linkedin"></span>
 
           </div>
+          <div class="profiles">
+            <img src="{{asset('images/profiles/mary.jpg')}}" alt="">
+                <h3>Mary Kinyua</h3>
+                <h4>Co-Founder</h4>  
+                <span class="fa fa-linkedin"></span>
+        </div>
 
-    <div class="profiles">
-        <img src="{{asset('images/profiles/#.jpg')}}" alt="">
-            <h3>Sam Njau</h3>
-            <h4>Co-Founder</h4> 
-            <span class="fa fa-linkedin"></span>
-
-     </div>
 </div>
 <div class="row">
     <div class=" profiles">
@@ -63,11 +62,12 @@
 
     </div>
     <div class="profiles">
-        <img src="{{asset('images/profiles/mary.jpg')}}" alt="">
-            <h3>Mary Kinyua</h3>
-            <h4>Co-Founder</h4>  
+        <img src="{{asset('images/profiles/#.jpg')}}" alt="">
+            <h3>Sam Njau</h3>
+            <h4>Co-Founder</h4> 
             <span class="fa fa-linkedin"></span>
-    </div>
+
+     </div>
 </div>
 
 
