@@ -283,7 +283,7 @@
                  <h3>Lecturer</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">500</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -345,10 +345,10 @@
             </div>
             <div class="col-md-6">
               <div class="qxp-price-Header-higher">
-                <h3>Student</h3>
+                <h3>Learners</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">500</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>

@@ -7510,45 +7510,63 @@ ul.franchises li:before {
 }
 .leader-top{
   text-align: center;
-  /* background: url(../images/featured/industries-1.jpg); */
+   /*background: url(../images/featured/industries-1.jpg); */
   background-position: center;
   background-repeat: repeat-x;
   background-size: 100% auto;
-  padding:130px;
+  padding:100px;
   background: #079DFF;
 
 }
 
 .leader-top h2{
   color: #fff;
+  font-weight: 900;
+  font-size: 40px;
 }
 .leader-top p{
   color: #060646;
   font-style: bold;
+  font-weight: 600;
 }
 .profiles{
   border-radius: 3px;
  margin-left: 60px;
  margin-bottom: 20px;
   width: 27%;
+  cursor: pointer;
   margin-top: 50px;
   text-align: center;
   padding: 20px;
   background: #fff;
   box-shadow: 5px 5px 20px;
 }
+.profiles:hover{
+  box-shadow: 1px 1px 50px;
+}
 .profiles h3{
   font-size: 20px;
+  margin-top: 40px;
   font-weight: 200;
 }
+.profiles span{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #079DFF;
+  padding: 10px;
+  color: #fff;
+  border-radius: 500px;
+}
 .profiles h4{
-  color: #0099FE;
-  font-size: 15px;
+  color: #079DFF;
+  font-size: 18px;
+  
+
 }
 .profiles img{
-  border-radius: 50% 50% 50% 50%;
+  border-radius: 2% 2% 2% 2%;
   -o-object-fit: cover;
-  width: 180px;
+  width: 100%;
   align-items: center;
   object-fit:contain;
 }
