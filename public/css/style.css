@@ -1933,25 +1933,25 @@ li.dropdown:hover .tw-mega-menu {
 .slider-img {
   width: 100%;
 }
-.landing2{
+.home-2{
   background: #EBF5FB;
-  padding: 50px 130px !important;
-  text-align: center !important;
+  padding: 30px 130px ;
+  text-align: center ;
 }
-.landing2 h2{
+.home-2 h2{
   color: #0707A4;
   font-family: "Hind Vadodara", Sans-serif;
   font-size: 56px;
   font-weight: 900;
   letter-spacing: -3.2px;
 }
-.landing2 p{
+.home-2 p{
   color: #060646;
   font-weight: 900;
   padding-top: 20px;
   font-size: 20px;
 }
-.landing2 button{
+.home-2  button{
   color:#fff;
   border-radius: 30px;
   border: 1px solid #fff;
@@ -1960,9 +1960,10 @@ li.dropdown:hover .tw-mega-menu {
   width: 150px;
   padding:8px;
 }
-.landing2 img{
+.home-2 img{
   width: 120%;
-  margin-left: -60px;
+  margin-left: -80px;
+  margin-top: -140px;
   
 }
 .meeting-top-row{
@@ -6835,6 +6836,9 @@ ul.comments-reply .comment-body {
 
 /*for the features section only in mobile devices*/
 @media only screen and (max-width: 767px) {
+  .tw-mega-menu{
+    margin-left: 0px;
+  }
     .features-section {
         text-align: center;
     }
@@ -6902,7 +6906,8 @@ ul.comments-reply .comment-body {
       display: none;
     }
     .register-custom-login, .meeting-custom-login{
-    width: 100%;
+    margin: 20px auto;
+    width: 90%;
     }
     .meeting-spacer{
       display: none;
@@ -7026,21 +7031,29 @@ ul.comments-reply .comment-body {
       display: inline-block;
      }
   /* LANDING PAGE RESPONSIVENESS */
-    .landing2{
-      padding: 20px;
-      }
-    .landing2 h2{
-      color: #0707A4;
-      font-family: "Hind Vadodara", Sans-serif;
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: 1.2px;
-    }
-    .landing2 img{
-      width: 100%;
-      margin-left: 0px;
-      
-    }
+     .home-2{
+      padding: 30px !important;
+     
+     }
+     .home-2 h2{
+       font-size: 25px;
+       padding: 10px;
+       letter-spacing: 0.5px;
+       
+     }
+     .home-2 p{
+       font-weight: 400 !important;
+       padding-bottom: 20px;
+       
+     }
+     .home-2 button{
+      width: 150px !important;
+     }
+     .home-2 img{
+       margin-left: 0px !important;
+       width: 100%;
+       margin-top: 3px;
+     }
     .features-box{
       background: #F4F6F6;
     }
