@@ -3434,8 +3434,10 @@ input.round-btn {
  font-size: 15px;
 }
 .footer-widget li {
-  
-  font-size: 12px;
+
+  font-weight: 100;
+  font-size: 13px;
+  padding: 0px;
 }
 .footer-widget ul li span{
   padding-right: 10px;
@@ -3551,8 +3553,8 @@ input.round-btn {
 
 .copyright span,
 .copyright a {
-  color: #fff;
-  font-size: 15px;
+  color: #666;
+  font-size: 12px;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
