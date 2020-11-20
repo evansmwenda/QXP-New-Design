@@ -1935,7 +1935,7 @@ li.dropdown:hover .tw-mega-menu {
 }
 .home-2{
   background: #EBF5FB;
-  padding: 30px 130px ;
+  padding: 100px ;
   text-align: center ;
 }
 .home-2 h2{
@@ -1948,8 +1948,12 @@ li.dropdown:hover .tw-mega-menu {
 .home-2 p{
   color: #060646;
   font-weight: 900;
-  padding-top: 20px;
+  margin: 20px 0px;
   font-size: 20px;
+}
+.btns{
+  width: 300px;
+  margin: 0px auto;
 }
 .home-2  button{
   color:#fff;
@@ -1957,6 +1961,7 @@ li.dropdown:hover .tw-mega-menu {
   border: 1px solid #fff;
   font-size: 13px;
   font-weight: bold;
+
   width: 150px;
   padding:8px;
 }
@@ -7048,6 +7053,8 @@ ul.comments-reply .comment-body {
      }
      .home-2 button{
       width: 150px !important;
+      text-align: center;
+      
      }
      .home-2 img{
        margin-left: 0px !important;
@@ -7070,16 +7077,19 @@ ul.comments-reply .comment-body {
       margin-left: -150px;
       margin-top: -20px;
     }
-.leader-top{
-  padding: 20px !important;
-  text-align: left !important;
-}
-.profiles{
-  
-  border-radius: 10px !important;
-   width: 100% !important;
-   margin: 30px !important;
-}
+    .leader-top{
+      padding: 20px !important;
+      text-align: left !important;
+    }
+    .profiles{
+      
+      border-radius: 10px !important;
+      width: 100% !important;
+      margin: 30px !important;
+    }
+    .tw-top-bar{
+      display: none;
+    }
 }
 
 

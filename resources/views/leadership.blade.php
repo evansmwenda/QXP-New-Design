@@ -33,7 +33,7 @@
 </div>
 <div class="row">
     <div class=" profiles">
-        <img src="{{asset('images/profiles/george.jpg')}}" alt="">
+        <img src="{{asset('images/profiles/george.jpg')}}" alt="">~
             <h3>George Kahinga</h3>
             <h4>Co-Founder</h4>  
             <a href="https://www.linkedin.com/in/george-kahinga-muiruri-2bb51344/" target="new"><span class="fa fa-linkedin"></span> </a>

@@ -117,10 +117,10 @@
 {{-- LANDING PAGE DESIGN 2 --}}
 <div class="home-2">
    <div class="container">
-     
+
       <h2>Connect, Collaborate & Learn</h2>
       <p>Qxp maximizes productivity through reliable tools -tailor-made for meeting and learning,anytime, anywhere, Across any device.</p>
-        <div class="row">
+        <div class="row btns">
          <button style="background: #11BECC" onclick="location.href='/register-user'">SIGN UP, ITS FREE</button>
          <button style="background: #FD6C03" onclick="location.href='/pricing'"> SEE PRICING</button>
         </div>
