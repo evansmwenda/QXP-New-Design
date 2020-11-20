@@ -16,16 +16,16 @@
             <h4>Founder</h4>   
             <span class="fa fa-linkedin"></span>     
     </div>
-        <div class="profiles">
-        <img src="{{asset('images/profiles/mary.jpg')}}" alt="">
-            <h3>Mary Kinyua</h3>
-            <h4>Co-Founder</h4>  
+            <div class="profiles">
+        <img src="{{asset('images/profiles/mathew.png')}}" alt="">
+            <h3>Mathew Mwangi</h3>
+            <h4>CO-Founder</h4>  
             <span class="fa fa-linkedin"></span>
-    </div>
 
+          </div>
 
     <div class="profiles">
-        <img src="{{asset('images/profiles/kevin.jpg')}}" alt="">
+        <img src="{{asset('images/profiles/#.jpg')}}" alt="">
             <h3>Sam Njau</h3>
             <h4>Co-Founder</h4> 
             <span class="fa fa-linkedin"></span>
@@ -57,19 +57,19 @@
 
 <div class="row">
     <div class="profiles">
-        <img src="{{asset('images/profiles/doreen.png')}}" alt="">
+        <img src="{{asset('images/profiles/doreen.jpeg')}}" alt="">
             <h3>Doreen Gakii</h3>
             <h4>CO-Founder</h4> 
             <span class="fa fa-linkedin"></span> 
 
     </div>
-        <div class="profiles">
-        <img src="{{asset('images/profiles/mathew.png')}}" alt="">
-            <h3>Mathew Mwangi</h3>
-            <h4>CO-Founder</h4>  
+    <div class="profiles">
+        <img src="{{asset('images/profiles/mary.jpg')}}" alt="">
+            <h3>Mary Kinyua</h3>
+            <h4>Co-Founder</h4>  
             <span class="fa fa-linkedin"></span>
-
     </div>
+
 
 
 
