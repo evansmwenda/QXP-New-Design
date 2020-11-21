@@ -45,7 +45,7 @@
 
            </div>
     <div class="profiles" data-toggle="modal" data-target=".grace">
-        <img src="{{asset('images/profiles/grace.jpg')}}" alt="">
+        <img src="{{asset('images/profiles/grace.png')}}" alt="">
             <h3>Grace Muinde</h3>
             <h4>Co-Founder</h4>  
             <a href="https://www.linkedin.com/in/cpa-grace-muinde-a06987163/" target="new"><span class="fa fa-linkedin"></span> </a>
@@ -207,7 +207,7 @@
                  </div>
                  <div class="row profile-modals">
                      <div class="col-md-5">
-                        <img src="{{asset('images/profiles/grace.jpg')}}" alt="">
+                        <img src="{{asset('images/profiles/grace.png')}}" alt="">
                      </div>
                      <div class="col-md-7">
                         <h3>Grace Muinde</h3>
@@ -246,7 +246,7 @@
     </div>
 </div>
 
-{{-- grace modal --}}
+{{-- Sam modal --}}
 <div class="modal fade sam" tabindex="-1" role="dialog" aria-labelledby="sam" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content qxp-login">
