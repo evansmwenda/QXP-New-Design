@@ -5,7 +5,10 @@
 
 
 <div class="container text-center error-404">
-    <h1 style="">Whoops, the page you are trying to look for is not found.</h1>
+<img src="{{asset('images/errors/error.png')}}" alt="">
+    <h3 style="">Ooops!!</h3>
+    <h4>Sorry, Something went wrong</h4>
+      <p>We appologize for any inconvenieces caused. If the problem persists, please feel free to contact us.</p>
     <hr>
     <a href="/"><button>Go Back</button></a>
 </div>
