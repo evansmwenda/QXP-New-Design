@@ -1,7 +1,7 @@
 <footer id="tw-footer" class="tw-footer">
     <div class="container">
       <div class="row">
-         <div class=" col-md-8 footer-top">
+         <div class=" col-md-8 col-sm-12 footer-top">
          <p>TRY QXP FREE FOR 14 DAYS</p>
          <h3>Empower Teams, Students & Workforce</h3>
          </div>
@@ -17,7 +17,7 @@
 
     <div class="container">
       <div class="row">         <!-- End Col -->        
-         <div class="col-6 col-md-3" style="margin-top:10px">
+         <div class="col-6 col-md-3">
             <div class="footer-widget">
             <h3>Products</h3>
             <ul>
@@ -26,11 +26,12 @@
                <li> <span class="fa fa-angle-right"></span><a href="http://business.qxp-global.com"> QXP Business</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="http://meetings.qxp-global.com"> QXP Meeting</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="/features"> Features</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/features"> Learning Management System</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
          </div>
-         <div class="col-6 col-md-3"  style="margin-top:10px">
+         <div class="col-6 col-md-3">
             <div class="footer-widget">
             <h3>Company</h3>
             <ul>
@@ -44,9 +45,9 @@
             </div>
             <!-- End Footer Widget -->
          </div>
-         <div class="col-6 col-md-3" style="margin-top:10px">
+         <div class="col-6 col-md-3" >
             <div class="footer-widget">
-            <h3>QXP For</h3>
+            <h3>Industries</h3>
             <ul>
                <li> <span class="fa fa-angle-right"></span><a href="/industries/education">Education</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="/industries/healthcare">Health Care</a></li>
@@ -59,7 +60,7 @@
             </div>
             <!-- End Footer Widget -->
          </div>
-         <div class="col-6 col-md-3" style="margin-top:10px">
+         <div class="col-6 col-md-3" >
             <div class="footer-widget">
             <h3>Support</h3>
             <ul>
@@ -68,6 +69,7 @@
                <li> <span class="fa fa-angle-right"></span><a href="#">Support Centre</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Knowledge Base</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Accessibility Resources</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="#">Downloads</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->
