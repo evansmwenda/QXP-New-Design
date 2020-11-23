@@ -27,9 +27,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="register-custom-login">
                        
-                        <h1>Sign Up for Free</h1>
-                      
-                        {{-- login form --}}
+                
                         <form method="POST" action="{{ route('register2') }}">
                             @csrf
 
@@ -93,10 +91,11 @@
                             <div class="form-group row">
                                <input id="password-confirm" placeholder="Confirm-Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
-                                    {{ __('Register') }}
-                                </button>
+
                             </div>
+                            <button type="submit" class="btn btn-primary col-md-12" style="margin-top: 10px;">
+                                {{ __('Register') }}
+                            </button>
 
 
                         </form>
