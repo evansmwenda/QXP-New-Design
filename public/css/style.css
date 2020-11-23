@@ -2146,7 +2146,25 @@ padding-left: 30px;
 .features-text {
   position: relative;
 }
-
+.error-404{
+text-align: center;
+background: #fff;
+color: #060646;
+padding: 130px;
+}
+.error-404 h1{
+  color: #079DFF;
+  font-weight: 900;
+  font-size: 50px;
+}
+.error-404 button{
+  padding: 8px;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: 10px;
+  background: #FD6C03;
+  width: 150px;
+}
 .features-text:after {
   position: absolute;
   left: -48px;
@@ -6851,6 +6869,12 @@ ul.comments-reply .comment-body {
 
 /*for the features section only in mobile devices*/
 @media only screen and (max-width: 767px) {
+  .error-404{
+    padding: 10px;
+  }
+  .error-404 h1{
+    font-size: 25px;
+  }
   .tw-mega-menu{
     margin-left: 0px;
   }
