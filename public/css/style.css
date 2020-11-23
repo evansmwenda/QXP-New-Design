@@ -220,8 +220,9 @@ button:hover {
 }
 
 .tw-readmore {
-  color: #060646;
-  font-weight: 800;
+  color: #0707A4;
+  font-weight: 900;
+  font-size: 20px;
   display: inline-block;
 }
 
@@ -2160,13 +2161,13 @@ padding-left: 30px;
   background: #fff;
   padding: 20px;
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.03);
+  box-shadow:2px 2px 25px;
   min-height: 315px;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   border-radius: 5px;
-  /* cursor:pointer; */
+  cursor:pointer;
 }
 
 .features-box .features-icon {
@@ -7049,16 +7050,18 @@ ul.comments-reply .comment-body {
   /* LANDING PAGE RESPONSIVENESS */
      .home-2{
       padding: 30px !important;
+      width: 100%;
      
      }
      .home-2 h2{
-       font-size: 25px;
+       font-size: 20px;
        padding: 10px;
-       letter-spacing: 0.5px;
+       font-weight: 800;
+       letter-spacing: 0.05px;
        
      }
      .home-2 p{
-       font-weight: 400 !important;
+       font-weight: 900 !important;
        padding-bottom: 20px;
        
      }
@@ -7069,11 +7072,12 @@ ul.comments-reply .comment-body {
      }
      .home-2 img{
        margin-left: 0px !important;
+       margin-top: 1px;
        width: 100%;
-       margin-top: 3px;
+       
      }
     .features-box{
-      background: #F4F6F6;
+      background: #fff;
     }
     .tw-intro-area {
       background-size: 336px auto;
