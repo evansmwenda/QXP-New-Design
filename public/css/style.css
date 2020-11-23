@@ -2150,12 +2150,17 @@ padding-left: 30px;
 text-align: center;
 background: #fff;
 color: #060646;
-padding: 130px;
+padding: 100px;
 }
 .error-404 h1{
   color: #079DFF;
   font-weight: 900;
   font-size: 50px;
+}
+.error-404 h3{
+  color: #079DFF;
+  font-weight: 900;
+  font-size: 25px;
 }
 .error-404 button{
   padding: 8px;
