@@ -980,13 +980,18 @@ font-size:40px;
   padding: 20px;
 }
 .business-login{
-  padding: 30px;
+  padding-top: 30px;
   text-align: center;
   margin: 30px;
   height: 150px;
   box-shadow: 3px 3px 20px;
   border-radius: 5px;
   border: 2px solid #ccc;
+}
+.business-login p{
+  color: #000;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 .business-login:hover{
