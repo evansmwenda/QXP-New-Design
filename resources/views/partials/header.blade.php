@@ -209,25 +209,25 @@
           </div>
           <div class="row">
             <div class="col-md-5 academy-login business-login" onclick="location.href='https://academy.qxp-global.com/';">
-               <img src="{{asset('images/logo/bgAsset6.svg')}}" width="100">
-               <h2>QXP For Academy</h2>
+               <img src="{{asset('images/logo/bgAsset-3-2.svg')}}" width="100">
+              
               <p>QXP for Pre Primary, Primary and Secondary Education (K-12)</p>
             </div>
             <div class="col-md-5 higher-login business-login" onclick="location.href='https://higher-ed.qxp-global.com/';">
-               <img src="{{asset('images/logo/bgAsset8.svg')}}" width="100">
-               <h2>QXP For Higher Ed</h2>
+               <img src="{{asset('images/logo/bgAsset-2-2.svg')}}" width="100">
+              
               <p>Immersively Engaging Tertiary Education</p>
             </div>
          </div>
           <div class="row">
              <div class="col-md-5 business-login" onclick="location.href='https://business.qxp-global.com/';">
-               <img src="{{asset('images/logo/bgAsset9.svg')}}" width="100">
-               <h2>QXP For Business</h2>
+               <img src="{{asset('images/logo/bgAsset-1-1.svg')}}" width="100">
+               
                <p>Remain Connected, Stay Organized</p>
                </div>
              <div class="col-md-5 meeting-login business-login"onclick="location.href='/login-for-meeting';">
-                <img src="{{asset('images/logo/bgAsset7.svg')}}" width="100">
-               <h2>QXP For Meetings</h2>
+                <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="100">
+              
               <p>Reaching Anyone, Anytime, Anywhere.</p>
              </div>
           </div>

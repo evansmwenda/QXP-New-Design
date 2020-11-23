@@ -13,7 +13,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="meeting-custom-login">
                         <div class="text-center">
-                            <img class="text-center" src="{{asset('images/logo/bgAsset7.svg')}}" width="100" height="100">
+                            <img class="text-center" src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="100" height="100">
                         </div>
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">

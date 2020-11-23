@@ -345,7 +345,7 @@
             </div>
             <div class="col-md-6">
               <div class="qxp-price-Header-higher">
-                <h3>Learners</h3>
+                <h3>Students</h3>
               </div>
               <div class="price-body">
                 <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">500</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
@@ -388,7 +388,7 @@
           <div class="row">
             <div class="col-md-6">
                <div class="qxp-price-Header">
-                 <h3>Subject Matter Experts</h3>
+                 <h3>SME</h3>
                </div>
                <div class="price-body">
                 <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
@@ -453,7 +453,7 @@
             </div>
             <div class="col-md-6">
               <div class="qxp-price-Header">
-                <h3>Student</h3>
+                <h3>Learners</h3>
               </div>
               <div class="price-body">
                 <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">1000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
