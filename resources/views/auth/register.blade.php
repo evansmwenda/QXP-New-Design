@@ -31,10 +31,9 @@
                         <form method="POST" action="{{ route('register2') }}">
                             @csrf
 
-                            <div class="form-group row">
+                            <div class="form-group row " style="display: none;">
                                 <select id="role_id" class="form-control @error('role_id') is-invalid @enderror" 
                                 name="role_id" value="{{ old('role_id') }}"  required autocomplete="role_id" autofocus>
-                                  <option value="">Select Role</option>
                                   <option v alue="3">Student</option>
                                   <option value="2">Teacher</option>
                                 </select>

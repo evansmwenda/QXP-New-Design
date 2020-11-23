@@ -906,8 +906,8 @@ section {
 }
 .register-spacer img{
   width: 100px;
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 25px;
     border-radius: 500px;
     -o-object-fit: cover;
     object-fit: cover;
