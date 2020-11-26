@@ -46,8 +46,8 @@
                 </div>
             </form>
         </div>
-        <div class="career-input">
-    <img src="{{asset('images/featured/UX-Ui-01-01smaller-1.png')}}" alt="">
+        <div class="career-input" style="margin-top: -50px">
+           <img src="{{asset('images/featured/UX-Ui-01-01smaller-1.png')}}" alt="">
         </div>
 </div>
 </div>
