@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('main')
-    <div class="qxp-header-row text-center">
+    <div class="qxp-header-row">
         <h2>Our Pricing and Plans</h2>
         <p>Simple and Predictable Pricing</p>
     </div>
@@ -93,7 +93,7 @@
                 <p>Small Teams</p>
               </div>
               <div class="price-body">
-               <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:600">1,300</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+               <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">1,300</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                <ul>
                 <li>
                   <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -175,7 +175,7 @@
                  <h3>Teachers</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -240,13 +240,14 @@
                 <h3>Student</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">1,000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">250</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
                    <span>Numerous Courses Available</span>
                  </li>
                  <li>
+
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
                    <span>Mobile Learning Experience</span>
                  </li>
@@ -283,7 +284,7 @@
                  <h3>Lecturer</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -348,7 +349,7 @@
                 <h3>Students</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">500</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">500</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -391,7 +392,7 @@
                  <h3>SME</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">2000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -456,7 +457,7 @@
                 <h3>Learners</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:50px">KES</sup><strong style="color: #060646;font-size:80px; font-weight:900">1000</strong> <sup style="color: #060646; font-size:50px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">1,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>

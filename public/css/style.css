@@ -7140,6 +7140,30 @@ ul.comments-reply .comment-body {
     .tw-top-bar{
       display: none;
     }
+    .qxp-header-row{
+     padding: 30px !important;
+    }
+    .qxp-header-row h2{
+
+      font-size: 25px !important;
+
+    }
+    .qxp-tab{
+      font-size: 18px !important;
+      margin-bottom: 5px !important;
+      margin-top: 5px !important;
+      
+    }
+    .plans .nav-item {
+      width: 140px !important;
+      margin-left: 10px !important;
+      margin-bottom: 10px;
+      float: left;
+
+      }
+      .price-body ul{
+        font-size: 15px !important;
+      }
 }
 
 
@@ -7156,6 +7180,7 @@ ul.comments-reply .comment-body {
   padding: 110px;
   background-color: #079DFF;
   width: 100%;
+  text-align: center;
   color: #fff;
 }
 .qxp-header-row h2{
@@ -7258,10 +7283,10 @@ border-radius: 10px;
 .price-body ul{
   list-style: none;
   color: #060646;
-  font-size: 20px;
+  font-size: 18px;
 }
 .price-body ul li{
-  padding:20px;
+  padding:10px;
   border-bottom: 1px #ccc solid;
 }
 .price-body ul i{
