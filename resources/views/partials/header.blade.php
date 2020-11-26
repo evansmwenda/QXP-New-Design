@@ -121,7 +121,7 @@
                               <hr style="border-top: 1px solid #ccc">
                               <ul>
                                  <li><a href="/industries/education"><span class=" fa fa-angle-right"></span>Education</a></li>
-                                 <li><span><a href="/industries/education"><span class=" fa fa-angle-right"></span>Education</a></li>
+                                
                                  <li><span><a href="/industries/legal"><span class=" fa fa-angle-right"></span>Legal</a></li>
                                  <li><span><a href="/industries/financial-institutions"><span class=" fa fa-angle-right"></span>Financial Institutions</a>
                                  </li>
@@ -208,7 +208,7 @@
              <span data-dismiss="modal">x</span>
           </div>
           <div class="row">
-            <div class="col-md-5 academy-login business-login" onclick="location.href='https://academy.qxp-global.com/';">
+            <div class="col-md-5 academy-login business-login" onclick="location.href='#';">
                <img src="{{asset('images/logo/bgAsset-3-2.svg')}}" width="100">
               
               <p>QXP for Pre Primary, Primary and Secondary Education (K-12)</p>
@@ -220,7 +220,7 @@
             </div>
          </div>
           <div class="row">
-             <div class="col-md-5 business-login" onclick="location.href='https://business.qxp-global.com/';">
+             <div class="col-md-5 business-login" onclick="location.href='#';">
                <img src="{{asset('images/logo/bgAsset-1-1.svg')}}" width="100">
                
                <p>Remain Connected, Stay Organized</p>

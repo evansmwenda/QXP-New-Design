@@ -39,7 +39,7 @@
                <li> <span class="fa fa-angle-right"></span><a href="/leadership">Leadership</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Case Studies</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> News Media</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#"> Careers</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/career"> Careers</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#"> Contact</a></li>
             </ul>
             </div>

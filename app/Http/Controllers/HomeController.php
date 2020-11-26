@@ -60,6 +60,10 @@ class HomeController extends Controller
     {
        return view('downloads');
     }
+    public function career()
+    {
+       return view('career');
+    }
     public function sendActivate(Request $request){
         //this function sends activation email to those  who havent activated their accounts
         $user = User::where('email',$request->email)->get()->first();
