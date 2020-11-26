@@ -5396,7 +5396,9 @@ ul.comments-reply .comment-body {
 }
 .features h2{
   color: #079DFF;
-  font-size: 25px;
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: 400;
   margin-top: 15px;
 }
 .features span{
