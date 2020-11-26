@@ -6880,6 +6880,23 @@ ul.comments-reply .comment-body {
 
 /*for the features section only in mobile devices*/
 @media only screen and (max-width: 767px) {
+  .download-card{
+    width: 96% !important;
+    padding:20px !important;
+    margin-right:0px !important;
+    margin-left:10px !important;
+  }
+  .ios{
+    float:left; 
+    width:35%;
+    margin-left: 0px !important;
+  }
+  .ios img{
+  height: 30px !important;
+  width: 100px !important;
+  margin-left: 50px !important;
+  
+  }
   .error-404{
     padding: 10px;
   }
@@ -7778,4 +7795,61 @@ border-bottom: 1px solid rgb(223, 220, 220);
 }
 .collapse{
   padding: 20px;
+}
+.downloads-top{
+  width:100% ;
+  background: #fff;
+  color: #060646;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 100px;
+}
+.downloads-top h2{
+  color: #007bff;
+  font-weight: 40px;
+}
+.download-card{
+  width: 49%;
+  padding:30px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 2px 2px 20px;
+}
+.download-card h3{
+  margin: 20px;
+  font-size: 20px;
+}
+.download-card p{
+  color: #000;
+
+  font-size: 20px;
+}
+.download-card img{
+  margin-top: 30px;
+  width: 120px;
+}
+.download-card button{
+  background: #007bff;
+  padding:7px;
+  margin: 20px;
+  border-radius: 3px;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.download-card button i{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ios{
+  float:left; 
+  width:35%;
+  margin-left: 30px;
+}
+.ios img{
+height: 50px;
+width: 160px;
+margin-left: 30px;
+
 }

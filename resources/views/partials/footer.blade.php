@@ -69,7 +69,7 @@
                <li> <span class="fa fa-angle-right"></span><a href="#">Support Centre</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Knowledge Base</a></li>
                <li> <span class="fa fa-angle-right"></span><a href="#">Accessibility Resources</a></li>
-               <li> <span class="fa fa-angle-right"></span><a href="#">Downloads</a></li>
+               <li> <span class="fa fa-angle-right"></span><a href="/downloads">Downloads</a></li>
             </ul>
             </div>
             <!-- End Footer Widget -->

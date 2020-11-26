@@ -27,6 +27,7 @@ Route::get('/meeting','HomeController@meeting');
 Route::get('/login-for-meeting','HomeController@meetingLogin');
 Route::get('/about','HomeController@about');
 Route::get('/leadership','HomeController@leadership');
+Route::get('/downloads','HomeController@downloads');
 Route::get('/get-started','HomeController@getstarted');
 Route::get('/mail','HomeController@mail');
 
