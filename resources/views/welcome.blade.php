@@ -156,7 +156,7 @@
                <h3 style="color: #f4ba00">Academy</h3>
                <p class="plan-detail">For Pre-primary, Primary and Secondary Education
                </p>
-               <a href="http://academy.qxp-global.com" class="tw-readmore">Learn More
+               <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
@@ -181,7 +181,7 @@
                <h3 style="color: #71CA52">Higher Ed</h3>
                <p class="plan-detail">For Institutes of Higher Learning
                </p>
-               <a href="http://higher-ed.qxp-global.com" class="tw-readmore">Learn More
+               <a href="https://higher-ed.qxp-global.com" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
@@ -232,7 +232,7 @@
                <h3 style="color: #C92519">For Business</h3>
                <p class="plan-detail">Suited For All Business Trainings and Webinars
                </p>
-               <a href="http://business.qxp-global.com" class="tw-readmore">Learn More
+               <a href="#" class="tw-readmore">Learn More
                   <i class="fa fa-angle-right"></i>
                </a>
                <div class="academy">
