@@ -61,7 +61,7 @@
 
     </div>
     <div class="profiles" data-toggle="modal" data-target=".sam">
-        <img src="{{asset('images/profiles/sam.jpg')}}" alt="">
+        <img src="{{asset('images/profiles/sam.jpeg')}}" alt="">
             <h3>Sam Njau</h3>
             <h4>Co-Founder</h4> 
             <a href="https://www.linkedin.com/in/sam-njau-9898b189/" target="new"><span class="fa fa-linkedin"></span> </a> 
@@ -197,7 +197,7 @@
     </div>
 </div>
 
-{{-- doreen modal --}}
+{{-- grace modal --}}
 <div class="modal fade grace" tabindex="-1" role="dialog" aria-labelledby="grace" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content qxp-login">
@@ -212,8 +212,11 @@
                      <div class="col-md-7">
                         <h3>Grace Muinde</h3>
                         <h4>Co-Founder</h4> 
-                        <p>Grace is a Finance and Administration Expert serving as a Finance and Admin Manager at Serenity Services Ltd. As a passionate leader and mentor, she applies a multi-disciplinary approach to help organizations accelerate outcomes while creating environments of transparent communications.</p>
-                        <a href="https://www.linkedin.com/in/cpa-grace-muinde-a06987163/" target="new"><span class="fa fa-linkedin"></span> </a>
+                        <p>Grace is an industrious and responsible leader, driven to create
+                            and enforce order within systems and institutions. She is eager to
+                            improve systems and processes with her innovative ideas and has a
+                            talent for seeing possibilities for improvement in everything.</p>
+                       <a href="https://www.linkedin.com/in/cpa-grace-muinde-a06987163/" target="new"><span class="fa fa-linkedin"></span> </a>
 
                     </div>
                     </div>
@@ -256,7 +259,7 @@
                  </div>
                  <div class="row profile-modals">
                      <div class="col-md-5">
-                        <img src="{{asset('images/profiles/sam.jpg')}}" alt="">
+                        <img src="{{asset('images/profiles/sam.jpeg')}}" alt="">
                      </div>
                      <div class="col-md-7">
                         <h3>Sam Njau</h3>
