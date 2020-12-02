@@ -33,6 +33,19 @@
                                     <!-- Heading title-->
                                     <div class="schedule-header title">
                                         Your Scheduled meetings 
+                                        @if(Session::has("flash_message_error")) 
+                                        <div class="alert alert-error alert-block">
+                                            <button type="button" class="close" data-dismiss="alert">x</button>
+                                            <strong>{!! session( 'flash_message_error') !!}</strong>
+                                        </div> 
+                                        @endif 
+                              
+                                        @if(Session::has("flash_message_success")) 
+                                        <div class="alert progress-bar-success alert-block">
+                                            <button type="button" class="close" data-dismiss="alert">x</button>
+                                            <strong>{!! session('flash_message_success') !!}</strong>
+                                        </div> 
+                                        @endif
                                     </div>
                                     {{-- <div class="schedule-header">
                                         Clarice Peru Kibii
@@ -54,7 +67,7 @@
                                               <div class="row colored">
                                                 <div class="col-md-4">{{$scheduled->title}}</div>
                                                 <div class="col-md-2">{{$scheduled->meetingID}}</div>
-                                                <div class="col-md-3">{{$scheduled->classTime}}</div>
+                                                <div class="col-md-3">{{substr($scheduled->classTime,0,16)}}</div>
                                                 <div class="col-md-2">
                                                     <div class="just-btn">
                                                       <form method="post" action="/live-schedule-start">{{ csrf_field() }}
@@ -73,7 +86,17 @@
                                                 <td colspan="5" style="text-align: center">You dont have any scheduled events</td>
                                               </tr>
                                             @endif
-
+                                            <form method="post" action="/live-schedule">{{ csrf_field() }}
+                                                <div class="col-md-6">
+                                                    <label>Meeting Title</label>
+                                                    <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
+                                                    <label>Start Date</label>
+                                                    <input type="datetime-local" required class="form-control" name="startdate">
+                                                    <label>End Date</label>
+                                                    <input type="datetime-local" required class="form-control" name="enddate">
+                                                    <button type="submit">Save</button>
+                                                </div>
+                                             </form>
                                             
                                         </div>
                                     </div>

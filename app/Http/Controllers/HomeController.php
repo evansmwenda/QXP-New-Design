@@ -1466,7 +1466,9 @@ class HomeController extends Controller
         }  
         
     }
-
+    public function support(){
+    return view('meetings.support');
+    }
 }
  
 

@@ -25,7 +25,7 @@
         </div>
         
         <!-- Meeting Plans -->
-        <div class="list-icons">
+        {{-- <div class="list-icons">
           <div class="icon-only">
             <img src="{{asset('images/meeting-icon/meeting-room.png')}}" alt="">
           </div>
@@ -33,7 +33,7 @@
             <li onclick="location.href='/home/plans'">Meeting Plans</li>
           </div>
           <hr>
-        </div> 
+        </div>  --}}
 
         <!-- Billing -->
         <div class="list-icons">
@@ -44,7 +44,7 @@
             <li onclick="location.href='/home/subscribe'">Billing</li>
           </div>
           <hr>
-        </div>
+        </div> 
 
 
         <!-- Recordings -->
@@ -56,7 +56,7 @@
             <!-- this support button is using the recordings link -->
             <li onclick="location.href='/home/recordings'">Recordings</li>
           </div>
-        </div> --}}
+        </div>
 
         <!-- Support -->
         <div class="list-icons">
