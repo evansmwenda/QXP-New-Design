@@ -5,7 +5,7 @@
         <div class="list-icons">
           <div class="icon-only">
            <!-- <img src="http://127.0.0.1:8000/images/icons/meetingIcon.svg" alt=""> -->
-            <img src="http://127.0.0.1:8000/images/meeting-icon/video-conference-65.png" alt="">
+            <img src="{{asset('images/meeting-icon/video-conference-65.png')}}" alt="">
           </div>
           <div class="list-only" style="color:#0099FE;font-weight:bold;">
             <li onclick="location.href='/home'">Home</li>
@@ -16,7 +16,7 @@
         <!-- Schedule -->
         <div class="list-icons">
           <div class="icon-only">
-            <img src="http://127.0.0.1:8000/images/meeting-icon/icons8-schedule-96.png" alt="">
+            <img src="{{asset('images/meeting-icon/icons8-schedule-96.png')}}" alt="">
           </div>
           <div class="list-only">
             <li onclick="location.href='/schedule-meeting'">Schedule</li>
@@ -27,7 +27,7 @@
         <!-- Meeting Plans -->
         <div class="list-icons">
           <div class="icon-only">
-            <img src="http://127.0.0.1:8000/images/meeting-icon/meeting-room.png" alt="">
+            <img src="{{asset('images/meeting-icon/meeting-room.png')}}" alt="">
           </div>
           <div class="list-only">
             <li onclick="location.href='/home/plans'">Meeting Plans</li>
@@ -38,7 +38,7 @@
         <!-- Billing -->
         <div class="list-icons">
           <div class="icon-only">
-            <img src="http://127.0.0.1:8000/images/meeting-icon/billing-icon.png" alt="">
+            <img src="{{asset('images/meeting-icon/billing-icon.png')}}" alt="">
           </div>
           <div class="list-only">
             <li onclick="location.href='/home/subscribe'">Billing</li>
@@ -61,7 +61,7 @@
         <!-- Support -->
         <div class="list-icons">
           <div class="icon-only">
-            <img src="http://127.0.0.1:8000/images/meeting-icon/support-logo.png" alt="">
+            <img src="{{asset('images/meeting-icon/support-logo.png')}}" alt="">
           </div>
           <div class="list-only">
             <!-- this support button is using the recordings link -->
