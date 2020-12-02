@@ -23,9 +23,11 @@
                <p>
                  Package: {{$subscription[0]->package->name ?? 'Free Version'}}</span>
                </p>
-               <a href="/home/subscribe/{{$subscription[0]->package->id ?? '1'}}" class="btn btn-primary">Renew Subscription</a>
+               <a href="/home/subscribe/{{$subscription[0]->package->id ?? '1'}}" id="pesapal-btn" class="btn btn-primary">Renew Subscription
+              </a>
              @if(isset($iframe_src))
-             <div class="col-xs-12 col-sm-12">
+
+             <div class="col-xs-12 col-sm-12" id="pesapal">
                  <iframe src="{{ $iframe_src }}" width="100%" height="700px" scrolling="no" frameBorder="0">
                    <p>Browser unable to load iFrame</p>
                  </iframe>
@@ -41,5 +43,6 @@
     </div>
 
 </div>
-<!-- Modal -->
+
+
 @endsection

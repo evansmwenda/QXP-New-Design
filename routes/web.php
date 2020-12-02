@@ -33,6 +33,10 @@ Route::get('/get-started','HomeController@getstarted');
 Route::get('/mail','HomeController@mail');
 
 Route::post('/schedule','HomeController@createMeeting');
+Route::get('/schedule-meeting','HomeController@scheduleMeeting');
+Route::post('/live-schedule','HomeController@liveSchedule');
+Route::post('/live-schedule-start','HomeController@liveScheduleStart');
+
 Route::post('/joinmeeting','HomeController@joinmeeting');
 Route::get('/user/live/{id}','HomeController@join_meeting');
 Route::group(['prefix'=>'industries'], function (){
@@ -66,7 +70,6 @@ Route::match(['get','post'],'/register-user', 'HomeController@register2')->name(
 Route::post('/register/activate', 'HomeController@sendActivate')->name('send_activate');
 Route::get('/register/activate/{id}', 'HomeController@accountActivate')->name('account_activate');
 // Route::get('/home/plans', 'HomeController@getPlans')->name('plans');
-
 
 
 
