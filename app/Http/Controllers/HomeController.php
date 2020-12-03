@@ -1207,13 +1207,13 @@ class HomeController extends Controller
     public function scheduleMeeting()
     {
         // get logged in user meeting schedules
-        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->get();
+        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(5);
         // dd($my_schedules);
         return view('meetings.schedule')->with(compact('my_schedules'));
     }
     public function liveSchedule(Request $request){
 
-        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->get();
+        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(5);
         // dd($my_schedules);
 
         $data=$request->all();            
