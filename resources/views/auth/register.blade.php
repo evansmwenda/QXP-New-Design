@@ -8,6 +8,7 @@
                 <strong>{!! session('flash_message_error') !!}</strong>
             </div> 
         @endif 
+        
 
         @if(Session::has("flash_message_success")) 
             <div class="alert progress-bar-success alert-block">

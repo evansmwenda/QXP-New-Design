@@ -29,7 +29,20 @@
             <div class="meeting-body">
               {{-- create meeting --}}
               <div class="meeting-content" id="create">
-                 @if(Session::has("flash_message_error")) 
+
+                <div class="create-join-container">
+                  <h2>{{\Auth::user()->name}} Meetings Room</h2>
+                <br>
+                 <p>Connecting People Together</p>
+
+                 <i>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</i>
+                  <br><br>
+                 
+                   <button data-toggle="modal" data-target="#joinmeeting" style="background-color: #71CA52;">Join</button> 
+                    <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color: #11BECC;"> Start a Meeting</button> 
+                  <a href="/schedule-meeting"><button style="background-color: #FD6C03;">Schedule</button> </a>
+                </div>
+                @if(Session::has("flash_message_error")) 
                 <div class="alert alert-error alert-block">
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>{!! session( 'flash_message_error') !!}</strong>
@@ -42,21 +55,45 @@
                     <strong>{!! session('flash_message_success') !!}</strong>
                 </div> 
                 @endif 
-                <div class="create-join-container">
-                  <h2>{{\Auth::user()->name}} Meetings Room</h2>
-                <br>
-                 <p>Connecting People Together</p>
-                 <i>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</i>
-                  <br><br>
-                 
-                   <button data-toggle="modal" data-target="#joinmeeting" style="background-color: #71CA52;">Join</button> 
-                    <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color: #11BECC;"> Start a Meeting</button> 
-                  <a href="/schedule-meeting"><button style="background-color: #FD6C03;">Schedule</button> </a>
-                </div>
                   <hr>
+                  <h3 style="color: #060646; font-weight:500; margin-top:20px; font-size:15px">Upcoming Metings</h3>
+                  @if(count($my_schedules)>0)
+                  @foreach ($my_schedules as $scheduled)
+                  <div class="row colored">
+                    <div class="col-md-4">{{$scheduled->title}}</div>
+                    <div class="col-md-1">{{$scheduled->meetingID}}</div>
+                    <div class="col-md-3">{{$scheduled->today}}</div>
+                    <div class="col-md-1">{{$scheduled->time}}</div>
+                    <?php
+                    $time=substr(date("Y-m-d H:i:A"),10,16);
+                    if($scheduled->time > $time){
+                      ?>
+
+                      <?php
+                    }else{
+                      ?>
+                      <div class="col-md-2 just-btn">
+
+
+
+                    </div>
+                    <?php
+                                        
+                  }
+                    ?>
+
+                </div>
+                <br>
+                  @endforeach
+                  {{$my_schedules->links()}}
+                  @else
+                  <tr >
+                    <td >You currently don`t have any scheduled meetings for today</td>
+                  </tr>
                   
-              </div>
-              
+                @endif
+                </div>
+
               <!-- Recordings List 
               <div class="recordings-list-container">
                 <div class="recordings-header">
@@ -112,7 +149,6 @@
       </form>
     </div>
   </div>
-
 </div>
 {{-- join modal --}}
 <div class="modal fade" id="joinmeeting" tabindex="-1" role="dialog" aria-labelledby="joinmeeting" aria-hidden="true">
@@ -132,7 +168,6 @@
       </div>
 
           <div class="modal-body create-meeting">
-            
               <p> Enter meeting ID to join meeting</p> 
               <form method="post" action="/joinmeeting">{{ csrf_field() }}
                   <input type="text" class="form-control col-md-8" name="meetingID" required placeholder="Enter Meeting Id">
@@ -143,6 +178,6 @@
           </div>
     </div>
   </div>
-
 </div>
+
 @endsection

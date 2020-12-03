@@ -41,7 +41,7 @@
                                         @if(Session::has("flash_message_success")) 
                                         <div class="alert progress-bar-success alert-block">
                                             <button type="button" class="close" data-dismiss="alert">x</button>
-                                            <strong>{!! session('flash_message_success') !!}</strong>
+                                            <p>{!! session('flash_message_success') !!}</p>
                                         </div> 
                                         @endif
                                     </div>
@@ -58,7 +58,7 @@
                                             </div>
                                             <hr>
                                             <!-- Content -->
-                                            @if(count($my_schedules)>1)
+                                            @if(count($my_schedules)>0)
                                               @foreach ($my_schedules as $scheduled)
                                               <div class="row colored">
                                                 <div class="col-md-4">{{$scheduled->title}}</div>
@@ -116,18 +116,13 @@
                 
                     <label>Meeting Title</label>
                     <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Start Date</label>
-                            <input type="datetime-local" required class="form-control" name="startdate">
-                        </div>
-                        <div class="col-md-6">
-                            <label>End Date</label>
-                            <input type="datetime-local" required class="form-control" name="enddate">
-                        </div>
-                    </div>
+
+                      <label>Start Date</label>
+                      <input type="datetime-local" required class="form-control" name="startdate">
+            
+                   
                     <label for="">Description</label>
-                    <div class="row"><textarea name="" class="form-control" cols="100" id=""rows="5"></textarea></div>
+                    <div class="row"><textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea></div>
                     
                     <button type="submit">Save</button>
               

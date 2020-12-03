@@ -37,6 +37,7 @@ Route::get('/schedule-meeting','HomeController@scheduleMeeting');
 Route::post('/live-schedule','HomeController@liveSchedule');
 Route::post('/live-schedule-start','HomeController@liveScheduleStart');
 
+
 Route::post('/joinmeeting','HomeController@joinmeeting');
 Route::get('/user/live/{id}','HomeController@join_meeting');
 Route::group(['prefix'=>'industries'], function (){

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Auth;
 use App\LiveClasses;
 use App\Events;
+use App\Meeting;
 use App\LiveClassRecordings;
 use GuzzleHttp\Client;
 use GuzzleHttp\Ring\Exception\ConnectException;
@@ -343,6 +344,17 @@ class HomeController extends Controller
     }
     public function meeting(){
         if (\Auth::check()) {
+                    // get logged in user meeting schedules
+        $date=date("Y-m-d  h:i:s");
+        $today=date("Y-m-d H:i:s",strtotime($date));
+        
+        // dd(substr($today,0,10));
+        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',substr($today,0,10))->paginate(2);
+        // $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
+        //    foreach ($my_schedules  as $key => $value) {
+        //     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
+        //    }
+        //    dd($my_schedules);
             $status = User::where('email',\Auth::user()->email)->value('verified');
             if($status == '0'){
                 //user not verified->redirect to verification page
@@ -365,7 +377,7 @@ class HomeController extends Controller
             }
 
             // return View::make('meeting', compact('subscription', 'active','expiry_on'));
-            return view('meeting')->with(compact('subscription', 'active','expiry_on'));
+            return view('meeting')->with(compact('subscription', 'active','expiry_on','my_schedules'));
         }else{
             return view('meeting_login');
         }
@@ -1207,13 +1219,13 @@ class HomeController extends Controller
     public function scheduleMeeting()
     {
         // get logged in user meeting schedules
-        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(5);
+        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
         // dd($my_schedules);
         return view('meetings.schedule')->with(compact('my_schedules'));
     }
     public function liveSchedule(Request $request){
 
-        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(5);
+        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
         // dd($my_schedules);
 
         $data=$request->all();            
@@ -1242,12 +1254,12 @@ class HomeController extends Controller
         $meetingID =substr(md5(mt_rand()), 0, 6);
         // dump($meetingID);
 
-        $event_start_end = $data['startdate'];
-        $event_start_enddate = $data['enddate'];
+        // $event_start_end = $data['startdate'];
+        $event_start_end=date("Y-m-d H:i:s",strtotime($data['startdate']));
         //  dd($event_start_end);
         
-        $event_start_end = explode(" - ", $event_start_end);
-        $event_start_enddate = explode(" - ", $event_start_enddate);
+        // $event_start_end = explode(" - ", $event_start_end);
+        // $event_start_enddate = explode(" - ", $event_start_enddate);
         // 0 => "2020-06-23 00:00:00"
         // 1 => "2020-06-23 23:59:59"
         // dd($event_start_enddate);
@@ -1256,7 +1268,8 @@ class HomeController extends Controller
         
 
 
-        $classTime=$data['startdate'];//"2020-06-23 00:00:00"
+        $classTime=$event_start_end;//"2020-06-23 00:00:00"
+        // dd($classTime);
         $attendeePW=str_random(6);//"ap";//$request->attendeePW;
         
         $moderatorPW=str_random(6);//"mp";//$request->moderatorPW;
@@ -1266,19 +1279,27 @@ class HomeController extends Controller
         // $classTime=date("Y-m-d H:i:s",strtotime($classTime));//"2020-04-20 07:30:00"
         // dd($classTime);
                     //insert record to table
-                    
+        // $date=date("Y-m-d  h:i:s");
+        // $today=date("Y-m-d H:i:A",strtotime($date)); 
+        $today=date("Y-m-d H:i:A",strtotime($data['startdate']));
+        // dd($today);
         $newLiveClass= [
             'title'=>$title,//class title
             'meetingID'=>$meetingID,//meeting ID
-            'course_id'=>0,
+            // 'course_id'=>0,
             'classTime'=>$classTime,//classTime
             'attendeePW'=>$attendeePW,//attendee password 
             'moderatorPW'=>$moderatorPW,//moderator password
-            // 'duration'=>$duration,//role=0for normal user accounts
-            'owner'=>$user['id']
+            //'duration'=>$duration,//role=0for normal user accounts
+            'owner'=>$user['id'],
+            'today'=>substr($today,0,10),
+            'description'=>'my description',
+            'time'=>substr($today,10,16),
+            'attendees'=>$data['description']
+            
             ];
           
-            $newLiveClass = LiveClasses::create($newLiveClass);
+            $newLiveClass = Meeting::create($newLiveClass);
             // dd($newLiveClass);
             if($newLiveClass){
                 //return back to dashboard with class scheduled notification.
@@ -1291,7 +1312,7 @@ class HomeController extends Controller
     }
 
     public function liveScheduleStart(Request $request){
-        $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->get();
+        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->get();
         $topic="";
         $mtnID="";
         $cltime="";
@@ -1454,7 +1475,7 @@ class HomeController extends Controller
                 //send email notification for welcome and account activation
                 event(new MeetingCreatedEvent($data));
 
-                return redirect()->back()->with('flash_message_success','Meeting has started successfully');
+                return redirect()->back()->with('flash_message_success','Meeting has started successfully!');
 
             }else{
                 //not successful
@@ -1469,6 +1490,8 @@ class HomeController extends Controller
     public function support(){
     return view('meetings.support');
     }
+ 
+    
 }
  
 

@@ -12,7 +12,7 @@
    
         <h2 style=>QXP Meeting Creation was successfull</h2>
         <p>Dear {{$data['name']}},</p>
-         <p>You been has invited you to a scheduled QXP Meeting</h4>
+         <p>You are the host for the scheduled meeting with the following Details;</h4>
 
          <p>Meeting ID : {{$data['ID']}}</p>
 

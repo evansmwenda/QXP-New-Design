@@ -21,7 +21,8 @@
             <div>
              <h2>Renew Subscription</h2>
                <p>
-                 Package: {{$subscription[0]->package->name ?? 'Free Version'}}</span>
+                 {{-- Package: {{$subscription[0]->package->name ?? 'Free Version'}}</span> --}}
+                 Package: Free Version</span>
                </p>
                <a href="/home/subscribe/{{$subscription[0]->package->id ?? '1'}}" id="pesapal-btn" class="btn btn-primary">Renew Subscription
               </a>
