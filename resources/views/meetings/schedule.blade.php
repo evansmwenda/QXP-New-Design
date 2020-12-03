@@ -30,7 +30,7 @@
                                     <!-- Heading title-->
                                     <div class="schedule-header title">
                                         Your Scheduled meetings 
-                                        <button class="create-schedule" data-toggle="modal" data-target="#exampleModalCenter">Create Schedule</button>
+                                        <button class="create-schedule pull-right" style="background: chocolate;margin-top:-7px;margin-right:20px;" data-toggle="modal" data-target="#exampleModalCenter">Create Schedule</button>
                                         @if(Session::has("flash_message_error")) 
                                         <div class="alert alert-error alert-block">
                                             <button type="button" class="close" data-dismiss="alert">x</button>
@@ -105,7 +105,7 @@
           <div class="qxp-logo-meeting-dashboard modal-design">
             <img src="http://127.0.0.1:8000/images/logo/bgAsset-4-2.svg" alt="qxp-logo">
           </div>
-          <h5 class="modal-title" id="exampleModalLongTitle">Schedule Meeting</h5>
+          <h5 class="modal-title" style="margin-left: 50px" id="exampleModalLongTitle">Schedule Meeting</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -122,7 +122,7 @@
             
                    
                     <label for="">Description</label>
-                    <div class="row"><textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea></div>
+                    <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>
                     
                     <button type="submit">Save</button>
               

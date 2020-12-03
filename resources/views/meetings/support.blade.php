@@ -15,11 +15,6 @@
             <hr>
             <div class="meeting-menu">
                @include('partials.meeting_sidebar') 
-               {{-- <div class="contact-us-email">
-                Contact Us for more Queries 
-                <hr>
-                info@qxp-global.com
-              </div> --}}
             </div>
           </div>
         </div>

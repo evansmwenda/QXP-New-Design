@@ -295,11 +295,44 @@ class HomeController extends Controller
     }
     public function meetingLogin(){
         if (\Auth::check()) {
-            return view('meeting');
-        }else{
-            return view('meeting_login');
-        }
-        
+            // get logged in user meeting schedules
+$date=date("Y-m-d  h:i:s");
+$today=date("Y-m-d H:i:s",strtotime($date));
+
+// dd(substr($today,0,10));
+$my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',substr($today,0,10))->paginate(2);
+// $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
+//    foreach ($my_schedules  as $key => $value) {
+//     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
+//    }
+//    dd($my_schedules);
+    $status = User::where('email',\Auth::user()->email)->value('verified');
+    if($status == '0'){
+        //user not verified->redirect to verification page
+        // dd("not verif");
+        // return Redirect::route('verify2');
+        return redirect()->route('verify2');
+    }
+    // $this->checkEmailActivationStatus(\Auth::user()->email);
+    // check if any unused payments
+    $this->checkPaymentStatusDashboard();
+    //get package status
+    $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+    // Date('Y-m-d h:i:s', strtotime('+14 days')),  
+    // dd($subscription ) ;    
+    $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+    $expiry_on =$subscription[0]->expiry_on;
+    if($expiry_on > $date_now){
+        $active = true;//subscription is active
+    }else{
+        $active = false;//expired or is on free trial
+    }
+
+    // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+    return view('meeting')->with(compact('subscription', 'active','expiry_on','my_schedules'));
+}else{
+    return view('meeting_login');
+}
     }
     public function test(){
         $data=array(
@@ -367,7 +400,8 @@ class HomeController extends Controller
             $this->checkPaymentStatusDashboard();
             //get package status
             $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
-            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),  
+            // dd($subscription ) ;    
             $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
             $expiry_on =$subscription[0]->expiry_on;
             if($expiry_on > $date_now){
@@ -870,9 +904,10 @@ class HomeController extends Controller
         $iframe_src->set_parameter("oauth_callback", $callback_url);
         $iframe_src->set_parameter("pesapal_request_data", $post_xml);
         $iframe_src->sign_request($signature_method, $consumer, $token);
-
+        // dd($subscription);
         // return view('user.payments.iframe')->with(compact('iframe_src','amount','package_name'));
-         return view('payments.subscribe')->with(compact('iframe_src',
+        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        return view('payments.subscribe')->with(compact('iframe_src',
          'amount',
          'package_name',
          'subscription', 
@@ -1217,11 +1252,25 @@ class HomeController extends Controller
         return view('support.qxp_meetings');
     }
     public function scheduleMeeting()
-    {
-        // get logged in user meeting schedules
+    {        
+        if (\Auth::check()) {
+        //get package status
+        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+        $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+        $expiry_on =$subscription[0]->expiry_on;
+        if($expiry_on > $date_now){
+            $active = true;//subscription is active
+        }else{
+            $active = false;//expired or is on free trial
+        }
         $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
-        // dd($my_schedules);
-        return view('meetings.schedule')->with(compact('my_schedules'));
+
+        return view('meetings.schedule')->with(compact('subscription','my_schedules','active','expiry_on'));
+    }else{
+        return view('meeting_login');
+    }
+
     }
     public function liveSchedule(Request $request){
 
@@ -1300,6 +1349,7 @@ class HomeController extends Controller
             ];
           
             $newLiveClass = Meeting::create($newLiveClass);
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
             // dd($newLiveClass);
             if($newLiveClass){
                 //return back to dashboard with class scheduled notification.
@@ -1308,7 +1358,7 @@ class HomeController extends Controller
         
             }
     
-            return view('meetings.schedule')->with(compact('my_schedules'));
+            return view('meetings.schedule')->with(compact('my_schedules','subscription'));
     }
 
     public function liveScheduleStart(Request $request){
@@ -1488,7 +1538,24 @@ class HomeController extends Controller
         
     }
     public function support(){
-    return view('meetings.support');
+        if (\Auth::check()) {
+            //get package status
+            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('meetings.support')->with(compact('subscription', 'active','expiry_on'));
+        }else{
+            return view('meeting_login');
+        }
+
     }
  
     

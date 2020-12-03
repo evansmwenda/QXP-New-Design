@@ -4,17 +4,21 @@
 
 <div class="row">
   <div class="col-md-7">
-    Logged In : <span class="username-meeting-info">{{\Auth::user()->name}}</span>
+    Logged In As: <span class="username-meeting-info">{{\Auth::user()->name}}</span><br> 
   </div>
   <div class="col-md-5">
-    Expiry Date :
     @if($active ?? '')
-    
-      <span style="color:green;" >{{$expiry_on ?? ''}} (Active)</span>
-      <br>
+    Meeting Subscription :
+      <span style="color:green;" >Active</span><br>
+    Package Subscribed : <span style="color:green;" >
+    @if($subscription[0]->package_id ==1)
+    Meeting Pro
     @else
-   
-      <span style="color:red;">{{$expiry_on ?? ''}} (Expired)</span>
+    Free Version
+    @endif
+    </span>
+    @else
+      
     @endif  
   </div>
 </div>

@@ -1,6 +1,7 @@
 @extends('layouts.home')
 
 @section('main')
+
 <div class="row meeting-top-row">
 </div>
 <div class="row meeting-bg">
@@ -133,7 +134,7 @@
         <div class="qxp-logo-meeting-dashboard modal-design">
         <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="100" alt="qxp-logo">
         </div>
-        <h5 class="modal-title" id="exampleModalLongTitle">Create Your Meeting</h5>
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -145,14 +146,13 @@
                   <label for="">Topic</label>
                   <input type="text" name="topic" required class="form-control" placeholder="Enter Meeting Title">
                   <input type="hidden" name="classTime" value="2020-05-12T08:00">
-              </div>
-              
-          </div>
-          <div class="modal-footer">
-            <button type="submit" style="background-color: #11BECC;" class="create-meeting-button">Create </button>
-            <button type="button" class="close-meeting-button" data-dismiss="modal">Close</button>
+                  <button type="submit" style="background-color: #11BECC; width:100px" class="create-meeting-button">Create </button>
 
+              </div>
+          
           </div>
+
+       
       </form>
     </div>
   </div>
@@ -169,7 +169,7 @@
         <div class="qxp-logo-meeting-dashboard modal-design">
         <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" width="100" alt="qxp-logo">
         </div>
-        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -180,7 +180,7 @@
               <p> Enter meeting ID to join meeting</p> 
               <form method="post" action="/joinmeeting">{{ csrf_field() }}
                   <input type="text" class="form-control " name="meetingID" required placeholder="Enter Meeting Id">
-                 <hr>
+               
                   <button type="submit" style="background:#71CA52">Join Meeting</button> 
               </form>
         
