@@ -78,7 +78,7 @@
         </div>
 
       <!-- End of Lists and Icons -->
-      </ul>
+</ul>
 
 
 {{-- <ul>

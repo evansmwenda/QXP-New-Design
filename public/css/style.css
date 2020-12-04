@@ -7316,6 +7316,61 @@ ul.comments-reply .comment-body {
       .price-body ul{
         font-size: 15px !important;
       }
+      /* mobile responsive on meetings */
+      .meeting-dash-col-1 {
+        display: none !important;   
+    }
+    .meeting-info {
+      margin-bottom: 30px !important;
+      height: auto !important;
+      padding-left: 20px !important;
+      
+    }
+    .meeting-dash-container {
+      height: auto !important;
+    }
+
+    .get-started-content ul{
+      margin-left: -30px !important;
+    }
+    .get-started-content ul li{
+      margin-right: 0px !important;
+    }
+    .meeting-form{
+      height: 1200 !important;
+      overflow-y: scroll;
+    }
+    .meeting-body {
+      height: 100% !important;
+  }
+    .meeting-content {
+      padding-left: 15px !important;
+      padding-top: 0px !important;
+      padding-bottom: 10px !important;
+    }
+    .meeting-desc-button-3 {
+      display: none !important;
+    }
+    .schedule-header.title {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      margin-left: 10px !important;
+      width: 100% !important;
+     }
+     .schedule-header.title button{
+      margin-top: 10px !important;
+      float:  left;
+     }
+     .schedule-body {
+
+      margin-top: 40px !important;
+      }
+      div.row.title { display: none !important;}
+      .sidebar-meeting-list i{
+        padding-right: 20px;
+      }
+
+      /* end of mobile view  */
 }
 
 
