@@ -1557,6 +1557,22 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
         }
 
     }
+    public function meetingLanding()
+    {
+        return view('meetings.landing');
+    }
+    public function businessLanding()
+    {
+        return view('meetings.business');
+    }
+    public function academyLanding()
+    {
+        return view('meetings.academy');
+    }
+    public function higherEd()
+    {
+        return view('meetings.higher-ed');
+    }
  
     
 }

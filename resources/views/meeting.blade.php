@@ -64,42 +64,7 @@
                 </div> 
                 @endif 
                   <hr>
-                  <h3 style="color: #060646; font-weight:500; margin-top:20px; font-size:15px">Upcoming Metings</h3>
-                  @if(count($my_schedules)>0)
-                  @foreach ($my_schedules as $scheduled)
-                  <div class="row colored">
-                    <div class="col-md-4">{{$scheduled->title}}</div>
-                    <div class="col-md-1">{{$scheduled->meetingID}}</div>
-                    <div class="col-md-3">{{$scheduled->today}}</div>
-                    <div class="col-md-1">{{$scheduled->time}}</div>
-                    <?php
-                    $time=substr(date("Y-m-d H:i:A"),10,16);
-                    if($scheduled->time > $time){
-                      ?>
-
-                      <?php
-                    }else{
-                      ?>
-                      <div class="col-md-2 just-btn">
-
-
-
-                    </div>
-                    <?php
-                                        
-                  }
-                    ?>
-
-                </div>
-                <br>
-                  @endforeach
-                  {{-- {{$my_schedules->links()}} --}}
-                  @else
-                  <tr >
-                    <td >You currently don`t have any scheduled meetings for today</td>
-                  </tr>
-                  
-                @endif
+               
                 </div>
 
               <!-- Recordings List 

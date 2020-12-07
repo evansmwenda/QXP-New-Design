@@ -105,7 +105,7 @@
                             <div class="col-md-8">
                                <h3>Products</h3>
                                <hr style="border-top: 1px solid #ccc">
-                                     <div class="row products-menu" onclick="location.href='#';">
+                                     <div class="row products-menu" onclick="location.href='/academy_landing';">
                                         <div class="col-sm-2" style="padding-top: 15px">
                                         <img src="{{asset('images/logo/bgAsset-3-2.svg')}}" width="85">
                                         </div>
@@ -115,7 +115,8 @@
                                         </div>
                                      </div>   
                                      {{-- <hr style="border-top: 1px solid #ccc"> --}}
-                                     <div class="row products-menu" onclick="location.href='https://higher-ed.qxp-global.com/';">
+                                     {{-- <div class="row products-menu" onclick="location.href='https: higher-ed.qxp-global.com/';"> --}}
+                                     <div class="row products-menu" onclick="location.href='/higher_ed_landing';">
                                         <div class="col-sm-2" style="padding-top: 15px">
                                         <img src="{{asset('images/logo/bgAsset-2-2.svg')}}" width="85">
                                         </div>
@@ -126,7 +127,7 @@
                                      </div>  
                                       
                                      {{-- <hr style="border-top: 1px solid #ccc"> --}}
-                                     <div class="row products-menu" onclick="location.href='#';">
+                                     <div class="row products-menu" onclick="location.href='/business_landing';">
                                         <div class="col-sm-2" style="padding-top: 15px">
                                         <img src="{{asset('images/logo/bgAsset-1-1.svg')}}" width="85">
                                         </div>

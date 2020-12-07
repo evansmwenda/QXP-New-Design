@@ -19,7 +19,10 @@
     @endif
     </span>
     @else
-   
+      Meeting Subscription :
+      <span style="color:red;" >Active</span><br>
+    Package Subscribed : <span style="color:green;" >
+    Free Version
     @endif  
     <span data-toggle="modal" data-target="#menu" class="fa fa-bars fa-2x pull-right" style="margin-right: 20px;margin-top:-50px"></span>
   </div>

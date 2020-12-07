@@ -50,39 +50,37 @@
                                     <!--Schedule Column-->
                                     <div class="schedule-body">
                                         <div class="container">
-                                            <div class="row title">
-                                                <div class="col-md-4">Meeting Title</div>
-                                                <div class="col-md-2">Meeting ID</div>
-                                                <div class="col-md-4">Time</div>
-                                                <div class="col-md-2">Action</div>
-                                            </div>
-                                            <hr>
-                                            <!-- Content -->
-                                            @if(count($my_schedules)>0)
-                                              @foreach ($my_schedules as $scheduled)
-                                              <div class="row colored">
-                                                <div class="col-md-4">{{$scheduled->title}}</div>
-                                                <div class="col-md-2">{{$scheduled->meetingID}}</div>
-                                                <div class="col-md-4">{{substr($scheduled->classTime,0,30)}}</div>
-                                                <div class="col-md-1 just-btn">
+                                          <table class="table table-bordered table-striped">
+                                            <thead>
+                                              <tr>
+                                                <td>Title</td>
+                                                <td>Meeting ID</td>
+                                                <td>Time</td>
+                                                <td>Action</td>
+                    
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              @if(count($my_schedules)>0)
+                                                @foreach ($my_schedules as $scheduled)
+                                                <tr>
+                                                  <td>{{$scheduled->title}}</td>
+                                                  <td>{{$scheduled->meetingID}}</td>
+                                                  <td>{{substr($scheduled->classTime,0,30)}}</td>
+                                                  <td>
+                                                    <div class="col-md-1 just-btn">
                                                       <form method="post" action="/live-schedule-start">{{ csrf_field() }}
                                                         <input type="hidden" value="{{$scheduled->id}}" name="meetingID">
                                                           <button type="submit" class="btn-schedule">Start</button>
                                                         </form>
 
                                                 </div>
-                                            </div>
-                                            <br>
-                                              @endforeach
-                                              {{$my_schedules->links()}}
-                                              @else
-                                              <tr >
-                                                <td >You dont have any scheduled events</td>
-                                              </tr>
-                                              
-                                            @endif
-
-                                            
+                                                  </td>
+                                                </tr>
+                                                @endforeach
+                                              @endif
+                                            </tbody>
+                                          </table>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +101,7 @@
             <img src="http://127.0.0.1:8000/images/meeting-icon/meeting-room.png" alt="">
           </div> --}}
           <div class="qxp-logo-meeting-dashboard modal-design">
-            <img src="http://127.0.0.1:8000/images/logo/bgAsset-4-2.svg" alt="qxp-logo">
+          <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" alt="qxp-logo">
           </div>
           <h5 class="modal-title" style="margin-left: 50px" id="exampleModalLongTitle">Schedule Meeting</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">

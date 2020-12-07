@@ -44,39 +44,34 @@
 
     <div class="schedule-body recordings">
       <div class="container">
-
-        <div class="row title">
-          <div class="col-md-6">Recording Name</div>
-          <div class="col-md-4">Recording Length</div>
-          <div class="col-md-2">Downloads</div>
-        </div>
-        <br>
-
-        @if(count($recordings) > 0)
-
-        @foreach($recordings as $key=>$recording)
-        <div class="row colored">
-          <div class="col-md-6">{{$recording->name ?? ''}}</div>
-          <div class="col-md-4">{{$recording->length}} min(s)</div>
-          <div class="col-md-2"><a href="{{$recording->url}}"><button class="download-icon"><i class="fa fa-musica" aria-hidden="true"></i></button></a></div>
-        </div>
-        <br>
-
-        @endforeach
-        @else
-        <div class="row text-center">
-          <h4 class="text-muted" style="margin-top: 50px">You have no recorded meetings</h4>
-        </div>
-          
-        @endif
-
-       
-
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <td>Recording Name</td>
+              <td>Recording Length</td>
+              <td>Downloads</td>
+        
+            </tr>
+          </thead>
+          <tbody>
+            @if(count($recordings)>0)
+              @foreach ($recordings as $recording)
+              <tr>
+                <td>{{$recording->name ?? ''}}</td>
+                <td>{{$recording->length}} min(s)</td>
+                <td><a href="{{$recording->url}}"><button class="download-icon"><i class="fa fa-musica" aria-hidden="true"></i></button></a>
+                </td>
+              </tr>
+              @endforeach
+              @else
+              <tr>
+                <td colspan="3" style="text-align: center">You have no recorded Meeting</td>
+              </tr>
+            @endif
+          </tbody>
+        </table>
       </div>
     </div>
-
-
-
   </div>
 </div>
 </div>
