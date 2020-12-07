@@ -300,7 +300,7 @@ $date=date("Y-m-d  h:i:s");
 $today=date("Y-m-d H:i:s",strtotime($date));
 
 // dd(substr($today,0,10));
-$my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',substr($today,0,10))->paginate(2);
+$my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',substr($today,0,10))->paginate(2);
 // $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
 //    foreach ($my_schedules  as $key => $value) {
 //     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
