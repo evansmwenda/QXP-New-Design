@@ -7371,6 +7371,9 @@ ul.comments-reply .comment-body {
       }
 
       /* end of mobile view  */
+      .meetid{
+        display: none;
+      }
 
 }
 
@@ -8624,6 +8627,15 @@ button.download-icon :hover{
   /* width: 80px; */
   align-content: center;
   border: 1px solid transparent;
+}
+.schedule-body table thead{
+  background: #11BECC;
+  color: #fff;
+  font-weight: 500;
+}
+.schedule-body table td{
+  padding:2px;
+  padding-left: 10px;
 }
 
 .dash-dash{

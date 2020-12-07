@@ -24,8 +24,7 @@
             {{-- Subscribe Here --}}
             <div class="meeting-content" id="create">
              <h2>Meeting Subscription</h2>
-                Account Name: <span style="color:green;" >{{\Auth::user()->name}}</span>
-                <br>
+                
                 Package Subscribed:<span style="color:green;" >
                 @if($subscription[0]->package_id ==1)
                 Meeting Pro

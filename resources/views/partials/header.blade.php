@@ -23,7 +23,14 @@
       <div class="col-md-8 ml-auto">
          <div class="top-contact-info">
             <span class="reg-user"><a href="/register-user" ><i class="fa fa-user"></i>Sign up</a></span>
-            <span><i class="fa fa-comment"></i><a href="/login-for-meeting"> Join Meeting</a></span>
+            <span><i class="fa fa-comment"></i><a href="/login-for-meeting">
+              @if (\Auth::check())
+              My Dashboard
+              @else
+              Join Meeting
+              @endif
+            
+          </a></span>
             <span><i class="fa fa-envelope"></i><a href="#">info@qxp-global.com</a></span>
          </div>
  

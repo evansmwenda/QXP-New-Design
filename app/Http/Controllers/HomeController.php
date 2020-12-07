@@ -382,7 +382,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
         $today=date("Y-m-d H:i:s",strtotime($date));
         
         // dd(substr($today,0,10));
-        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',substr($today,0,10))->paginate(2);
+        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',substr($today,0,10))->paginate(2);
         // $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
         //    foreach ($my_schedules  as $key => $value) {
         //     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
@@ -1273,8 +1273,20 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
 
     }
     public function liveSchedule(Request $request){
+        $startdate=new DateTime($request->stardate);
+        $endate=new DateTime($request->enddate);
+        $dateDiff=$endate->diff($startdate);
+        $hours = $dateDiff->h;
+        $hours = $hours + ($dateDiff->days*24);
 
-        $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
+        // dd($hours);
+        // check to see if the meeting hours is beyond 24 hrs
+        if($hours >24){
+
+            return redirect()->back()->with('flash_message_error','You can only schedule meeting lasting for 24 hours');
+
+        } else{
+                    $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
         // dd($my_schedules);
 
         $data=$request->all();            
@@ -1305,8 +1317,10 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
 
         // $event_start_end = $data['startdate'];
         $event_start_end=date("Y-m-d H:i:s",strtotime($data['startdate']));
-        //  dd($event_start_end);
-        
+        // get the meeting stopoping time
+        $event_end=date("Y-m-d H:i:s",strtotime($data['enddate']));
+         // dd($event_end);
+
         // $event_start_end = explode(" - ", $event_start_end);
         // $event_start_enddate = explode(" - ", $event_start_enddate);
         // 0 => "2020-06-23 00:00:00"
@@ -1331,8 +1345,9 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
         // $date=date("Y-m-d  h:i:s");
         // $today=date("Y-m-d H:i:A",strtotime($date)); 
         $today=date("Y-m-d H:i:A",strtotime($data['startdate']));
+        $end_date=date("Y-m-d H:i:A",strtotime($data['enddate']));
         // dd($today);
-        $newLiveClass= [
+        $newschedule= [
             'title'=>$title,//class title
             'meetingID'=>$meetingID,//meeting ID
             // 'course_id'=>0,
@@ -1341,17 +1356,21 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
             'moderatorPW'=>$moderatorPW,//moderator password
             //'duration'=>$duration,//role=0for normal user accounts
             'owner'=>$user['id'],
-            'today'=>substr($today,0,10),
-            'description'=>'my description',
-            'time'=>substr($today,10,16),
-            'attendees'=>$data['description']
+            'start_date'=>substr($today,0,10),
+            'description'=>$data['description'],
+            'start_time'=>substr($today,10,16),
+            'attendees'=>$data['description'],
+            'end_date'=>substr($end_date,0,10),
+            'end_time'=>substr($end_date,10,16),
             
             ];
+
+            // dd($newschedule);
           
-            $newLiveClass = Meeting::create($newLiveClass);
+            $newschedule = Meeting::create($newschedule);
             $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
             // dd($newLiveClass);
-            if($newLiveClass){
+            if($newschedule){
                 //return back to dashboard with class scheduled notification.
                 $class_string = "You have successfully created a scheduled meeting. Meeting ID is: ".$meetingID.".";
                 return redirect()->back()->with('flash_message_success',$class_string);
@@ -1359,6 +1378,10 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('today','=',subst
             }
     
             return view('meetings.schedule')->with(compact('my_schedules','subscription'));
+        }
+
+
+
     }
 
     public function liveScheduleStart(Request $request){

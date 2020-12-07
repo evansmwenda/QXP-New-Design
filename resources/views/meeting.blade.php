@@ -30,6 +30,19 @@
             <div class="meeting-body">
               {{-- create meeting --}}
               <div class="meeting-content" id="create">
+                @if(Session::has("flash_message_error")) 
+                <div class="alert alert-warnin alert-block" style="background: #E5E8E8">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <p style="color: red">{!! session( 'flash_message_error') !!}</<?php  ?>>
+                </div> 
+                @endif 
+
+                @if(Session::has("flash_message_success")) 
+                <div class="alert progress-bar-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <p style="green">{!! session('flash_message_success') !!}</p>
+                </div> 
+                @endif 
 
                 <div class="create-join-container">
                   <h2>{{\Auth::user()->name}}'s Meeting Room</h2>
@@ -49,22 +62,10 @@
                   </div> 
                   <div class="meeting-desc-button-3"> 
                     <button 
-                     data-toggle="modal" data-target="#schedule">Create Schedule</button>
+                     data-toggle="modal" data-target="#schedule">Schedule</button>
                   </div>
                 </div>
-                @if(Session::has("flash_message_error")) 
-                <div class="alert alert-error alert-block">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
-                    <strong>{!! session( 'flash_message_error') !!}</strong>
-                </div> 
-                @endif 
 
-                @if(Session::has("flash_message_success")) 
-                <div class="alert progress-bar-success alert-block">
-                    <button type="button" class="close" data-dismiss="alert">x</button>
-                    <strong>{!! session('flash_message_success') !!}</strong>
-                </div> 
-                @endif 
                   <hr>
                
                 </div>
@@ -157,7 +158,6 @@
 
 </div>
 
-
 <!-- Modal -->
  <div class="modal fade" id="schedule" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -181,9 +181,17 @@
                     <label>Meeting Title</label>
                     <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
 
-                      <label>Start Date</label>
-                      <input type="datetime-local" required class="form-control" name="startdate">
-            
+                    <div class="row">
+                        <div class="col-md-6">
+                          <label>Start Date</label>
+                          <input type="datetime-local" required class="form-control" name="startdate">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Start Date</label>
+                          <input type="datetime-local"required class="form-control" name="enddate">
+                        </div> 
+                    </div>
+
                    
                     <label for="">Description</label>
                     <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>

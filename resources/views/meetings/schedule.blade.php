@@ -30,18 +30,19 @@
                                     <!-- Heading title-->
                                     <div class="schedule-header title">
                                         Your Scheduled meetings 
-                                        <button class="create-schedule pull-right" style="background: chocolate;margin-top:-7px;margin-right:20px;" data-toggle="modal" data-target="#exampleModalCenter">Create Schedule</button>
+                                        <button class="create-schedule pull-right" style="background: #FD6C03;margin-top:-7px;margin-right:20px;" data-toggle="modal" data-target="#exampleModalCenter">Schedule</button>
                                         @if(Session::has("flash_message_error")) 
                                         <div class="alert alert-error alert-block">
                                             <button type="button" class="close" data-dismiss="alert">x</button>
-                                            <strong>{!! session( 'flash_message_error') !!}</strong>
+                                            <p style="color:red">{!! session( 'flash_message_error') !!}</p>
                                         </div> 
+
                                         @endif 
                               
                                         @if(Session::has("flash_message_success")) 
                                         <div class="alert progress-bar-success alert-block">
                                             <button type="button" class="close" data-dismiss="alert">x</button>
-                                            <p>{!! session('flash_message_success') !!}</p>
+                                            <p style="color: green">{!! session('flash_message_success') !!}</p>
                                         </div> 
                                         @endif
                                     </div>
@@ -54,18 +55,17 @@
                                             <thead>
                                               <tr>
                                                 <td>Title</td>
-                                                <td>Meeting ID</td>
+                                                <td class="meetid">Meeting ID</td>
                                                 <td>Time</td>
                                                 <td>Action</td>
-                    
-                                              </tr>
+                                                </tr>
                                             </thead>
                                             <tbody>
                                               @if(count($my_schedules)>0)
                                                 @foreach ($my_schedules as $scheduled)
                                                 <tr>
                                                   <td>{{$scheduled->title}}</td>
-                                                  <td>{{$scheduled->meetingID}}</td>
+                                                  <td class="meetid">{{$scheduled->meetingID}}</td>
                                                   <td>{{substr($scheduled->classTime,0,30)}}</td>
                                                   <td>
                                                     <div class="col-md-1 just-btn">
@@ -115,9 +115,17 @@
                     <label>Meeting Title</label>
                     <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
 
-                      <label>Start Date</label>
-                      <input type="datetime-local" required class="form-control" name="startdate">
-            
+                    <div class="row">
+                        <div class="col-md-6">
+                          <label>Start Date</label>
+                          <input type="datetime-local" required class="form-control" name="startdate">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Start Date</label>
+                          <input type="datetime-local"required class="form-control" name="enddate">
+                        </div> 
+                    </div>
+
                    
                     <label for="">Description</label>
                     <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>
@@ -132,4 +140,7 @@
 
   </div>
 <br><br><br>
+<!-- check the dates and time if is within 24 hours -->
+
+
 @endsection
