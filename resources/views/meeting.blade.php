@@ -48,7 +48,8 @@
                     <button data-toggle="modal" data-target="#joinmeeting">Join</button>
                   </div> 
                   <div class="meeting-desc-button-3"> 
-                    <button class="create-schedule pull-right" style="background: chocolate;margin-top:-7px;margin-right:20px;" data-toggle="modal" data-target="#schedule">Create Schedule</button>
+                    <button 
+                     data-toggle="modal" data-target="#schedule">Create Schedule</button>
                   </div>
                 </div>
                 @if(Session::has("flash_message_error")) 

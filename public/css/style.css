@@ -8556,7 +8556,7 @@ div.row.btns{
   display: inline;
 }
 .meeting-desc-button-3 button{
-  background-color: #FD6C03;
+  background: #FD6C03;
   color: #ffffff;
 }
 .meeting-desc-button-3 button :hover{

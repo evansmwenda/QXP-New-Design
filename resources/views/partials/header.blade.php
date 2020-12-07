@@ -212,7 +212,7 @@
                       <button type="submit" class="btn btn-warning">Logout</button>
                     </form>
                 @else
-                   <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-warning">Login</button>
+                   <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-warning" style="background: #FD6C03;">Login</button>
                 @endif
              </div>
              <!-- End of navbar collapse -->
