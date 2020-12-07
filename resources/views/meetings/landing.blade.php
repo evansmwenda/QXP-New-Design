@@ -18,7 +18,7 @@
                                 Connect from anywhere with just one click.
                             </p>
                         </div>
-                        <a href="#meeting-link">
+                        <a href="/login-for-meeting">
                             <button>Get Started</button>
                         </a>
                     </div>

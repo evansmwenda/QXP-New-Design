@@ -38,7 +38,8 @@
                  <div class="meeting-desc-italic">
                     <i>For meeting and working online with teleconferencing, video conference, remote working, work from home and work from anywhere</i>
                     <hr>
-                  </div> 
+                  </div>
+
                  <br>
                  <div class="meeting-desc-button-1">
                     <button data-toggle="modal" data-target="#exampleModalCenter"> Start a Meeting</button>
@@ -47,7 +48,7 @@
                     <button data-toggle="modal" data-target="#joinmeeting">Join</button>
                   </div> 
                   <div class="meeting-desc-button-3"> 
-                    <a href="/schedule-meeting"><button>Schedule</button> </a>
+                    <button class="create-schedule pull-right" style="background: chocolate;margin-top:-7px;margin-right:20px;" data-toggle="modal" data-target="#schedule">Create Schedule</button>
                   </div>
                 </div>
                 @if(Session::has("flash_message_error")) 
@@ -154,4 +155,45 @@
   </div>
 
 </div>
+
+
+<!-- Modal -->
+ <div class="modal fade" id="schedule" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          {{-- <div class="icon-only">
+            <img src="http://127.0.0.1:8000/images/meeting-icon/meeting-room.png" alt="">
+          </div> --}}
+          <div class="qxp-logo-meeting-dashboard modal-design">
+          <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" alt="qxp-logo">
+          </div>
+          <h5 class="modal-title" style="margin-left: 50px" id="exampleModalLongTitle">Schedule Meeting</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <hr>
+        <div class="row schedule-class">
+            <form method="post" action="/live-schedule">{{ csrf_field() }}
+                
+                    <label>Meeting Title</label>
+                    <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
+
+                      <label>Start Date</label>
+                      <input type="datetime-local" required class="form-control" name="startdate">
+            
+                   
+                    <label for="">Description</label>
+                    <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>
+                    
+                    <button type="submit">Save</button>
+              
+             </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 @endsection
