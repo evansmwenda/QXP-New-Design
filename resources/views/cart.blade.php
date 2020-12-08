@@ -34,14 +34,16 @@
                             Next
                         </button>
                         @else
-                        <a href="/login-for-meeting"><button class="btn btn-primary float-right">
-                            Login to continue
-                        </button></a>
+
                         @endif
 
                     </form>
-
-
+                    @if(\Auth::check())
+                    @else
+                    <a href="/login-for-meeting"><button class="btn btn-primary float-right">
+                        Login to continue
+                    </button></a>
+                    @endif
                  </div>
 
     </div>
