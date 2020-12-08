@@ -5487,6 +5487,7 @@ ul.comments-reply .comment-body {
 .features {
   margin-top: 10px;
   background: #fff;
+  text-align: left;
 }
 .features img{
   width: 100%;
@@ -7317,64 +7318,60 @@ ul.comments-reply .comment-body {
         font-size: 15px !important;
       }
        /* mobile responsive on meetings */
-      .meeting-dash-col-1 {
-        display: none !important;   
-      }
-      .meeting-info {
-      margin-bottom: 30px !important;
-      height: auto !important;
-      padding-left: 20px !important;
+ .meeting-dash-col-1 {
+  display: none !important;   
+}
+.meeting-info {
+margin-bottom: 30px !important;
+height: auto !important;
+padding-left: 20px !important;
 
-      }
-      .meeting-dash-container {
-      height: auto !important;
-      }
+}
+.meeting-dash-container {
+height: auto !important;
+}
 
-      .get-started-content ul{
-      margin-left: -30px !important;
-      }
-      .get-started-content ul li{
-      margin-right: 0px !important;
-      }
-      .meeting-form{
-      height: 1200 !important;
-      overflow-y: scroll;
-      }
-      .meeting-body {
-      height: 100% !important;
-      }
-      .meeting-content {
-      padding-left: 15px !important;
-      padding-top: 0px !important;
-      padding-bottom: 10px !important;
-      }
-      .meeting-desc-button-3 {
-      display: none !important;
-      }
-      .schedule-header.title {
-      font-size: 18px !important;
-      font-weight: 600 !important;
-      margin-left: 10px !important;
-      width: 100% !important;
-      }
-      .schedule-header.title button{
-      margin-top: 10px !important;
-      float:  left;
-      }
-      .schedule-body {
+.get-started-content ul{
+margin-left: -30px !important;
+}
+.get-started-content ul li{
+margin-right: 0px !important;
+}
+.meeting-form{
+height: 1200 !important;
+overflow-y: scroll;
+}
+.meeting-body {
+height: 100% !important;
+}
+.meeting-content {
+padding-left: 15px !important;
+padding-top: 0px !important;
+padding-bottom: 10px !important;
+}
+.meeting-desc-button-3 {
+display: none !important;
+}
+.schedule-header.title {
+font-size: 18px !important;
+font-weight: 600 !important;
+margin-left: 10px !important;
+width: 100% !important;
+}
+.schedule-header.title button{
+margin-top: 10px !important;
+float:  left;
+}
+.schedule-body {
 
-      margin-top: 40px !important;
-      }
-      div.row.title { display: none !important;}
-      .sidebar-meeting-list i{
-        padding-right: 20px;
-      }
+margin-top: 40px !important;
+}
+div.row.title { display: none !important;}
+.sidebar-meeting-list i{
+  padding-right: 20px;
+}
 
-      /* end of mobile view  */
-      .meetid{
-        display: none;
-      }
-
+/* end of mobile view  */
 }
 
 
@@ -8559,7 +8556,7 @@ div.row.btns{
   display: inline;
 }
 .meeting-desc-button-3 button{
-  background: #FD6C03;
+  background-color: #FD6C03;
   color: #ffffff;
 }
 .meeting-desc-button-3 button :hover{
@@ -8627,15 +8624,6 @@ button.download-icon :hover{
   /* width: 80px; */
   align-content: center;
   border: 1px solid transparent;
-}
-.schedule-body table thead{
-  background: #11BECC;
-  color: #fff;
-  font-weight: 500;
-}
-.schedule-body table td{
-  padding:2px;
-  padding-left: 10px;
 }
 
 .dash-dash{
@@ -8718,9 +8706,9 @@ div.row.desc-content-meeting{
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.desc-content-meeting h4, p {
-  text-align: center;
-}
+/* .desc-content-meeting h4, p {
+  text-align: left;
+} */
 .meeting-business-paragraph p{
   text-align: left;
 }
@@ -8854,4 +8842,284 @@ div.row.center{
 }
 .desc-content h4{
   text-align: center;
+}
+
+/* features page */
+.features button{
+  border-radius: 30px;
+  width: 100px;
+  margin-right: 5px;
+  background: transparent;
+  color: #060646;
+  /* background-color: #0099FE; */
+  /* color: #fff; */
+}
+.features-dec-button-blue button{
+  border: transparent;
+}
+.features-dec-button-blue button :hover{
+  background-color: #E5E8E8;
+  color: #000;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* news features */
+.full-news-features-container{
+  padding: 2%;
+}
+.news-features-content{
+  height: auto;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.social-media-category img{
+  width: 30px;
+}
+.social-media-img-1{
+  display: inline;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.social-media-img-1 span{
+  padding: 5px;
+  background: #079DFF;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.social-media-img-2{
+  display: inline;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.social-media-img-2 span{
+  padding: 5px;
+  background: blue;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.social-media-img-3{
+  display: inline;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.social-media-img-3 span{
+  padding: 5px;
+  background: green;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.social-media-img-4{
+  display: inline;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.social-media-img-4 span{
+  padding: 5px;
+  background: red;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.blog-list ul li{
+  display: inline;
+  padding: 2%;
+  margin-top: -3px;
+  color: #484848;
+}
+.blog-post-container{
+  padding: 8%;
+  width: 100%;
+  align-content: center;
+  background-image: url('/images/featured/industries-1.jpg');
+}
+.blog-post-container h2, h6{
+  text-align: center;
+  color: #079DFF;
+  font-size: 28px;
+}
+.posts-row{
+  border: 1px black;
+  background-color: #ffffff;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 15px;
+  padding-bottom: 2%;
+  width: 90%;
+  box-shadow: 0px 0px 20px 0px rgba(97, 105, 141, 0);
+}
+div.posts-row.post-2{
+  height: 100px;
+}
+div.posts-row.post-3{
+  padding-top: 5%;
+  height: 400px;
+}
+.recent-posts.social-media-category{
+  height: 100%;
+  padding-top: 20%;
+  /* text-align: center; */
+}
+.recent-post-title{
+  background-color: #079DFF;
+  padding: 5%;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* border-radius: 15px; */
+}
+.recent-post-title h3{
+  color: #ffffff;
+  text-align: center;
+}
+.post-3.comment-section input{
+  height: 200px;
+  width: 100%;
+}
+.post-3 button{
+  border-radius: 30px;
+  width: 100px;
+  margin-right: 5px;
+  background-color: #060646;
+  color: #ffffff;
+  border: transparent;
+}
+.recent-posts{
+  padding: 5px;
+}
+.recent-posts h4{
+  font-weight: 400;
+}
+div.posts-row.post-1{
+  margin-top: 20%;
+}
+.post-1 h4 h6{
+  text-align: left;
+}
+.blog-img{
+  padding: 5%;
+}
+.blog-title h3{
+  padding-left: 5%;
+  color: #079DFF !important;
+  font-size: 18px;
+}
+.blog-content{
+  padding-left: 5%;
+}
+.blog-list{
+  padding-left: 5%;
+}
+.blog-list ul{
+  color: #060646;
+}
+.blog-list ul li{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.blog-img img{
+  width: 100%;
+}
+.blog-title h3{
+  color: #060646;
+}
+div.just-post-column{
+  border-radius: 10px;
+  /* background-color: #E5E8E8; */
+  align-content: center;
+}
+div.posts-row{
+  justify-content: center;
+  margin: 0px auto;
+}
+
+/* contact-us page */
+.contact-us-content{
+  background: #fff;
+  padding-top: 5%;
+  border-radius: 5px;
+  width: 100%;
+}
+/* .support-no h3, h6{
+  text-align: left;
+  color: #060646;
+} */
+div.contact-us-another{
+  padding: 5%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #060646;
+}
+.contact-us-another button{
+  border-radius: 30px;
+  width: 100px;
+  margin-right: 5px;
+  background-color: #0099FE;
+  color: #ffffff;
+  border: transparent;
+}
+.contact-us-another button :hover{
+  background-color: #E5E8E8;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+}
+.sign-up-regestration-business{
+  color: #ffffff;
+  background-color: #060646;
+  height: auto;
+  text-align: center;
+}
+.sign-up-regestration-business h2, h3, h4{
+  color: #ffffff;
+}
+.sign-up-cta{
+  margin-top: 10%;
+  padding: 2%;
+}
+div.sign-up-container-business{
+  margin-top: 5%;
+  padding: 5%;
+}
+.sign-up-container-business td{
+  text-align: left;
+}
+.sign-up-container-business button{
+  border-radius: 30px;
+  width: 100px;
+  margin-right: 5px;
+  background-color: #fd6c03;
+  color: #ffffff;
+  border: transparent;
+}
+.sign-up-container-business{
+  color: #ffffff;
+  font-size: 16px;
+}
+.sign-up-container-business h4, h5, h6{
+  color: #ffffff;
+}
+.sign-up-container-business img{
+  width: 20%;
+  align-content: center;
+}
+.reg-business-content{
+  padding: 5%;
+}
+
+
+
+
+/* GEFF CUSTOM CSS */
+.schedule-body table thead{
+  background: #11BECC;
+  color: #fff;
+  font-weight: 500;
+}
+.schedule-body table td{
+  padding:2px;
+  padding-left: 10px;
 }

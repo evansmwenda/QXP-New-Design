@@ -85,3 +85,11 @@ Route::get('/meeting_landing', 'HomeController@meetingLanding');
 Route::get('/business_landing', 'HomeController@businessLanding');
 Route::get('/academy_landing', 'HomeController@academyLanding');
 Route::get('/higher_ed_landing', 'HomeController@higherEd');
+Route::get('/contact_us', 'HomeController@contactUs');
+
+// features amd news feeds
+Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
+Route::get('/sign_up_for_business', 'HomeController@signUp');
+
+Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
+

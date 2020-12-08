@@ -11,6 +11,7 @@ use App\LiveClassRecordings;
 use GuzzleHttp\Client;
 use GuzzleHttp\Ring\Exception\ConnectException;
 use App\Package;
+use App\News;
 use App\library\OAuth;
 use DB;
 use App\Subscription;
@@ -362,7 +363,15 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         return view('get_started');
     }
     public function features(){
-        return view('features');
+        $data=News::all();
+        // dd($data);
+        return view('features')->with(compact('data'));
+    }
+    public function newsFeeds(Request $request){
+        $otherNews=News::paginate(5);
+        $data = News::where('id',$request->id)->get()->first();
+        // dd($data);
+        return view('newsfeeds')->with(compact('data','otherNews'));
     }
     public function checkEmailActivationStatus(String $email_address){
         $status = User::where('email',$email_address)->value('verified');
@@ -1595,6 +1604,14 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
     public function higherEd()
     {
         return view('meetings.higher-ed');
+    }
+    public function contactUs()
+    {
+        return view('contact-us');
+    }
+    public function signUp()
+    {
+        return view('sign-up-business');
     }
  
     
