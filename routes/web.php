@@ -92,4 +92,6 @@ Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
 Route::get('/sign_up_for_business', 'HomeController@signUp');
 
 Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
+Route::post('/pricing_plan','HomeController@pricingPlan');
+Route::post('/subscribeNow', 'HomeController@pricingPlanSubscribe');
 

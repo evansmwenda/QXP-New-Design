@@ -25,6 +25,12 @@
           </li>
         </ul>
       </div>
+      @if(Session::has("flash_message_error")) 
+          <div class="alert alert-error alert-block" style="background: #fd7e14">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong style="color: #fff">{!! session('flash_message_error') !!}</strong>
+          </div> 
+      @endif 
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <div class="row">
@@ -34,7 +40,12 @@
                  <p>Personal Meeting</p>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center;color:#060646; font-weight:900;font-size:80px">FREE</h2>
+ 
+                <h2 style="text-align: center;color:#11BECC; font-weight:700;font-size:50px">FREE</h2>
+               <br>
+                <div class="text-center">
+                  <a href="/login-for-meeting"><button class="qxp-btn-dark"  style="background: #11BECC">GET STARTED</button></a>
+                 </div>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -82,9 +93,7 @@
                   </li>
                  
                 </ul>
-                <div class="text-center">
-                  <button class="qxp-btn-dark">GET IT</button>
-                 </div>
+
               </div>
             </div>
             <div class="col-md-6">
@@ -93,7 +102,11 @@
                 <p>Small Teams</p>
               </div>
               <div class="price-body">
-               <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">1,300</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
+               <h2 style="text-align: center"><sup style="color: #11BECC; font-size:20px">KES</sup><strong style="color: #11BECC;font-size:40px; font-weight:700">1,300</strong> <sup style="color: #11BECC; font-size:20px">Month</sup></h2>
+               <br>
+               <div class="text-center">
+                <button class="qxp-btn-dark" onclick="meetingPro()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #11BECC">GET IT</button>
+               </div>
                <ul>
                 <li>
                   <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -161,9 +174,7 @@
                 <span>  Custom Personal Meeting ID</span>
               </li>
                </ul>
-               <div class="text-center">
-               <button class="qxp-btn-dark">GET IT</button>
-              </div>
+
              </div>
            </div>
           </div>
@@ -175,7 +186,10 @@
                  <h3>Teachers</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #F4BA00; font-size:20px">KES</sup><strong style="color: #F4BA00;font-size:50px; font-weight:600">1,000</strong> <sup style="color: #F4BA00; font-size:20px">Month</sup></h2>
+                <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="meetingTeacher()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #F4BA00">GET IT</button>
+                 </div>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -230,9 +244,7 @@
                     <span>Automatic Assessment Grading & Feedback</span>
                   </li>
                 </ul>
-                <div class="text-center">
-                  <button class="qxp-btn-dark-academy">GET STARTED</button>
-                 </div>
+
               </div>
             </div>
             <div class="col-md-6">
@@ -240,8 +252,11 @@
                 <h3>Student</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">250</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
-               <ul>
+                <h2 style="text-align: center"><sup style="color: #F4BA00; font-size:20px">KES</sup><strong style="color: #F4BA00;font-size:50px; font-weight:600">200</strong> <sup style="color: #F4BA00; font-size:20px">Month</sup></h2>
+                 <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="meetingStudent()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #F4BA00">GET IT</button>
+                 </div>
+                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
                    <span>Numerous Courses Available</span>
@@ -270,9 +285,7 @@
                  </li>
                  
                </ul>
-               <div class="text-center">
-               <button class="qxp-btn-dark-academy">GET STARTED</button>
-              </div>
+
              </div>
            </div>
           </div>
@@ -284,7 +297,10 @@
                  <h3>Lecturer</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #71CA52; font-size:20px">KES</sup><strong style="color: #71CA52;font-size:50px; font-weight:600">2,000</strong> <sup style="color: #71CA52; font-size:20px">Month</sup></h2>
+                <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="higherTeacher()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #71CA52">GET IT</button>
+                 </div>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -339,9 +355,7 @@
                     <span>Automatic Assessment Grading & Feedback</span>
                   </li>
                 </ul>
-                <div class="text-center">
-                  <button class="qxp-btn-dark-academy">GET STARTED</button>
-                 </div>
+
               </div>
             </div>
             <div class="col-md-6">
@@ -349,8 +363,11 @@
                 <h3>Students</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">500</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
-               <ul>
+                <h2 style="text-align: center"><sup style="color: #71CA52; font-size:20px">KES</sup><strong style="color: #71CA52;font-size:50px; font-weight:600">500</strong> <sup style="color: #71CA52; font-size:20px">Month</sup></h2>
+                <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="higherStudent()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #71CA52">GET IT</button>
+                 </div>
+                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
                    <span>Numerous Courses Available</span>
@@ -378,9 +395,7 @@
                  </li>
                  
                </ul>
-               <div class="text-center">
-               <button class="qxp-btn-dark-academy">GET STARTED</button>
-              </div>
+
              </div>
            </div>
           </div>
@@ -392,7 +407,10 @@
                  <h3>SME</h3>
                </div>
                <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">2,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
+                <h2 style="text-align: center"><sup style="color: #C92519; font-size:20px">KES</sup><strong style="color: #C92519;font-size:50px; font-weight:600">2,000</strong> <sup style="color: #C92519; font-size:20px">Month</sup></h2>
+                <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="sme()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #C92519">GET IT</button>
+                 </div>
                 <ul>
                   <li>
                     <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
@@ -447,9 +465,7 @@
                     <span>Automatic Assessment Grading & Feedback</span>
                   </li>
                 </ul>
-                <div class="text-center">
-                  <button class="qxp-btn-dark">GET IT</button>
-                 </div>
+
               </div>
             </div>
             <div class="col-md-6">
@@ -457,8 +473,11 @@
                 <h3>Learners</h3>
               </div>
               <div class="price-body">
-                <h2 style="text-align: center"><sup style="color: #060646; font-size:30px">KES</sup><strong style="color: #060646;font-size:60px; font-weight:600">1,000</strong> <sup style="color: #060646; font-size:30px">Month</sup></h2>
-               <ul>
+                <h2 style="text-align: center"><sup style="color: #C92519; font-size:20px">KES</sup><strong style="color: #C92519;font-size:50px; font-weight:600">1,000</strong> <sup style="color: #C92519; font-size:20px">Month</sup></h2>
+                <div class="text-center">
+                  <button class="qxp-btn-dark" onclick="learner()" data-toggle="modal" data-target="#exampleModalCenter" style="background: #C92519">GET IT</button>
+                 </div>
+                <ul>
                  <li>
                    <i aria-hidden="true" class="fa fa-check-circle-o fa-1x"></i>
                    <span>Numerous Courses Available</span>
@@ -486,14 +505,78 @@
                  </li>
                  
                </ul>
-               <div class="text-center">
-               <button class="qxp-btn-dark">GET IT</button>
-              </div>
+
              </div>
            </div>
           </div>
         </div>
       </div>
     </div>
+{{-- CHECK MODAL --}}
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      {{-- <div class="modal-header" style="text-align: center">
+        <h5 class="modal-title" id="exampleModalLongTitle">GET STARTED</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> --}}
+      <div class="modal-body price-check">
+        <h3>Please enter your email address</h3>
+      
+        <form action="/pricing_plan" method="post">
+         <!-- Material input -->
+         @csrf
+          <div class="md-form">
+            <label >let's check if you have a account with QXP to get you started</label>
+            <input type="hidden" id="amount" name="amount">
+            <input type="hidden" id="plan" name="plan">
+            <input type="text"  name="email" required placeholder="Email Address" class="form-control">
+           
+          </div>
+        
+        <i>If you are first time user, please click here to sign up</i>
+      </div>
+      <div class="modal-footer">
+  
+        <button type="submit" class="btn btn-primary">Next</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function meetingPro(){
+  document.getElementById('amount').value="1300";
+  document.getElementById('plan').value="Meetings Pro";
+}
+function meetingTeacher(){
+  document.getElementById('amount').value="1000";
+  document.getElementById('plan').value="Academy Teacher";
+}
+function meetingStudent(){
+  document.getElementById('amount').value="200";
+  document.getElementById('plan').value="Academy Student";
+}
+function higherTeacher(){
+  document.getElementById('amount').value="2000";
+  document.getElementById('plan').value="Higher Education Lecturer";
+}
+function higherStudent(){
+  document.getElementById('amount').value="500";
+  document.getElementById('plan').value="Higher Education Student";
+}
+function sme(){
+  document.getElementById('amount').value="2000";
+  document.getElementById('plan').value="Business SME";
+}
+function learner(){
+  document.getElementById('amount').value="1000";
+  document.getElementById('plan').value="Business Learner";
+}
 
+
+</script>
 @endsection

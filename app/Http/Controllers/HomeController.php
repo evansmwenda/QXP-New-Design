@@ -14,9 +14,10 @@ use App\Package;
 use App\News;
 use App\library\OAuth;
 use DB;
+use App\User;
 use App\Subscription;
 use App\Transaction as MyTransactions;
-use App\User;
+// use App\User;
 use DateTime;
 use DateInterval;
 use DatePeriod;
@@ -31,6 +32,7 @@ use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MeetingEmail;
+use App\Mail\PricingMail;
 use App\Mail\RegisterMail;
 use View;
 use Redirect;
@@ -1613,8 +1615,135 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
     {
         return view('sign-up-business');
     }
+    public function pricingPlan(Request $request)
+    {
+        $exists = User::where('email',$request->email)->value('email');
+        $packageID=Package::where('name',$request->plan)->get();
+        $id="";
+        foreach ($packageID as $key => $value) {
+           $id=$value->id;
+        }
+// dd($id);
+        $data=array(
+            'email'=>$request->email,
+            'amount'=>$request->amount,
+            'plan'=>$request->plan,
+            'id'=>$id
+        );
+            return view('cart')->with(compact('data','exists'));
+    }
+    public function pricingPlanSubscribe(Request $request)
+    {
+        // dd($request->all());
+         //get package status
+         $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+         // Date('Y-m-d h:i:s', strtotime('+14 days')),       
+         $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+         $expiry_on =$subscription[0]->expiry_on;
+         if($expiry_on > $date_now){
+             $active = true;//subscription is active
+         }else{
+             $active = false;//expired or is on free trial
+         }
  
-    
+         $user = \Auth::user();
+         $packages = Package::where('id',$request->id)->get();
+        //  dd($packages);
+ 
+         
+         $isDemo = env('PESAPAL_IS_DEMO',true);//check if we are in sandbox mode
+         if($isDemo)
+             $api = 'https://demo.pesapal.com';
+         else
+             $api = 'https://www.pesapal.com';
+         
+         $token = $params    = NULL;
+         $iframelink         = $api.'/api/PostPesapalDirectOrderV4';
+ 
+         //Kenyan keys
+         $consumer_key       = env('PESAPAL_CONSUMER_KEY','');
+         $consumer_secret    = env('PESAPAL_CONSUMER_SECRET','');
+          
+         $signature_method   = new \OAuthSignatureMethod_HMAC_SHA1();
+         $consumer           = new \OAuthConsumer($consumer_key, $consumer_secret);
+         
+        //  dd($packages);
+         $package_name = $packages[0]->name;
+         $totalAmount=$request->amount*$request->hosts;
+         $amount = str_replace(',','', $totalAmount);// $_POST['amount'];
+         // $amount = number_format($amount, 2);//format amount to 2 decimal places
+        //  dd($amount);
+         $desc ="description";// ;
+         $type ="MERCHANT";// ; //default value = MERCHANT
+         $reference =uniqid();// //unique order id of the transactionby merchant
+         $name = explode(" ", $user['name']);
+         $first_name =$name[0];
+         if(count($name) >1 ){
+             $last_name =$name[1];
+         }else{
+             $last_name ='';
+         }
+         
+         $email =$user['email'];
+         $phonenumber ="";
+ 
+         $is_used="0";
+         $status = 'PLACED';
+         $currency ='KES';
+         $tracking_id = '';
+         $payment_method = '';//CHANGE LATER
+ 
+         $callback_url   = url("payments/redirect");//URL user to be redirected to after payment
+         // dd($callback_url);
+         // https://skytoptechnologies.com
+         // /?pesapal_transaction_tracking_id=058e9adb-d351-4092-9df7-0bd776900859
+         // &pesapal_merchant_reference=5f2ad92d9dc87
+ 
+ 
+         $transactions = new MyTransactions;
+         $transactions->user_id       = $user['id'];
+         $transactions->phone         = $user['email'];
+         $transactions->amount        = $amount;
+         $transactions->currency      = $currency;
+         $transactions->status        = $status;
+         $transactions->reference     = $reference;
+         $transactions->is_used       = $is_used;
+         $transactions->description   = $desc;
+         $transactions->tracking_id   = $tracking_id;
+         $transactions->payment_method= $payment_method;
+         $transactions->save();
+ 
+         //update the package_id in user's subscription
+         $subscription = Subscription::where('user_id',$user['id'])->first();
+         $subscription->package_id = $request->id;
+         $subscription->save();
+         
+         $post_xml   = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+                        <PesapalDirectOrderInfo 
+                             xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" 
+                             xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" 
+                             Currency=\"".$currency."\" 
+                             Amount=\"".$amount."\" 
+                             Description=\"".$desc."\" 
+                             Type=\"".$type."\" 
+                             Reference=\"".$reference."\" 
+                             FirstName=\"".$first_name."\" 
+                             LastName=\"".$last_name."\" 
+                             Email=\"".$email."\" 
+                             PhoneNumber=\"".$phonenumber."\" 
+                             xmlns=\"http://www.pesapal.com\" />";
+         $post_xml = htmlentities($post_xml);
+         
+         //post transaction to pesapal
+         $iframe_src = \OAuthRequest::from_consumer_and_token($consumer, $token, "GET", $iframelink, $params);
+         $iframe_src->set_parameter("oauth_callback", $callback_url);
+         $iframe_src->set_parameter("pesapal_request_data", $post_xml);
+         $iframe_src->sign_request($signature_method, $consumer, $token);
+         $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+         return view('pricing.subscribe')->with(compact('iframe_src'));
+     
+
+    }
 }
  
 
