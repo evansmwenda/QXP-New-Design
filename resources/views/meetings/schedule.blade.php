@@ -125,8 +125,8 @@
                           <input type="datetime-local"required class="form-control" name="enddate">
                         </div> 
                         <div class="col-md-12">
-                          <label>Share With</label>
-                          <input type="email" id="myEmail" class="form-control" name="email">
+                          <label>Attendees</label>
+                          <input type="email" id="myEmail" placeholder="Separate emails with a comma" class="form-control" name="email">
                         </div>
                     </div>
 
