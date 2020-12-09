@@ -31,9 +31,11 @@ use AfricasTalking\SDK\AfricasTalking;
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use App\Mail\MeetingEmail;
 use App\Mail\PricingMail;
 use App\Mail\RegisterMail;
+use App\Mail\ContactMail;
 use View;
 use Redirect;
 use Illuminate\Support\Facades\Hash;
@@ -1743,6 +1745,33 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
          return view('pricing.subscribe')->with(compact('iframe_src'));
      
 
+    }
+    public function contactFrom(Request $request)
+    {
+    // //    dd($request->all());
+    // $validator=Validator::make($request->all(),[
+    //     'name'=>'required',
+    //     'email'=>'required',
+    //     'phone'=>'required |max:10',
+    //     'subject'=>'required',
+    //     'message'=>'required'
+
+    // ]);
+    // if($validator->fails()){
+    //     return back()->with('error',$validator->messages()->all()[0])->withInput();
+    // }else{
+    //     dd($request->all());
+    // }
+    $data=array(
+        'name'=>$request->name,
+        'email'=>$request->email,
+        'mobile'=>$request->number,
+        'subject'=>$request->subject,
+        'message'=>$request->message
+        
+    );
+        Mail::to('info@qxp-global.com')->send(new ContactMail($data));
+        return back()->with('success','Your request has been submitted succeefully');
     }
 }
  

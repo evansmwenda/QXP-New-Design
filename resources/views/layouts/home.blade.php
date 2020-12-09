@@ -12,6 +12,7 @@
 <body>
    @yield('main')
    @include('partials.footer')
+   @include('sweetalert::alert')
 </body>
 
 <!-- Mirrored from demo.themewinter.com/html/seobin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Mar 2020 20:51:54 GMT -->

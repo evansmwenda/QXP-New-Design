@@ -1,7 +1,20 @@
 @extends('layouts.home')
 
 @section('main')
+@if(Session::has("flash_message_error")) 
+<div class="alert alert-error alert-block">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>{!! session('flash_message_error') !!}</strong>
+</div> 
+@endif 
 
+
+@if(Session::has("flash_message_success")) 
+<div class="alert progress-bar-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong style="color:white;">{!! session('flash_message_success') !!}</strong>
+</div> 
+@endif
 <div class="container">
     <div class="blog-post-container">
         <div class="row">
@@ -17,42 +30,43 @@
 
             <div class="col-md-6">
                 <div class="contact-us-another">
-                    <form action="">
+                    <form action="/contactpost" method="post">
+                        @csrf
                         <h4 style="color: #060646">Contact QXP Support</h4>
                         <table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
                            
                             <tr>
                                 <td>
-                                    Full Name<span style="color: red"> *<input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Full Name<span style="color: red"> *<input name="name" placeholder="Full Name" required type="text" maxlength="60" style="width:100%;" />
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    Email<span style="color: red"> *<input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;" />
+                                    Email<span style="color: red"> *<input name="email" placeholder="Email Address" required type="email" maxlength="90" style="width:100%;" />
                                 </td> 
                             </tr>
  
                            <tr>
                                 <td>
-                                    Company Name<span style="color: red"> *<input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Company Name<span style="color: red"> <input name="company"  placeholder="Company Name" type="text" maxlength="60" style="width:100%;" />
                                 </td>
                             </tr>   
                             
                             <tr>
                                 <td>
-                                    Phone number<span style="color: red"> *<input name="PhoneNumber" type="text" maxlength="43" style="width:100%;" />
+                                    Phone number<span style="color: red"> *<input name="number" placeholder="Phone Number" required type="number" maxlength="43" style="width:100%;" />
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    Subject<span style="color: red"> *<input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Subject<span style="color: red"> *<input name="subject" placeholder="Subject" type="text" maxlength="60" style="width:100%;" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Description<span style="color: red"> *<textarea name="Comments" rows="7" cols="40" style="width:100%;"></textarea>
+                                    Description<span style="color: red"> *<textarea name="message" rows="7" cols="40" style="width:100%;"></textarea>
                                 </td>
                             </tr>
 

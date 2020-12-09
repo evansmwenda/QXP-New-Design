@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+	// Alert::success('Success Title', 'Success Message');
+	toast('Success Toast','success');
+
+
     return view('welcome');
 });
 Route::get('/test','HomeController@test');
@@ -94,4 +100,6 @@ Route::get('/sign_up_for_business', 'HomeController@signUp');
 Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
 Route::post('/pricing_plan','HomeController@pricingPlan');
 Route::post('/subscribeNow', 'HomeController@pricingPlanSubscribe');
+Route::post('/contactpost', 'HomeController@contactFrom');
+
 
