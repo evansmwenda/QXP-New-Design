@@ -124,6 +124,10 @@
                           <label>Start Date</label>
                           <input type="datetime-local"required class="form-control" name="enddate">
                         </div> 
+                        <div class="col-md-12">
+                          <label>Share With</label>
+                          <input type="email" id="myEmail" class="form-control" name="email">
+                        </div>
                     </div>
 
                    
@@ -141,6 +145,7 @@
   </div>
 <br><br><br>
 <!-- check the dates and time if is within 24 hours -->
-
-
+<script type="text/javascript">
+ document.getElementById("myEmail").multiple = true;
+</script>
 @endsection

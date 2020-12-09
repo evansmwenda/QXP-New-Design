@@ -15,6 +15,7 @@ use App\MeetingSubscription;
 use App\News;
 use App\library\OAuth;
 use DB;
+
 use App\User;
 use App\Subscription;
 use App\RegisterBusiness;
@@ -37,6 +38,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Mail\MeetingEmail;
 use App\Mail\PricingMail;
 use App\Mail\RegisterMail;
+use App\Mail\ScheduledMail;
 use App\Mail\ContactMail;
 use View;
 use Redirect;
@@ -315,44 +317,44 @@ class HomeController extends Controller
     public function meetingLogin(){
         if (\Auth::check()) {
             // get logged in user meeting schedules
-$date=date("Y-m-d  h:i:s");
-$today=date("Y-m-d H:i:s",strtotime($date));
+            $date=date("Y-m-d h:i:s");
+            $today=date("Y-m-d H:i:s",strtotime($date));
 
-// dd(substr($today,0,10));
-$my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',substr($today,0,10))->paginate(2);
-// $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
-//    foreach ($my_schedules  as $key => $value) {
-//     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
-//    }
-//    dd($my_schedules);
-    $status = User::where('email',\Auth::user()->email)->value('verified');
-    if($status == '0'){
-        //user not verified->redirect to verification page
-        // dd("not verif");
-        // return Redirect::route('verify2');
-        return redirect()->route('verify2');
-    }
-    // $this->checkEmailActivationStatus(\Auth::user()->email);
-    // check if any unused payments
-    $this->checkPaymentStatusDashboard();
-    //get package status
-    $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
-    // Date('Y-m-d h:i:s', strtotime('+14 days')),  
-    // dd($subscription ) ;    
-    $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
-    $expiry_on =$subscription[0]->expiry_on;
-    if($expiry_on > $date_now){
-        $active = true;//subscription is active
-    }else{
-        $active = false;//expired or is on free trial
-    }
+            // dd(substr($today,0,10));
+            $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',substr($today,0,10))->paginate(2);
+            // $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
+            //    foreach ($my_schedules  as $key => $value) {
+            //     $scheduletime=date("Y-m-d H:i:s",strtotime($value->classTime));
+            //    }
+            //    dd($my_schedules);
+            $status = User::where('email',\Auth::user()->email)->value('verified');
+            if($status == '0'){
+                //user not verified->redirect to verification page
+                // dd("not verif");
+                // return Redirect::route('verify2');
+                return redirect()->route('verify2');
+            }
+            // $this->checkEmailActivationStatus(\Auth::user()->email);
+            // check if any unused payments
+            $this->checkPaymentStatusDashboard();
+            //get package status
+            $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
+            // Date('Y-m-d h:i:s', strtotime('+14 days')),  
+            // dd($subscription ) ;    
+            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $expiry_on =$subscription[0]->expiry_on;
+            if($expiry_on > $date_now){
+                $active = true;//subscription is active
+            }else{
+                $active = false;//expired or is on free trial
+            }
+            // return View::make('meeting', compact('subscription', 'active','expiry_on'));
+            return view('meeting')->with(compact('subscription', 'active','expiry_on','my_schedules'));
 
-    // return View::make('meeting', compact('subscription', 'active','expiry_on'));
-    return view('meeting')->with(compact('subscription', 'active','expiry_on','my_schedules'));
-}else{
-    return view('meeting_login');
-}
-    }
+            }else{
+                return view('meeting_login');
+            }
+        }
     public function test(){
         $data=array(
             'message'=>'Meeting has been created successfully,Meeting ID is',
@@ -1312,7 +1314,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         // check to see if the meeting hours is beyond 24 hrs
         if($hours >24){
 
-            return redirect()->back()->with('flash_message_error','You can only schedule meeting lasting for 24 hours');
+            return redirect()->back()->with('toast_error','You can only schedule meeting lasting for 24 hours');
 
         } else{
                     $my_schedules = Meeting::where(['owner'=> \Auth::id()])->paginate(5);
@@ -1388,16 +1390,34 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
             'start_date'=>substr($today,0,10),
             'description'=>$data['description'],
             'start_time'=>substr($today,10,16),
-            'attendees'=>$data['description'],
+            'attendees'=>$data['email'],
             'end_date'=>substr($end_date,0,10),
             'end_time'=>substr($end_date,10,16),
             
             ];
 
             // dd($newschedule);
-          
+
+            //send mail to attendees
+            $details=array(
+                'schedule'=>'You have been invited to a scheduled meeting with the following details;',
+                'owner'=>$user['name'],
+                'title'=>$data['title'],
+                'id'=>$meetingID,
+                'description'=>$data['description'],
+                'start_time'=>substr($today,10,16),
+                'end_time'=>substr($end_date,10,16),
+                'start_date'=>substr($today,0,10),
+                'end_date'=>substr($end_date,0,10)
+            );
+            // dd($details);
+            $attendees=explode(",",$data['email']);
+            // dd($attendees);
+            Mail::to($attendees)->send(new ScheduledMail($details));
+
+
             $newschedule = Meeting::create($newschedule);
-            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
             // dd($newLiveClass);
             if($newschedule){
                 //return back to dashboard with class scheduled notification.
@@ -1787,7 +1807,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         
     );
         Mail::to('info@qxp-global.com')->send(new ContactMail($data));
-        return back()->with('success','Your request has been submitted succeefully');
+        return back()->with('success','Your request has been submitted successfully');
     }
     public function registerBusiness(Request $request)
     {

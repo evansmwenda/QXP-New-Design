@@ -93,6 +93,9 @@
                                 
 
                             </div>
+                            <div class="form-group " style="color: #fff;">
+                                <input type="checkbox" required style="margin-right:10px ">Agree to terms and condition
+                            </div>
                             <button type="submit" class="btn btn-primary col-md-12" style="margin-top: 10px;">
                                 {{ __('Register') }}
                             </button>
