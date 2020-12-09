@@ -11,11 +11,13 @@ use App\LiveClassRecordings;
 use GuzzleHttp\Client;
 use GuzzleHttp\Ring\Exception\ConnectException;
 use App\Package;
+use App\MeetingSubscription;
 use App\News;
 use App\library\OAuth;
 use DB;
 use App\User;
 use App\Subscription;
+use App\RegisterBusiness;
 use App\Transaction as MyTransactions;
 // use App\User;
 use DateTime;
@@ -157,8 +159,10 @@ class HomeController extends Controller
                 'name' => $request->name,
                 'email'=>$request->email
             );
-            event(new NewUserRegisteredEvent($data));
-
+            $date=date("Y-m-d  h:i:s");
+            $today=date("Y-m-d H:i:s",strtotime($date));
+            // event(new NewUserRegisteredEvent($data));
+            Mail::to($request->email)->send(new RegisterMail($data));
             //assign user to selected role
             //$request->role_id 0=student by default
             DB::table('role_user')->insert(
@@ -168,7 +172,17 @@ class HomeController extends Controller
                     "role_id" => '3'
                 ]
             );
+            //auto subscribe to meetings by default 
+            DB::table('meeting_subscriptions')->insert(
+                [
+                    "user_id" => $newUser['id'],
+                    "package_id" => '8',
+                    "expiry_on" => $today
+                ]
+              
 
+                );
+            return back()->with('toast_success','Your account has been created successfully, Check your email for activation link');
             return redirect('/login');
         }
         return view('auth.register');
@@ -391,10 +405,11 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
     public function meeting(){
         if (\Auth::check()) {
                     // get logged in user meeting schedules
-        $date=date("Y-m-d  h:i:s");
+                    
+        $date=date('Y-m-d H:i:s');
         $today=date("Y-m-d H:i:s",strtotime($date));
         
-        // dd(substr($today,0,10));
+        // dd($date);
         $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',substr($today,0,10))->paginate(2);
         // $my_schedules = LiveClasses::where(['owner'=> \Auth::id()])->paginate(2);
         //    foreach ($my_schedules  as $key => $value) {
@@ -412,12 +427,12 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
             // check if any unused payments
             $this->checkPaymentStatusDashboard();
             //get package status
-            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
             // Date('Y-m-d h:i:s', strtotime('+14 days')),  
             // dd($subscription ) ;    
-            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            // $to = date("Y-m-d  h:i:s"); // this format is string comparable
             $expiry_on =$subscription[0]->expiry_on;
-            if($expiry_on > $date_now){
+            if($expiry_on > $today){
                 $active = true;//subscription is active
             }else{
                 $active = false;//expired or is on free trial
@@ -782,11 +797,11 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         if (\Auth::check()) {
             //get package status
             
-            $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+            $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
             // check if the user is already subscribed to any package
 
             // Date('Y-m-d h:i:s', strtotime('+14 days')),       
-            $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+            $date_now = date('Y-m-d H:i:s'); // this format is string comparable
             $expiry_on =$subscription[0]->expiry_on;
             if($expiry_on > $date_now){
                 $active = true;//subscription is active
@@ -804,9 +819,10 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
     }
     public function startSubscription($id=null){
         //get package status
-        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        // dd($id);
+        $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
         // Date('Y-m-d h:i:s', strtotime('+14 days')),       
-        $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+        $date_now = date('Y-m-d H:i:s'); // this format is string comparable
         $expiry_on =$subscription[0]->expiry_on;
         if($expiry_on > $date_now){
             $active = true;//subscription is active
@@ -820,12 +836,12 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
 
         
         if($packages->isEmpty()){
-            return back()->with('flash_message_error','An error occurred, please try again');
+            return back()->with('toast_error','An error occurred, please try again');
         }
         
         //check to see if user is logged in
         if(\Auth::id() == ""){
-            return back()->with('flash_message_error','Please login to renew subscription');
+            return back()->with('toast_error','Please login to renew subscription');
         }
         // dd($packages);
 
@@ -892,7 +908,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         $transactions->save();
 
         //update the package_id in user's subscription
-        $subscription = Subscription::where('user_id',$user['id'])->first();
+        $subscription = MeetingSubscription::where('user_id',$user['id'])->first();
         $subscription->package_id = $id;
         $subscription->save();
         
@@ -919,7 +935,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         $iframe_src->sign_request($signature_method, $consumer, $token);
         // dd($subscription);
         // return view('user.payments.iframe')->with(compact('iframe_src','amount','package_name'));
-        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
         return view('payments.subscribe')->with(compact('iframe_src',
          'amount',
          'package_name',
@@ -930,9 +946,9 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
 
     public function getCallback(Request $request){
         //get package status
-        $subscription = Subscription::with('package')->where('user_id',\Auth::id())->get();
+        $subscription = MeetingSubscription::with('package')->where('user_id',\Auth::id())->get();
         // Date('Y-m-d h:i:s', strtotime('+14 days')),       
-        $date_now = date("Y-m-d  h:i:s"); // this format is string comparable
+        $date_now = date('Y-m-d H:i:s'); // this format is string comparable
         $expiry_on =$subscription[0]->expiry_on;
         if($expiry_on > $date_now){
             $active = true;//subscription is active
@@ -1140,7 +1156,7 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
         //check if status was successful
         if($transaction_status == 'COMPLETED'){
             //payment successful->1.award subscription
-            $subscription = Subscription::where('user_id',$user_id)->first();
+            $subscription = MeetingSubscription::where('user_id',$user_id)->first();
             $subscription->expiry_on = Date('Y-m-d h:i:s', strtotime('+31 days')) ;
             $subscription->save();
 
@@ -1772,6 +1788,23 @@ $my_schedules = Meeting::where(['owner'=> \Auth::id()])->where('start_date','=',
     );
         Mail::to('info@qxp-global.com')->send(new ContactMail($data));
         return back()->with('success','Your request has been submitted succeefully');
+    }
+    public function registerBusiness(Request $request)
+    {
+       $fullname=" ".$request->fname." ".$request->lname;
+       $business=new RegisterBusiness;
+       $business->name=$fullname;
+       $business->business_name=$request->business_name;
+       $business->business_email=$request->business_email;
+       $business->business_phone=$request->phone;
+       $business->country=$request->country;
+       $business->business_size=$request->size;
+
+       if($business->save()){
+        return back()->with('toast_success','Your request has been successfully received.');
+       }else{
+        return back()->with('toast_error','An error occured. Try again later');
+       }
     }
 }
  

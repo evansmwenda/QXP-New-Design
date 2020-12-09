@@ -14,4 +14,8 @@ class Package extends Model
         public function subscription(){
                 return $this->hasMany('App\Subscription');
         }
+        public function meetingsubscription(){
+                return $this->hasMany('App\MeetingSubscription');
+        }
+
 }

@@ -101,5 +101,6 @@ Route::post('/newsfeeds/{id}','HomeController@newsFeeds');
 Route::post('/pricing_plan','HomeController@pricingPlan');
 Route::post('/subscribeNow', 'HomeController@pricingPlanSubscribe');
 Route::post('/contactpost', 'HomeController@contactFrom');
+Route::post('/register_business', 'HomeController@registerBusiness');
 
 

@@ -14,39 +14,40 @@
                 <div class="sign-up-container-business">
                     <img src="https://qxp-global.com/images/logo/bgAsset-1-1.svg" alt=""><hr>
                     {{-- QXP Business Sign Up --}}
-                    <form action="">
+                    <form action="/register_business" method="post">
+                        @csrf
                         <table style="width:100%;border:0;" cellpadding="8" cellspacing="0">
                            
                             <tr> 
                                 <td>
-                                    First Name<span style="color: #fd6c03"> *</span><input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    First Name<span style="color: #fd6c03"> *</span><input name="fname" required type="text" maxlength="60" style="width:100%;" />
                                 </td>
                                 <td>
-                                    Last Name<span style="color:  #fd6c03"> *</span> <input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Last Name<span style="color:  #fd6c03"> *</span> <input name="lname" required type="text" maxlength="60" style="width:100%;" />
                                 </td>
                             </tr>
         
                             <tr>
                                 <td>
-                                    Business Email<span style="color:  #fd6c03"> *</span><input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;" />
+                                    Business Email<span style="color:  #fd6c03"> *</span><input name="business_email" required type="email" maxlength="90" style="width:100%;" />
                                 </td>
                                 <td>
-                                    Business Phone<span style="color:  #fd6c03"> *</span><input name="PhoneNumber" type="text" maxlength="43" style="width:100%;" />
+                                    Business Phone<span style="color:  #fd6c03"> *</span><input name="phone" required type="number" maxlength="43" style="width:100%;" />
                                 </td>
                             </tr>
         
                            <tr>
                                 <td>
-                                    Company Name<span style="color:  #fd6c03"> *</span><input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Business Name<span style="color:  #fd6c03"> *</span><input name="business_name" required type="text" maxlength="60" style="width:100%;" />
                                 </td>
                                 <td>
-                                    Company Size<span style="color: #fd6c03"> *</span><input name="Name" type="text" maxlength="60" style="width:100%;" />
+                                    Business Size<span style="color: #fd6c03"> *</span><input name="size" type="text" required maxlength="60" style="width:100%;" />
                                 </td>
                             </tr> 
                             <tr>
                                 <td>Your Country <span style="color:  #fd6c03"> *
-                                    <select name = "dropdown" style="width:100%;">
-                                        <option value = "select language" selected>Country</option>
+                                    <select name = "country" required style="width:100%;">
+                                        <option value = "" selected>Country</option>
                                         <option value = "Kenya" selected>Kenya</option>
                                         <option value = "America">America</option>
                                         <option value = "Uganda">Uganda</option>
@@ -60,7 +61,7 @@
                             <tr> 
                                 <td>
                                     {{-- <input name="skip_Submit" type="submit" value="Submit" /> --}}
-                                    <button class="contact-us-btn" style="width: 100%">Send</button>
+                                    <button type="submit" class="contact-us-btn" style="width: 100%">Send</button>
                                 </td> 
                             </tr>
                         </table>

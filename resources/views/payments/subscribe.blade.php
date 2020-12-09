@@ -24,17 +24,16 @@
             {{-- Subscribe Here --}}
             <div class="meeting-content" id="create">
              <h2>Meeting Subscription</h2>
-                
-                Package Subscribed:<span style="color:green;" >
-                @if($subscription[0]->package_id ==1)
-                Meeting Pro
-                @else
-                Free Version
-                @endif
-                </span>
+             @if($active ?? '')
+            
+             Package Subscribed : <span style="color:green;" >Meetings Pro</span>
+             @else
+             
+             Renew Package : <span style="color:green;" >Free Version</span>
+             @endif
                 <br>
-               <a href="/home/subscribe/{{$subscription[0]->package->id ?? '1'}}" id="pesapal" class="btn btn-primary" style="background: #11BECC;padding:5px; border:1px solid transparent; margin-top:15px; font-size:13px;border-radius:5px;text-transform:none">
-                 @if($subscription[0]->package_id ==1)
+               <a href="/home/subscribe/{{$subscription[0]->package_id}}" id="pesapal" class="btn btn-primary" style="background: #11BECC;padding:5px; border:1px solid transparent; margin-top:15px; font-size:13px;border-radius:5px;text-transform:none">
+                 @if($active)
                  Renew Subscription
                  @else
                  Subscribe
