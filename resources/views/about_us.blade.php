@@ -2,7 +2,7 @@
 
 @section('main')
 
-<div class="row about-top">
+<div class="row about-us-top">
 
     <div class="col-md-6 col-sm-12">
         <h2>Who We Are</h2>
@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div class="row about-body">
+<div class="row about-us-body">
     <div class="col-md-6 col-sm-12">
         <h2>Know about us</h2>
         <hr style="border: 1px solid #007bff ">
@@ -20,52 +20,68 @@
         <p>Available for both students and trainers, we have created a platform that offers premium learning content from the best accredited tutors in the stated field. Access all the material you will need and master your craft from anywhere in the world.</p>
     </div>
     <div class="col-md-6 col-sm-12">
-        <img src="{{asset('images/featured/Dashboard-QXP.jpg')}}" alt="">
+        <div class="access-resource-content-header-img">
+            <img src="{{asset('images/featured/our-team.jpg')}}" alt="">
+        </div>
     </div>
 </div>
 
 <div class="row about-main">
-    <div class="col-md-5">
+    <div class="col-md-6">
         <h3>Why Us?</h3>
         <hr style="border:0.2px solid #fff">
-        <h4>Flexible</h4>
-        <p>Join and use from any device and strength of connection.</p>
-        <h4>  Easy Engagement</h4>
-        <p>Seamless and easy to use; One click to join.</p>
-        <h4>Productive</h4>
-        <p>Experience faster communication and a simplified flow of daily work.</p>
-        <hr style="border:1px solid #fff">
-        <h4>Mission</h4>  
-        <p>Strengthen business relationships and keep you connected from anywhere in the world.</p>
-        <h4>Vision</h4>
-        <p>To be consistent, reliable and the go to for every student and global company.</p>
-
+        <div class="about-us-main-content">
+            <div>
+                <h2>01</h2><h4>Flexible</h4>
+                <p>Join and use from any device and strength of connection.</p>
+            </div>
+            <div>
+                <h2>02</h2><h4>Easy Engagement</h4>
+                <p>Seamless and easy to use; One click to join.</p>
+            </div>
+            <div>
+                <h2>03</h2><h4>Productive</h4>
+                <p>Experience faster communication and a simplified flow of daily work.</p>
+            </div>
+            <hr style="border:1px solid #fff">
+            <div>
+                <h2>04</h2><h4>Mission</h4>  
+                <p>Strengthen business relationships and keep you connected from anywhere in the world.</p>
+            </div>
+            <div>
+                <h2>05</h2><h4>Vision</h4>
+                <p>To be consistent, reliable and the go to for every student and global company.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-1">
-        <h2>01</h2>
-        <h2>02</h2>
-        <h2>03</h2>
-        <h2>04</h2>
-
-    </div>
-    <div class="col-4 second-side">
+    <div class="col-md-6 second-side">
         <h3>Core Values</h3>
         <hr style="border:1px solid #fff">
-        <h4>Innovative</h4>
-        <p>We strive to exceed our customers’ expectations with superior connectivity every time they meet.</p>
-        <h4>Creative</h4>
-        <p>We work with multiple I.T. developers and designers of all ages and backgrounds to forge the ultimate modern workplace.</p>
-        <h4>Collaborative</h4>
-        <p>Just like our tools and solutions, our people collaborate to ensure our product is seamless and our customers’ desires are met.</p>
-        <hr style="border:0.2px solid #fff">
-        <h4>Honest</h4>  
-        <p> trusted partnership is built by caring for our customers, community and ourselves.</p>
+        <div class="about-us-main-content">
+            <div>
+                <h2>01</h2><h4>Innovative</h4>
+                <p>We strive to exceed our customers’ expectations with superior connectivity every time they meet.</p>
+            </div>
+            <div>
+                <h2>02</h2><h4>Creative</h4>
+                <p>We work with multiple I.T. developers and designers of all ages and backgrounds to forge the ultimate modern workplace.</p>
+            </div>
+            <div>
+                <h2>03</h2><h4>Collaborative</h4>
+                <p>Just like our tools and solutions, our people collaborate to ensure our product is seamless and our customers’ desires are met.</p>
+            </div>
+            <hr style="border:0.2px solid #fff">
+            <div>
+                <h2>04</h2><h4>Honest</h4>  
+                <p> trusted partnership is built by caring for our customers, community and ourselves.</p>
+            </div>
+        </div>
     </div>
 </div>
-<div class="about-bottom">
-    <h2>Interested? Let's get in touch</h2>
+<div class="banner-footer-cta about-bottom">
+    Interested? Let's get in touch<hr>
     <br>
-    <button>GET STARTED TODAY</button>
+    <button class="btn btn-warning">Get Started Today</button>
 </div>
 
 @endsection

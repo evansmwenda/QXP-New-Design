@@ -653,12 +653,12 @@ section {
 
 /* Button */
 .btn {
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   padding: 11px 35px;
-  border-radius: 50px;
+  border-radius: 30px;
   -webkit-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
@@ -692,6 +692,7 @@ section {
   background: #fff;
   border-color: #fff;
   color: #079DFF;
+  font-weight: 700;
 }
 
 .btn-secondary {
@@ -702,6 +703,7 @@ section {
 .btn-secondary:hover {
   background: #2e2c2d;
   border-color: #2e2c2d;
+  font-weight: 700;
 }
 
 .btn-warning {
@@ -735,6 +737,7 @@ section {
   background: #fff;
   border-color: #fff;
   color: #FD6C03;
+  font-weight: 700;
 }
 .btn-my-warning {
   background-color: #FD6C03;
@@ -745,6 +748,7 @@ section {
   background: #079DFF;
   border-color: #fff;
   color: #fff;
+  font-weight: 700;
 }
 
 .btn-dark {
@@ -755,6 +759,7 @@ section {
 .btn-dark:hover {
   background: #FFB72F;
   border-color: #FFB72F;
+  font-weight: 700;
 }
 
 .btn-white {
@@ -765,6 +770,7 @@ section {
 .btn-white:hover {
   background-color: #fff;
   border-color: #fff;
+  font-weight: 700;
 }
 
 .owl-carousel {
@@ -1068,6 +1074,10 @@ font-size:40px;
   position: relative;
   z-index: 2;
 }
+div.tw-head{
+  padding-right: 2%;
+  padding-left: 2%;
+}
 
 .tw-head {
   background: #fff;
@@ -1116,7 +1126,7 @@ nav.navbar{
 }
 
 .qxp-logo-container{
-  max-width: 100%;
+  width: 100%;
 }
 
 ul.menu-trial li{
@@ -2029,23 +2039,41 @@ li.dropdown:hover .tw-mega-menu {
 .slider-img {
   width: 100%;
 }
+div.row.home-img{
+  padding: 2%;
+}
+div.row.home-img img{
+  width: 100%;
+}
 .home-2{
   background: #EBF5FB;
   padding: 100px ;
   text-align: center ;
 }
-.home-2 h2{
+/* .home-2-heading h2{
   color: #0707A4;
   font-family: "Hind Vadodara", Sans-serif;
   font-size: 56px;
   font-weight: 900;
   letter-spacing: -3.2px;
+} */
+.home-header-content{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.home-2 h2{
+  color: #0707A4;
+  font-family: "Hind Vadodara", Sans-serif;
+  font-size: 46px;
+  font-weight: bolder;
+  /* letter-spacing: -3.2px; */
 }
 .home-2 p{
   color: #060646;
   font-weight: 900;
   margin: 20px 0px;
   font-size: 20px;
+  text-align: center;
 }
 .btns{
   width: 100%;
@@ -2055,16 +2083,11 @@ li.dropdown:hover .tw-mega-menu {
   color:#fff;
   border-radius: 30px;
   border: 1px solid #fff;
-  font-size: 13px;
-  font-weight: bold;
-
-  width: 150px;
-  padding:8px;
 }
 .home-2 img{
-  width: 120%;
-  margin-left: -80px;
-  margin-top: -140px;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
   
 }
 .meeting-top-row{
@@ -5471,7 +5494,8 @@ ul.comments-reply .comment-body {
   background-size: 1020px 800px;
   padding: 20px;
   height: 400px;
-  padding: 50px;
+  padding-left: 15%;
+  padding-right: 15%;
   text-align: center;
 }
 .features-top h2{
@@ -5483,11 +5507,11 @@ ul.comments-reply .comment-body {
 .features-top p{
   color: #060646;
   font-weight: 600;
+  text-align: center;
 }
 .features {
   margin-top: 10px;
   background: #fff;
-  text-align: left;
 }
 .features img{
   width: 100%;
@@ -5946,9 +5970,8 @@ ul.comments-reply .comment-body {
 }
 .top-contact-info .reg-user{
   background: #FD6C03;
-  border-radius: 5px;
+  border-radius: 30px;
   border: 1px solid transparent;
-
 }
 .tw-top-bar-angle {
   padding: 5px 0;
@@ -7385,31 +7408,31 @@ div.row.title { display: none !important;}
 
 /* CUSTOM CSS */
 .qxp-header-row{
-  padding: 50px;
-  background-color: #11BECC;
+  padding: 110px;
+  background-color: #079DFF;
   width: 100%;
   text-align: center;
   color: #fff;
 }
 .qxp-header-row h2{
   font-family: "Hind Vadodara", Sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
   font-weight: 800;
   line-height: 50px;
 }
 .qxp-header-row p{
   font-family: "Hind Vadodara", Sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   color: #fff;
 }
 .qxp-tab{
 
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Hind Vadodara", Sans-serif !important;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 70px;
+  margin-top: 70px;
   border-bottom: 1px solid transparent !important;
 }
 
@@ -7423,11 +7446,10 @@ div.row.title { display: none !important;}
 text-align: center;
 }
 .plans .nav-item {
-width: 100px;
-  margin-right: 10px;
-  /* color: #000; */
-  border-radius: 10px;
-  /* border: 1px solid #079DFF; */
+width: 250px;
+margin-right: 30px;
+border-radius: 10px;
+  border: 1px solid #079DFF;
 }
 .plans .nav-item .nav-link{
   padding: 8px !important;
@@ -7460,7 +7482,7 @@ width: 100px;
   margin-left: 30px;
 }
 .qxp-price-Header-meeting{
-  padding: 10px;
+  padding: 30px;
   box-shadow: 3px 3px 20px;
   background-color: #11BECC;
   border-top-right-radius:10px;
@@ -7486,16 +7508,13 @@ width: 100px;
 
 .price-body{
   margin-right: 30px;
-  margin-left: 30px;
+ margin-left: 30px;
   box-shadow: 3px 3px 20px;
-}
-.price-body h2{
-  padding-top: 20px;
 }
 .price-body ul{
   list-style: none;
-  color: #484848;
-  font-size: 15px;
+  color: #060646;
+  font-size: 18px;
 }
 .price-body ul li{
   padding:10px;
@@ -7534,33 +7553,20 @@ margin-left: 50px;
   padding: 50px;
 }
 .qxp-btn-dark{
-  /* background: #060646; */
+  background: #060646;
   color: #FFFFFF;
   border-radius: 30px;
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 20px;
-  border: 1px solid transparent;
+  border: 1px solid #060646;
   margin-bottom: 25px;
   text-align: center;
 }
-/* .qxp-btn-dark:hover{
+.qxp-btn-dark:hover{
   background: #C92519;
   border: 1px solid crimson;
-} */
-.price-check{
- text-align: center;
-  color: #000;
-}
-.price-check i{
-  font-style: italic;
-  font-size: 10px;
-  color: #222;
-}
-.price-check h3{
-  color: #0099FE;
-  font-size: 18px;
 }
 .qxp-btn-dark-academy{
   background: #060646;
@@ -7791,11 +7797,11 @@ ul.franchises li:before {
 }
 .about-main{
   background: #007bff;
-  
   color: #fff;
-  padding-top:50px;
-  padding-bottom:50px;
-  padding-left: 100px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .about-main h3{
   color: #fff;
@@ -7814,14 +7820,14 @@ ul.franchises li:before {
   font-family: "Muli", Sans-serif;
   font-size: 40px;
   font-weight: 800;
-  margin-top: 80px;
+  margin-top: 0px;
   line-height: 50px;
 }
-.about-bottom{
-  padding: 100px;
+/* .about-bottom{
   text-align: center;
-}
-.about-bottom button{
+  background-color: white;
+} */
+/* .about-bottom button{
   border-radius: 30px;
   background: #FD6C03;
   padding: 10px;
@@ -7830,7 +7836,7 @@ ul.franchises li:before {
 }
 .about-bottom h2{
   color: #079DFF;
-}
+} */
 .leader-top{
   text-align: center;
    /*background: url(../images/featured/industries-1.jpg); */
@@ -8652,7 +8658,7 @@ button.download-icon :hover{
   width: 100%;
   height: auto;
   padding-top: 5px;
-  padding-bottom: 4%;
+  /* padding-bottom: 4%; */
   justify-content: center;
   background-image: url(../images/featured/industries-1.jpg);
 }
@@ -8723,9 +8729,9 @@ div.row.desc-content-meeting{
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* .desc-content-meeting h4, p {
-  text-align: left;
-} */
+.desc-content-meeting h4, p {
+  text-align: center;
+}
 .meeting-business-paragraph p{
   text-align: left;
 }
@@ -8744,10 +8750,10 @@ div.container.banner{
 }
 .img-banner{
   width: 100%;
-  padding: 10px
+  padding: 10%;
 }
 .img-banner img{
-  width: 60%;
+  width: 100%;
   float: right;
 }
 .img-banner-desc{
@@ -8755,6 +8761,7 @@ div.container.banner{
   top: 15%;
   /* padding-right: 15%; */
   text-align: center;
+  padding: 5%;
 }
 .img-banner-desc h2{
   color: #060646;
@@ -8805,9 +8812,49 @@ h3.green{
   width: 100%;
   text-align: center;
   margin-bottom: 2%;
+  padding-left: 40%;
+  padding-right: 40%;
 }
 .desc-content-meeting-logo img{
-  width: 15%;
+  width: 100%;
+}
+
+/* GEFF CUSTOM CSS */
+.schedule-body table thead{
+  background: #11BECC;
+  color: #fff;
+  font-weight: 500;
+}
+.schedule-body table td{
+  padding:2px;
+  padding-left: 10px;
+}
+.cart-right{
+  margin-top: 20px;
+
+}
+.cart-card{
+  width: 40%;
+  margin: 20px;
+  
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #FD6C03;
+}
+.cart-card i{
+  font-size: 10px;
+}
+
+.subscription {
+  margin: 50px auto;
+  width: 60%;
+  background: #F2F4F4;
+  padding: 20px;
+  border-radius: 5px;
+}
+.cart-right h3{
+  color: #007bff;
+  font-size: 18px;
 }
 
 /* business */
@@ -8854,8 +8901,7 @@ h3.green{
 }
 div.row.center{
   justify-content: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 5%;
 }
 .desc-content h4{
   text-align: center;
@@ -8866,10 +8912,8 @@ div.row.center{
   border-radius: 30px;
   width: 100px;
   margin-right: 5px;
-  background: transparent;
-  color: #060646;
-  /* background-color: #0099FE; */
-  /* color: #fff; */
+  background-color: #0099FE;
+  color: #ffffff;
 }
 .features-dec-button-blue button{
   border: transparent;
@@ -8898,65 +8942,33 @@ div.row.center{
   margin-left: 2%;
   margin-right: 2%;
 }
-.social-media-img-1 span{
-  padding: 5px;
-  background: #079DFF;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50%;
-}
 .social-media-img-2{
   display: inline;
   margin-left: 2%;
   margin-right: 2%;
-}
-.social-media-img-2 span{
-  padding: 5px;
-  background: blue;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50%;
 }
 .social-media-img-3{
   display: inline;
   margin-left: 2%;
   margin-right: 2%;
 }
-.social-media-img-3 span{
-  padding: 5px;
-  background: green;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50%;
-}
 .social-media-img-4{
   display: inline;
   margin-left: 2%;
   margin-right: 2%;
 }
-.social-media-img-4 span{
-  padding: 5px;
-  background: red;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50%;
-}
 .blog-list ul li{
   display: inline;
   padding: 2%;
-  margin-top: -3px;
-  color: #484848;
 }
 .blog-post-container{
-  padding: 8%;
-  width: 100%;
+  padding: 5%;
   align-content: center;
   background-image: url('/images/featured/industries-1.jpg');
 }
 .blog-post-container h2, h6{
   text-align: center;
-  color: #079DFF;
-  font-size: 28px;
+  color: #060646;
 }
 .posts-row{
   border: 1px black;
@@ -8981,11 +8993,8 @@ div.posts-row.post-3{
   /* text-align: center; */
 }
 .recent-post-title{
-  background-color: #079DFF;
+  background-color: #060646;
   padding: 5%;
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   /* border-radius: 15px; */
 }
 .recent-post-title h3{
@@ -9005,10 +9014,7 @@ div.posts-row.post-3{
   border: transparent;
 }
 .recent-posts{
-  padding: 5px;
-}
-.recent-posts h4{
-  font-weight: 400;
+  padding: 5%;
 }
 div.posts-row.post-1{
   margin-top: 20%;
@@ -9019,10 +9025,8 @@ div.posts-row.post-1{
 .blog-img{
   padding: 5%;
 }
-.blog-title h3{
+.blog-title{
   padding-left: 5%;
-  color: #079DFF !important;
-  font-size: 18px;
 }
 .blog-content{
   padding-left: 5%;
@@ -9126,44 +9130,78 @@ div.sign-up-container-business{
 .reg-business-content{
   padding: 5%;
 }
-
-
-
-
-/* GEFF CUSTOM CSS */
-.schedule-body table thead{
-  background: #11BECC;
-  color: #fff;
-  font-weight: 500;
+.banner-img img{
+  justify-content: center;
+  width: 100%;
 }
-.schedule-body table td{
-  padding:2px;
-  padding-left: 10px;
-}
-.cart-right{
-  margin-top: 20px;
 
+/* accessibility-resources */
+.access-resource-content img{
+  width: 100%;
 }
-.cart-card{
-  width: 40%;
-  margin: 20px;
-  
+.access-resource-content-header-img img{
+  width: 100%;
+}
+.access-resource-header-content img{
+  width: 20%;
+  justify-content: center;
+}
+/* .access-resource-content-header-img{
+  padding: 5%;
+} */
+.access-resource-section{
+  padding: 0px 0;
+  position: relative;
+}
+.access-resource-header-container{
+  padding: 2%;
+  background-color: #E5E8E8;
   text-align: center;
-  border-radius: 10px;
-  border: 2px solid #FD6C03;
+  vertical-align: middle;
+  background-image: url('../images/featured/industries-1.jpg');
 }
-.cart-card i{
-  font-size: 10px;
+.access-resource-content{
+  padding: 5%;
+}
+.access-resource-content h2, h3, p{
+  color: #060646;
+  text-align: left;
+}
+.access-resource-header-content{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #000;
+  padding: 4%;
+  text-align: center;
+  margin-top: 5%;
+}
+/* .access-resource-header-content h2{
+  text-align: end;
+} */
+.banner-footer-cta{
+  padding: 8%;
+  background-color: #11BECC;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
 }
 
-.subscription {
-  margin: 50px auto;
-  width: 60%;
-  background: #F2F4F4;
-  padding: 20px;
-  border-radius: 5px;
+/* about-us pg */
+.about-us-body{
+  padding: 5%;
 }
-.cart-right h3{
-  color: #007bff;
-  font-size: 18px;
+.about-us-top{
+  padding: 5%;
+  background-image: url('../images/featured/industries-1.jpg');
+}
+.about-bottom{
+  background-color: #fff;
+  color: #11BECC;
+}
+
+.lms {
+  width: 100%;
+  padding-top: 10%;
+  height: 100%;
 }

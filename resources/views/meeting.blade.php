@@ -157,52 +157,60 @@
   </div>
 
 </div>
-
-<!-- Modal -->
- <div class="modal fade" id="schedule" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          {{-- <div class="icon-only">
-            <img src="http://127.0.0.1:8000/images/meeting-icon/meeting-room.png" alt="">
-          </div> --}}
-          <div class="qxp-logo-meeting-dashboard modal-design">
-          <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" alt="qxp-logo">
-          </div>
-          <h5 class="modal-title" style="margin-left: 50px" id="exampleModalLongTitle">Schedule Meeting</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        {{-- <div class="icon-only">
+          <img src="http://127.0.0.1:8000/images/meeting-icon/meeting-room.png" alt="">
+        </div> --}}
+        <div class="qxp-logo-meeting-dashboard modal-design">
+        <img src="{{asset('images/logo/bgAsset-4-2.svg')}}" alt="qxp-logo">
         </div>
-        <hr>
-        <div class="row schedule-class">
-            <form method="post" action="/live-schedule">{{ csrf_field() }}
-                
-                    <label>Meeting Title</label>
-                    <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
-
-                    <div class="row">
-                        <div class="col-md-6">
-                          <label>Start Date</label>
-                          <input type="datetime-local" required class="form-control" name="startdate">
-                        </div>
-                        <div class="col-md-6">
-                          <label>Start Date</label>
-                          <input type="datetime-local"required class="form-control" name="enddate">
-                        </div> 
-                    </div>
-
-                   
-                    <label for="">Description</label>
-                    <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>
-                    
-                    <button type="submit">Save</button>
-              
-             </form>
-        </div>
-
+        <h5 class="modal-title" style="margin-left: 50px" id="exampleModalLongTitle">Schedule Meeting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
+      <hr>
+      <div class="row schedule-class">
+          <form method="post" action="/live-schedule">{{ csrf_field() }}
+              
+                  <label>Meeting Title</label>
+                  <input type="text" required class="form-control" name="title" placeholder="Meeting Title">
 
+                  <div class="row">
+                      <div class="col-md-6">
+                        <label>Start Date</label>
+                        <input type="datetime-local" required class="form-control" name="startdate">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Start Date</label>
+                        <input type="datetime-local"required class="form-control" name="enddate">
+                      </div> 
+                      <div class="col-md-12">
+                        <label>Attendees</label>
+                        <input type="email" id="myEmail" placeholder="Separate emails with a comma" class="form-control" name="email">
+                      </div>
+                  </div>
+
+                 
+                  <label for="">Description</label>
+                  <textarea name="description" required class="form-control" cols="100" id=""rows="5"></textarea>
+                  
+                  <button type="submit">Save</button>
+            
+           </form>
+      </div>
+
+    </div>
   </div>
+
+</div>
+<br><br><br>
+<!-- check the dates and time if is within 24 hours -->
+<script type="text/javascript">
+document.getElementById("myEmail").multiple = true;
+</script>
 @endsection

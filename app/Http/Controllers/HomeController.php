@@ -1826,6 +1826,14 @@ class HomeController extends Controller
         return back()->with('toast_error','An error occured. Try again later');
        }
     }
+    public function accessibilityResources()
+    {
+        return view('footer.accessibility-resources');
+    }
+    public function learningManagementSystem()
+    {
+        return view('footer.learning-management-system');
+    }
 }
  
 

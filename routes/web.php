@@ -102,5 +102,7 @@ Route::post('/pricing_plan','HomeController@pricingPlan');
 Route::post('/subscribeNow', 'HomeController@pricingPlanSubscribe');
 Route::post('/contactpost', 'HomeController@contactFrom');
 Route::post('/register_business', 'HomeController@registerBusiness');
+Route::get('/accessibility-resources', 'HomeController@accessibilityResources');
+Route::get('/learning_management_system', 'HomeController@learningManagementSystem');
 
 

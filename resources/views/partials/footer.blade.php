@@ -26,7 +26,7 @@
               <li> <span class="fa fa-angle-right"></span><a href="/sign_up_for_business"> QXP Business</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="http://meetings.qxp-global.com"> QXP Meeting</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="/features"> Features</a></li>
-              <li> <span class="fa fa-angle-right"></span><a href="/features"> Learning Management System</a></li>
+              <li> <span class="fa fa-angle-right"></span><a href="/learning_management_system"> Learning Management System</a></li>
            </ul>
            </div>
            <!-- End Footer Widget -->
@@ -38,7 +38,7 @@
               <li> <span class="fa fa-angle-right"></span><a href="/about"> Who We Are</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="/leadership">Leadership</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="#"> Case Studies</a></li>
-              <li> <span class="fa fa-angle-right"></span><a href="#"> News Media</a></li>
+              <li> <span class="fa fa-angle-right"></span><a href="/features"> News Media</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="/career"> Careers</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="/contact_us"> Contact</a></li>
            </ul>
@@ -68,7 +68,7 @@
               <li> <span class="fa fa-angle-right"></span><a href="#">Video Tutorials</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="#">Support Centre</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="#">Knowledge Base</a></li>
-              <li> <span class="fa fa-angle-right"></span><a href="#">Accessibility Resources</a></li>
+              <li> <span class="fa fa-angle-right"></span><a href="/accessibility-resources">Accessibility Resources</a></li>
               <li> <span class="fa fa-angle-right"></span><a href="/downloads">Downloads</a></li>
            </ul>
            </div>
